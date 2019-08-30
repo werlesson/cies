@@ -10,15 +10,18 @@
       <router-link to="/about">About</router-link>
     </div>-->
     <router-view />
+    <footer-layout />
   </div>
 </template>
 
 <script>
 import HeaderLayout from "./layout/Header";
+import FooterLayout from "./layout/FooterLayout";
 
 export default {
   components: {
-    HeaderLayout
+    HeaderLayout,
+    FooterLayout
   }
 };
 </script>
