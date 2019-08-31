@@ -8,7 +8,7 @@
         <img src="../assets/img/footer-right-pic.png" alt />
       </div>
       <a href="#" class="footer-logo">
-        <img src="../assets/img/logo.png" alt />
+        <img src="../assets/img/logo1.png" alt />
       </a>
       <ul class="main-menu footer-menu">
         <li>

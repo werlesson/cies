@@ -3,35 +3,29 @@
   <header class="header-section">
     <div class="header-warp">
       <div class="header-social d-flex justify-content-end">
-        <p>Follow us:</p>
-        <a href="#">
-          <i class="fa fa-pinterest"></i>
-        </a>
-        <a href="#">
+        <p>Siga-nos em nossas redes sociais:</p>
+        <a href="https://www.facebook.com/ciesoficial/">
           <i class="fa fa-facebook"></i>
         </a>
-        <a href="#">
-          <i class="fa fa-twitter"></i>
+        <a href="https://www.instagram.com/ciesoficial">
+          <i class="fa fa-instagram"></i>
         </a>
-        <a href="#">
-          <i class="fa fa-dribbble"></i>
-        </a>
-        <a href="#">
-          <i class="fa fa-behance"></i>
+        <a href="https://twitch.tv/MatheusTF7">
+          <i class="fa fa-twitch"></i>
         </a>
       </div>
       <div class="header-bar-warp d-flex">
         <!-- site logo -->
         <router-link to="/" class="site-logo">
-          <img src="../assets/img/logo.png" alt />
+          <img src="../assets/img/logo1.png" alt />
         </router-link>
         <nav class="top-nav-area w-100">
-          <div class="user-panel">
-            <a href>Login</a> /
-            <a href>Register</a>
+          <div class="user-panel pb-5">
+            <!-- <a href>Login</a> / -->
+            <a href="https://forms.gle/Qco39doRwpdHSNmg7">Registre-se Aqui!</a>
           </div>
           <!-- Menu -->
-          <ul class="main-menu primary-menu">
+          <!-- <ul class="main-menu primary-menu">
             <li>
               <router-link to="/">Home</router-link>
             </li>
@@ -52,7 +46,7 @@
             <li>
               <router-link to="/contact">Contact</router-link>
             </li>
-          </ul>
+          </ul> -->
         </nav>
       </div>
     </div>

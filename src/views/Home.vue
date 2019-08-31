@@ -1,6 +1,7 @@
 <template>
-  <div class="home">
-    <section class="hero-section overflow-hidden">
+  <div class="home">  
+  <!-- <link rel="stylesheet" href="../../public/css/home.css" /> -->
+    <!-- <section class="hero-section overflow-hidden">
       <div class="hero-slider owl-carousel">
         <div
           class="hero-item set-bg d-flex align-items-center justify-content-center text-center"
@@ -35,8 +36,9 @@
           </div>
         </div>
       </div>
-    </section>
-
+    </section> -->
+    <div class="space-top"></div>
+    <div class="imagem-fundo"></div>
     <section class="intro-section">
       <div class="container">
         <div class="row">
