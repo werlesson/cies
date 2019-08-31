@@ -1,6 +1,5 @@
 <template>
-  <div class="home">  
-  <!-- <link rel="stylesheet" href="../../public/css/home.css" /> -->
+  <div class="home">
     <!-- <section class="hero-section overflow-hidden">
       <div class="hero-slider owl-carousel">
         <div
@@ -38,7 +37,23 @@
       </div>
     </section> -->
     <div class="space-top"></div>
-    <div class="imagem-fundo"></div>
+    <div class="imagem-fundo">
+      <!-- <button class="site-btn">
+        subscribe
+        <img src="../assets/img/icons/double-arrow.png" alt="#" />
+      </button> -->
+      <div class="container text-center">
+        <h2 class="inscreva-se-h2">Inscrições Abertas!</h2>
+        <p class="inscreva-se-p">
+          As inscrições para a 3ª edição do campeonato de CS:GO do CIES
+          <br/>já estão abertas. clica no botão abaixo para se inscrever!
+        </p>
+        <a href="#" class="site-btn">
+          Inscreva-se Agora
+          <img src="../assets/img/icons/double-arrow.png" alt="#" />
+        </a>
+      </div>
+    </div>
     <section class="intro-section">
       <div class="container">
         <div class="row">
@@ -88,7 +103,7 @@
       </div>
     </section>
 
-    <section class="blog-section spad">
+    <!-- <section class="blog-section spad">
       <div class="container">
         <div class="row">
           <div class="col-xl-9 col-lg-8 col-md-7">
@@ -108,9 +123,9 @@
               <li>
                 <a href="#">Online</a>
               </li>
-            </ul>
+            </ul> -->
             <!-- Blog item -->
-            <div class="blog-item">
+            <!-- <div class="blog-item">
               <div class="blog-thumb">
                 <img src="../assets/img/blog/1.jpg" alt />
               </div>
@@ -126,9 +141,9 @@
                   <img src="../assets/img/icons/double-arrow.png" alt="#" />
                 </a>
               </div>
-            </div>
+            </div> -->
             <!-- Blog item -->
-            <div class="blog-item">
+            <!-- <div class="blog-item">
               <div class="blog-thumb">
                 <img src="../assets/img/blog/2.jpg" alt />
               </div>
@@ -144,9 +159,9 @@
                   <img src="../assets/img/icons/double-arrow.png" alt="#" />
                 </a>
               </div>
-            </div>
+            </div> -->
             <!-- Blog item -->
-            <div class="blog-item">
+            <!-- <div class="blog-item">
               <div class="blog-thumb">
                 <img src="../assets/img/blog/3.jpg" alt />
               </div>
@@ -253,9 +268,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section
+    <!-- <section
       class="intro-video-section set-bg d-flex align-items-end"
       data-setbg="./img/promo-bg.jpg"
     >
@@ -268,9 +283,9 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="featured-section">
+    <!-- <section class="featured-section">
       <div class="featured-bg set-bg" data-setbg="img/featured-bg.jpg"></div>
       <div class="featured-box">
         <div class="text-box">
@@ -286,20 +301,20 @@
           </a>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="newsletter-section">
-      <div class="container">
-        <h2>Subscribe to our newsletter</h2>
-        <form class="newsletter-form">
-          <input type="text" placeholder="ENTER YOUR E-MAIL" />
-          <button class="site-btn">
-            subscribe
-            <img src="../assets/img/icons/double-arrow.png" alt="#" />
-          </button>
-        </form>
-      </div>
-    </section>
+      <!-- <section class="newsletter-section">
+        <div class="container">
+          <h2>Subscribe to our newsletter</h2>
+          <form class="newsletter-form">
+            <input type="text" placeholder="ENTER YOUR E-MAIL" />
+            <button class="site-btn">
+              subscribe
+              <img src="../assets/img/icons/double-arrow.png" alt="#" />
+            </button>
+          </form>
+        </div>
+      </section> -->
   </div>
 </template>
 

@@ -25,7 +25,7 @@
             <a href="https://forms.gle/Qco39doRwpdHSNmg7">Registre-se Aqui!</a>
           </div>
           <!-- Menu -->
-          <!-- <ul class="main-menu primary-menu">
+          <ul class="main-menu primary-menu">
             <li>
               <router-link to="/">Home</router-link>
             </li>
@@ -44,9 +44,9 @@
               <router-link to="/blog">Blog</router-link>
             </li>
             <li>
-              <router-link to="/contact">Contact</router-link>
+              <router-link to="/contact">Local</router-link>
             </li>
-          </ul> -->
+          </ul>
         </nav>
       </div>
     </div>

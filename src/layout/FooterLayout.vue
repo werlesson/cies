@@ -10,7 +10,8 @@
       <a href="#" class="footer-logo">
         <img src="../assets/img/logo1.png" alt />
       </a>
-      <ul class="main-menu footer-menu">
+      <div class="pt-5"></div>
+      <!-- <ul class="main-menu footer-menu">
         <li>
           <a href>Home</a>
         </li>
@@ -26,22 +27,16 @@
         <li>
           <a href>Contact</a>
         </li>
-      </ul>
+      </ul> -->
       <div class="footer-social d-flex justify-content-center">
-        <a href="#">
-          <i class="fa fa-pinterest"></i>
-        </a>
-        <a href="#">
+        <a href="https://www.facebook.com/ciesoficial/">
           <i class="fa fa-facebook"></i>
         </a>
-        <a href="#">
-          <i class="fa fa-twitter"></i>
+        <a href="https://www.instagram.com/ciesoficial">
+          <i class="fa fa-instagram"></i>
         </a>
-        <a href="#">
-          <i class="fa fa-dribbble"></i>
-        </a>
-        <a href="#">
-          <i class="fa fa-behance"></i>
+        <a href="https://twitch.tv/MatheusTF7">
+          <i class="fa fa-twitch"></i>
         </a>
       </div>
       <div class="copyright">

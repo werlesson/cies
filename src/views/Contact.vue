@@ -1,7 +1,7 @@
 <template>
   <div class="contact">
     <!-- Page top section -->
-    <section class="page-top-section set-bg" data-setbg="img/page-top-bg/4.jpg">
+    <!-- <section class="page-top-section set-bg" data-setbg="img/page-top-bg/4.jpg">
       <div class="page-info">
         <h2>Contact</h2>
         <div class="site-breadcrumb">
@@ -9,20 +9,26 @@
           <span>Contact</span>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- Page top end-->
 
+    <div class="space-top"></div>
+
     <!-- Contact page -->
-    <section class="contact-page">
-      <div class="container">
+    <section class="contact-page pt-5 pb-5">
+      <div class="container text-white">
+        <h2>Onde irá ocorrer?</h2>
+        <p class="pl-5 pr-5 pb-5 pt-3">O evento irá ocorrer no IFCE Campus Aracati e é totalmente gratuito. Com o mapa abaixo você pode ver e se informar melhor sobre o local de realização do evento e se planejar
+          para chegar no local certo e no horário certo.
+        </p>
         <div class="map">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14376.077865872314!2d-73.879277264103!3d40.757667781624285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1546528920522"
+            src="https://maps.google.com/maps?q=ifce%20aracati&t=&z=17&ie=UTF8&iwloc=&output=embed"
             style="border:0"
             allowfullscreen
           ></iframe>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-lg-7 order-2 order-lg-1">
             <form class="contact-form">
               <input type="text" placeholder="Your name" />
@@ -57,13 +63,13 @@
               <div class="ci-text">hosting@contact.com</div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
     <!-- Contact page end-->
 
     <!-- Newsletter section -->
-    <section class="newsletter-section">
+    <!-- <section class="newsletter-section">
       <div class="container">
         <h2>Subscribe to our newsletter</h2>
         <form class="newsletter-form">
@@ -74,7 +80,7 @@
           </button>
         </form>
       </div>
-    </section>
+    </section> -->
   </div>
 </template>
 
