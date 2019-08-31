@@ -9,7 +9,7 @@
           <span>Contact</span>
         </div>
       </div>
-    </section> -->
+    </section>-->
     <!-- Page top end-->
 
     <div class="space-top"></div>
@@ -18,7 +18,8 @@
     <section class="contact-page pt-5 pb-5">
       <div class="container text-white">
         <h2>Onde irá ocorrer?</h2>
-        <p class="pl-5 pr-5 pb-5 pt-3">O evento irá ocorrer no IFCE Campus Aracati e é totalmente gratuito. Com o mapa abaixo você pode ver e se informar melhor sobre o local de realização do evento e se planejar
+        <p class="pl-5 pr-5 pb-5 pt-3">
+          O evento irá ocorrer no IFCE Campus Aracati e é totalmente gratuito. Com o mapa abaixo você pode ver e se informar melhor sobre o local de realização do evento e se planejar
           para chegar no local certo e no horário certo.
         </p>
         <div class="map">
@@ -63,7 +64,7 @@
               <div class="ci-text">hosting@contact.com</div>
             </div>
           </div>
-        </div> -->
+        </div>-->
       </div>
     </section>
     <!-- Contact page end-->
@@ -80,7 +81,7 @@
           </button>
         </form>
       </div>
-    </section> -->
+    </section>-->
   </div>
 </template>
 
@@ -88,5 +89,8 @@
 export default {};
 </script>
 
-<style>
+<style lang="scss" scoped>
+.contact {
+  margin-top: 100px;
+}
 </style>

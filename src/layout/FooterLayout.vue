@@ -8,7 +8,7 @@
         <img src="../assets/img/footer-right-pic.png" alt />
       </div>
       <a href="#" class="footer-logo">
-        <img src="../assets/img/logo1.png" alt />
+        <img src="../assets/img/cies-logo-white.svg" width="100" alt />
       </a>
       <div class="pt-5"></div>
       <!-- <ul class="main-menu footer-menu">
@@ -27,7 +27,7 @@
         <li>
           <a href>Contact</a>
         </li>
-      </ul> -->
+      </ul>-->
       <div class="footer-social d-flex justify-content-center">
         <a href="https://www.facebook.com/ciesoficial/">
           <i class="fa fa-facebook"></i>
