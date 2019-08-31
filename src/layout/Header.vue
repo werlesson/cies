@@ -61,6 +61,7 @@ header {
   align-items: center;
   justify-content: center;
   padding: 15px 40px;
+  height: 100%;
   nav {
     display: flex;
     flex-direction: row-reverse;

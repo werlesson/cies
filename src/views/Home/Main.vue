@@ -45,6 +45,7 @@ export default {
   background-size: cover;
   padding-top: 200px;
   text-align: center;
+  transition: all 0.3s linear;
 
   h2 {
     font-size: 3.5rem;
@@ -58,6 +59,26 @@ export default {
       text-align: center;
       margin: 0;
       color: white;
+    }
+  }
+
+  a {
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .main-section {
+    padding-top: 0px;
+    height: 500px;
+    h2 {
+      font-size: 2.5rem;
+      color: white;
+      text-align: center;
+    }
+
+    a {
+      margin-bottom: 10px;
     }
   }
 }
