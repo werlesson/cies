@@ -29,7 +29,7 @@
             <li>
               <router-link to="/">Home</router-link>
             </li>
-            <li>
+            <!-- <li>
               <router-link to="/games">Games</router-link>
               <ul class="sub-menu">
                 <li>
@@ -42,9 +42,9 @@
             </li>
             <li>
               <router-link to="/blog">Blog</router-link>
-            </li>
+            </li> -->
             <li>
-              <router-link to="/contact">Local</router-link>
+              <router-link to="/contact">Local do Evento</router-link>
             </li>
           </ul>
         </nav>

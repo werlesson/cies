@@ -43,3 +43,9 @@
     right: 50px;
     bottom: 0px !important;
 }
+
+hr{
+    height: 0;
+    width: 100%;
+    border-top: 1px solid rgb(255, 9, 247);
+}
