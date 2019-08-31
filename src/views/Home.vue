@@ -49,7 +49,7 @@
           <br/>já estão abertas de 01/09/2019 até 13/09/2019.
           <br/> clica no botão abaixo para se inscrever!
         </p>
-        <a href="#" class="site-btn">
+        <a href="https://forms.gle/J7mPvQHRHRgNKte89" class="site-btn">
           Inscreva-se Agora
           <img src="../assets/img/icons/double-arrow.png" alt="#" />
         </a>
