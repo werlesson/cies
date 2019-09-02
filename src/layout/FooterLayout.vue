@@ -7,10 +7,15 @@
       <div class="footer-right-pic">
         <img src="../assets/img/footer-right-pic.png" alt />
       </div>
-      <a href="#" class="footer-logo">
-        <img src="../assets/img/cies-logo-white.svg" width="100" alt />
-      </a>
-      <div class="pt-5"></div>
+      <div>
+        <a href="#" class="footer-logo">
+          <img src="../assets/img/cies-logo-white.svg" width="100" alt />
+          
+        </a>
+        <p class="text-white pt-2">Copa IFCE de e-sports</p>
+      </div>
+
+      <!-- <div class="pt-5"></div> -->
       <!-- <ul class="main-menu footer-menu">
         <li>
           <a href>Home</a>
@@ -30,13 +35,13 @@
       </ul>-->
       <div class="footer-social d-flex justify-content-center">
         <a href="https://www.facebook.com/ciesoficial/">
-          <i class="fa fa-facebook"></i>
+          <i class="fa fa-facebook fa-2x"></i>
         </a>
         <a href="https://www.instagram.com/ciesoficial">
-          <i class="fa fa-instagram"></i>
+          <i class="fa fa-instagram fa-2x"></i>
         </a>
         <a href="https://twitch.tv/MatheusTF7">
-          <i class="fa fa-twitch"></i>
+          <i class="fa fa-twitch fa-2x"></i>
         </a>
       </div>
       <div class="copyright">
