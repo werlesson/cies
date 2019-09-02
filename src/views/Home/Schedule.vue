@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-md-4">
           <div class="intro-text-box text-box text-white">
-            <div class="top-meta">02/09 à 13/09/2019 - Inscrições</div>
+            <div class="top-meta">02/09 a 13/09/2019 - Inscrições</div>
             <h3>Inscrições Abertas!</h3>
             <p>
               Durante este período, poderão ser inscritos membros individuais ou equipes de no mínimo 2 membros. Vale ressaltar que para confirmação da incrição cada um dos membros
@@ -26,11 +26,11 @@
         </div>
         <div class="col-md-4">
           <div class="intro-text-box text-box text-white">
-            <div class="top-meta">14/09 à 16/09/2019 - Formação dos Times</div>
+            <div class="top-meta">14/09 a 16/09/2019 - Formação dos Times</div>
             <h3>Hora de formar os Times</h3>
             <p>
               Durante este período ocorrerá a formação dos times. Jogadores que se inscreverão individualmente ou equipes com menos de 5 jogadores serão completadas randomicamente
-              com outros jogadores. O processo de formação das equipes se dará entre os 14.09.2019 à 16.09.2019 e será feito internamente pela comissão organizadora do evento.
+              com outros jogadores. O processo de formação das equipes se dará entre os 14.09.2019 a 16.09.2019 e será feito internamente pela comissão organizadora do evento.
             </p>
             <!-- <a href="#" class="read-more">
                 Read More
@@ -60,11 +60,11 @@
 
         <div class="col-md-4 pt-5">
           <div class="intro-text-box text-box text-white">
-            <div class="top-meta">20/09 à 20/10/2019 - Etapa Online</div>
+            <div class="top-meta">20/09 a 20/10/2019 - Etapa Online</div>
             <h3>Finalmente! Hora de Jogar.</h3>
             <p>
               Durante este período, deverão ocorrer os jogos conforme apresentados na tabela do campeonato. Os confrontos irão ocorrer no formato MD1 e serão executados na plataforma da
-              Gamers Club. Com formato MD1, os times terão apenas uma chance de avançar à próxima fase, sendo a derrota, consequência de eliminação.
+              Gamers Club. Com formato MD1, os times terão apenas uma chance de avançar a próxima fase, sendo a derrota, consequência de eliminação.
             </p>
             <!-- <a href="#" class="read-more">
                 Não sabe como chegar? Clique aqui!
