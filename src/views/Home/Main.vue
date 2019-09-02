@@ -6,7 +6,7 @@
     </div>
     <a :href="subscription.link" class="site-btn">
       {{subscription.value}}
-      <img src="../../assets/img/icons/double-arrow.png" alt="#" />
+      <img src="@/assets/img/icons/double-arrow.png" alt="#" />
     </a>
   </section>
 </template>
