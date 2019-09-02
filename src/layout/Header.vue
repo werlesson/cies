@@ -1,6 +1,6 @@
 <template>
   <header class="header-section">
-    <nav class="navbar navbar-expand-lg header-bar-warp d-flex">
+    <nav class="navbar navbar-expand-lg d-flex navbar-light">
       <router-link to="/" class="site-logo navbar-brand">
         <img src="../assets/img/cies-logo-white.svg" alt />
       </router-link>
@@ -17,7 +17,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 main-menu primary-menu">
+        <ul class="navbar-nav ml-auto mt-lg-0 main-menu primary-menu">
           <li>
             <router-link to="/">Home</router-link>
           </li>
@@ -38,7 +38,10 @@
           </li>-->
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <a class="btn-register" href="https://forms.gle/Qco39doRwpdHSNmg7">Inscreva-se!</a>
+          <a
+            class="btn-register ml-auto mr-auto"
+            href="https://forms.gle/Qco39doRwpdHSNmg7"
+          >Inscreva-se!</a>
         </form>
       </div>
     </nav>
@@ -55,21 +58,25 @@ header {
   height: 100px;
   padding: 0;
 }
-.header-bar-warp {
-  display: flex;
-  align-items: center;
-  // justify-content: center;
-  padding: 15px 40px;
-  height: 100%;
-  nav {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: flex-start;
-    .main-menu li a {
-      padding-bottom: 0;
-    }
-  }
+// .header-bar-warp {
+//   display: flex;
+//   align-items: center;
+//   // justify-content: center;
+//   padding: 15px 40px;
+//   height: 100%;
+//   nav {
+//     display: flex;
+//     flex-direction: row-reverse;
+//     align-items: center;
+//     justify-content: flex-start;
+//     .main-menu li a {
+//       padding-bottom: 0;
+//     }
+//   }
+// }
+
+.navbar {
+  background-color: rgb(8, 22, 36);
 }
 
 .btn-register {
@@ -89,12 +96,13 @@ header {
   width: 75px;
 }
 
-.navbar-collapse.show {
-  background-color: rgb(8, 22, 36);
-  padding: 20px;
-  position: absolute;
-  top: 100px;
-  width: 100%;
-  left: 0px;
+.main-menu li a {
+  padding-bottom: 0px;
+}
+
+@media screen and (max-width: 992px) {
+  .main-menu li a {
+    padding-bottom: 28px;
+  }
 }
 </style>
