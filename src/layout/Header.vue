@@ -19,7 +19,7 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav ml-auto mt-lg-0 main-menu primary-menu">
           <li>
-            <router-link to="/">Home</router-link>
+            <router-link to="/">Página Inicial</router-link>
           </li>
           <li>
             <router-link to="/contact">Local do Evento</router-link>
