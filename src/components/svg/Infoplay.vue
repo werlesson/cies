@@ -87,17 +87,13 @@ export default {};
   width: 100%;
   transition: all 0.35s ease;
 
-  #infoplay {
-    box-shadow: 3px, 3px, 3px, rgba(black, 0.2);
-  }
-
   * {
     path {
       transition: all 0.5s ease;
     }
   }
   &:hover {
-    transform: scale(0.98);
+    transform: scale(0.99);
     #Info,
     #Logo {
       path,

@@ -10,7 +10,8 @@
         <infoplay />
       </div>
       <div class="col-md-4 pt-2">
-        <img src="../../assets/img/patrocinio/netonda.png" alt />
+        <!-- <img src="../../assets/img/patrocinio/netonda.png" alt /> -->
+        <netonda />
       </div>
     </div>
   </section>
@@ -18,9 +19,11 @@
 
 <script>
 import Infoplay from "@/components/svg/Infoplay";
+import Netonda from "@/components/svg/Netonda";
 export default {
   components: {
-    Infoplay
+    Infoplay,
+    Netonda
   }
 };
 </script>
