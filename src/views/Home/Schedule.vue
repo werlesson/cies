@@ -2,7 +2,7 @@
   <section class="intro-section pt-5">
     <div class="container">
       <h2 class="text-white pb-5">Datas Importantes</h2>
-      <div class="row text-justify">
+      <div class="row">
         <div class="col-md-4">
           <div class="intro-text-box text-box text-white">
             <div class="top-meta">02/09 à 13/09/2019 - Inscrições</div>
