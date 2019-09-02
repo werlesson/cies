@@ -5,7 +5,7 @@
       <div class="row text-justify">
         <div class="col-md-4">
           <div class="intro-text-box text-box text-white">
-            <div class="top-meta">01/09 à 13/09/2019 - Inscrições</div>
+            <div class="top-meta">02/09 à 13/09/2019 - Inscrições</div>
             <h3>Inscrições Abertas!</h3>
             <p>
               Durante este período, poderão ser inscritos membros individuais ou equipes de no mínimo 2 membros. Vale ressaltar que para confirmação da incrição cada um dos membros
