@@ -39,7 +39,7 @@
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <a
-            class="btn-register ml-auto mr-auto"
+            class="btn-register ml-auto mr-auto btn-block text-center"
             href="https://forms.gle/Qco39doRwpdHSNmg7"
           >Inscreva-se!</a>
         </form>

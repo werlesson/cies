@@ -6,7 +6,8 @@
         <img src="../../assets/img/patrocinio/ifce.png" alt />
       </div>
       <div class="col-md-4 pt-2">
-        <img src="../../assets/img/patrocinio/infoplay.png" alt />
+        <!-- <img src="../../assets/img/patrocinio/infoplay.svg" alt /> -->
+        <infoplay />
       </div>
       <div class="col-md-4 pt-2">
         <img src="../../assets/img/patrocinio/netonda.png" alt />
@@ -16,7 +17,12 @@
 </template>
 
 <script>
-export default {};
+import Infoplay from "@/components/svg/Infoplay";
+export default {
+  components: {
+    Infoplay
+  }
+};
 </script>
 
 <style lang="scss" scoped>
