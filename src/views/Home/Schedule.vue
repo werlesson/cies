@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-md-4">
           <div class="intro-text-box text-box text-white">
-            <div class="top-meta">01.09 à 13.09.2019 - Inscrições</div>
+            <div class="top-meta">01/09 à 13/09/2019 - Inscrições</div>
             <h3>Inscrições Abertas!</h3>
             <p>
               Durante este período, poderão ser inscritos membros individuais ou equipes de no mínimo 2 membros. Vale ressaltar que para confirmação da incrição cada um dos membros
@@ -26,7 +26,7 @@
         </div>
         <div class="col-md-4">
           <div class="intro-text-box text-box text-white">
-            <div class="top-meta">14.09 à 16.09.2019 - Formação dos Times</div>
+            <div class="top-meta">14/09 à 16/09/2019 - Formação dos Times</div>
             <h3>Hora de formar os Times</h3>
             <p>
               Durante este período ocorrerá a formação dos times. Jogadores que se inscreverão individualmente ou equipes com menos de 5 jogadores serão completadas randomicamente
@@ -40,7 +40,7 @@
         </div>
         <div class="col-md-4">
           <div class="intro-text-box text-box text-white">
-            <div class="top-meta">17.09.19 - Divulgação dos Times e da Tabela</div>
+            <div class="top-meta">17/09/19 - Divulgação da Tabela e Times</div>
             <h3>Meu Time e Contra quem irei jogar.</h3>
             <p>
               Após a formação dos times ocorrerá a divulgação dos mesmos bem como a elaboração e divulgação da tabela oficial dos jogos do campeonato. A table irá dispor quais
@@ -60,7 +60,7 @@
 
         <div class="col-md-4 pt-5">
           <div class="intro-text-box text-box text-white">
-            <div class="top-meta">20.09 à 20.10.2019 - Etapa Online</div>
+            <div class="top-meta">20/09 à 20/10/2019 - Etapa Online</div>
             <h3>Finalmente! Hora de Jogar.</h3>
             <p>
               Durante este período, deverão ocorrer os jogos conforme apresentados na tabela do campeonato. Os confrontos irão ocorrer no formato MD1 e serão executados na plataforma da
@@ -74,7 +74,7 @@
         </div>
         <div class="col-md-4 pt-5">
           <div class="intro-text-box text-box text-white">
-            <div class="top-meta">26.10.2019 - Etapa Local</div>
+            <div class="top-meta">26/10/2019 - Etapa Local</div>
             <h3>We Are The Champions, my Friends! A Final</h3>
             <p>
               Finalmente chegamos ao último dia de campeonato. Um detalhe importante que vale ser ressaltado é que, diferentemente da etapa anterior, a final será realizada localmente
