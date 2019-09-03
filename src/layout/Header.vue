@@ -2,8 +2,7 @@
   <header
     class="header-section"
     :class="{
-      'header--hidden': hideHeader,
-      'bg-blue': lastScrollPosition > OFFSET && !hideHeader
+      'bg-blue': lastScrollPosition >= OFFSET
     }"
   >
     <nav class="navbar navbar-expand-lg d-flex navbar-light">
@@ -162,6 +161,10 @@ header {
 @media screen and (max-width: 992px) {
   .main-menu li a {
     padding-bottom: 28px;
+  }
+
+  .navbar {
+    background-color: rgb(8, 22, 36);
   }
 }
 </style>
