@@ -84,7 +84,6 @@ export default {};
 
 <style lang="scss" scoped>
 .svg-image {
-  width: 100%;
   transition: all 0.35s ease;
 
   * {
