@@ -7,7 +7,7 @@
     </div>
     <div v-if="showVideo" @click="toggleVideo()" class="video-frame">
       <iframe
-        src="https://www.youtube.com/embed/edYCtaNueQY?start=10?autoplay=1"
+        src="https://www.youtube.com/embed/1do3Q90r5lQ"
         frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
