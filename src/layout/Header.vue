@@ -1,5 +1,11 @@
 <template>
-  <header class="header-section">
+  <header
+    class="header-section"
+    :class="{
+      'header--hidden': hideHeader,
+      'bg-blue': lastScrollPosition > OFFSET && !hideHeader
+    }"
+  >
     <nav class="navbar navbar-expand-lg d-flex navbar-light">
       <router-link to="/" class="site-logo navbar-brand">
         <img src="../assets/img/cies-logo-white.svg" alt />
@@ -37,11 +43,12 @@
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
           </li>-->
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <form class="form-inline my-2 my-lg-0" v-if="isAvailableToSubscribe">
           <a
             class="btn-register ml-auto mr-auto btn-block text-center"
             href="https://forms.gle/Qco39doRwpdHSNmg7"
-          >Inscreva-se!</a>
+            >Inscreva-se!</a
+          >
         </form>
       </div>
     </nav>
@@ -49,7 +56,49 @@
 </template>
 
 <script>
-export default {};
+import { mapGetters } from "vuex";
+
+export default {
+  data() {
+    return {
+      hideHeader: false,
+      lastScrollPosition: 0,
+      OFFSET: 30
+    };
+  },
+
+  computed: {
+    ...mapGetters(["isAvailableToSubscribe"])
+  },
+
+  mounted() {
+    this.lastScrollPosition = window.pageYOffset;
+    window.addEventListener("scroll", this.onScroll);
+    const viewportMeta = document.createElement("meta");
+    viewportMeta.name = "viewport";
+    viewportMeta.content = "width=device-width, initial-scale=1";
+    document.head.appendChild(viewportMeta);
+  },
+
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.onScroll);
+  },
+
+  methods: {
+    onScroll() {
+      if (window.pageYOffset < 0) {
+        return;
+      }
+      if (
+        Math.abs(window.pageYOffset - this.lastScrollPosition) < this.OFFSET
+      ) {
+        return;
+      }
+      this.hideHeader = window.pageYOffset > this.lastScrollPosition;
+      this.lastScrollPosition = window.pageYOffset;
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -75,8 +124,18 @@ header {
 //   }
 // }
 
-.navbar {
-  background-color: rgb(8, 22, 36);
+header {
+  background-color: transparent;
+  transform: translate3d(0, 0, 0);
+  transition: 0.3s all ease-out;
+
+  &.header--hidden {
+    box-shadow: none;
+    transform: translate3d(0, -100%, 0);
+  }
+  &.bg-blue {
+    background-color: rgb(8, 22, 36);
+  }
 }
 
 .btn-register {
