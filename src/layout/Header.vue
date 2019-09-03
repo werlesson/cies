@@ -2,7 +2,7 @@
   <header
     class="header-section"
     :class="{
-      'bg-blue': lastScrollPosition >= OFFSET
+      transparent: $route.path == '/' && lastScrollPosition < OFFSET
     }"
   >
     <nav class="navbar navbar-expand-lg d-flex navbar-light">
@@ -60,7 +60,6 @@ import { mapGetters } from "vuex";
 export default {
   data() {
     return {
-      hideHeader: false,
       lastScrollPosition: 0,
       OFFSET: 30
     };
@@ -93,7 +92,6 @@ export default {
       ) {
         return;
       }
-      this.hideHeader = window.pageYOffset > this.lastScrollPosition;
       this.lastScrollPosition = window.pageYOffset;
     }
   }
@@ -124,16 +122,11 @@ header {
 // }
 
 header {
-  background-color: transparent;
-  transform: translate3d(0, 0, 0);
+  background-color: rgb(8, 22, 36);
   transition: 0.3s all ease-out;
 
-  &.header--hidden {
-    box-shadow: none;
-    transform: translate3d(0, -100%, 0);
-  }
-  &.bg-blue {
-    background-color: rgb(8, 22, 36);
+  &.transparent {
+    background-color: transparent;
   }
 }
 
