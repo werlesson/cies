@@ -75,10 +75,10 @@
         <div class="col-md-4 pt-5">
           <div class="intro-text-box text-box text-white">
             <div class="top-meta">26/10/2019 - Etapa Local</div>
-            <h3>We Are The Champions, my Friends! A Final</h3>
+            <h3>We Are The Champions, my Friends! Semifinal e Final</h3>
             <p>
-              Finalmente chegamos ao último dia de campeonato. Um detalhe importante que vale ser ressaltado é que, diferentemente da etapa anterior, a final será realizada localmente
-              no IFCE Campus Aracatí e ocorrerá no formato MD3 onde o vencedor será aquele que acumular 2 vitórias de um total de 3 partidas.
+              Finalmente chegamos ao último dia de campeonato. Neste dia, ocorrerá a semifinal e a final. Um detalhe importante que vale ser ressaltado é que, a semifinal e a final serão realizadas localmente
+              no IFCE Campus Aracatí. A semifinal manterá o formato MD1, já a final será no formato MD3 onde o vencedor será aquele que acumular 2 vitórias de um total de 3 partidas.
             </p>
             <!-- <a href="#" class="read-more">
                 Read More
