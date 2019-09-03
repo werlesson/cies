@@ -1,69 +1,108 @@
 <template>
   <section class="main-section">
-    <h2>{{title}}</h2>
-    <div class="description">
-      <p v-for="(text, index) in description" :key="index">{{text}}</p>
-    </div>
-    <a :href="subscription.link" class="site-btn">
-      {{subscription.value}}
-      <img src="@/assets/img/icons/double-arrow.png" alt="#" />
-    </a>
+    <section class="available" v-if="isAvailableToSubscribe">
+      <h2>Inscrições Abertas!</h2>
+
+      <countdown :date="deadline"></countdown>
+
+      <div class="description">
+        <p>Terceira edição da copa CS:GO</p>
+        <p>Disponível até 13/09/2019</p>
+        <p>Copa IFCE de eSports</p>
+      </div>
+
+      <a href="https://forms.gle/J7mPvQHRHRgNKte89" class="site-btn">
+        Inscreva-se agora!
+        <img src="@/assets/img/icons/double-arrow.png" alt="#" />
+      </a>
+
+      <div class="background"></div>
+    </section>
+
+    <section class="unavailable" v-else>
+      <h2>Inscrições Encerradas</h2>
+
+      <!-- <div class="description">
+        <p>Mensagem pra quem chegou tarde</p></p>
+      </div>-->
+
+      <div class="background"></div>
+    </section>
   </section>
 </template>
-    
+
 <script>
+import { mapGetters } from "vuex";
+import Countdown from "@/components/Countdown";
+
 export default {
-  data() {
-    return {
-      title: "Inscrições Abertas!",
-      description: [
-        "As inscrições para a 3ª edição do campeonato de CS:GO do CIES",
-        "já estão abertas de 01/09/2019 até 13/09/2019.",
-        "Clique no botão abaixo para se inscrever!"
-      ],
-      subscription: {
-        value: " Inscreva-se agora!",
-        link: "https://forms.gle/J7mPvQHRHRgNKte89"
-      }
-    };
+  components: {
+    Countdown
+  },
+
+  computed: {
+    ...mapGetters(["deadline", "isAvailableToSubscribe"])
   }
 };
 </script>
 
 <style lang="scss" scoped>
 .main-section {
-  margin-top: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 600px;
-  background-color: #cccccc;
-  background-image: url("~@/assets/img/background-cs.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-top: 200px;
-  text-align: center;
-  transition: all 0.3s linear;
-
-  h2 {
-    font-size: 3.5rem;
-    color: white;
+  .available,
+  .unavailable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: transparent;
     text-align: center;
-  }
+    transition: all 0.3s linear;
 
-  .description {
-    margin: 10px 0 50px 0;
-    p {
-      text-align: center;
-      margin: 0;
+    h2 {
+      font-size: 3.5rem;
       color: white;
+      text-align: center;
+    }
+
+    .description {
+      margin: 10px 0 50px 0;
+      p {
+        text-align: center;
+        margin: 0;
+        color: white;
+      }
+    }
+
+    a {
+      margin-bottom: 40px;
+
+      &:hover ~ div.background {
+        filter: none;
+      }
+    }
+
+    div.background {
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-image: url("~@/assets/img/background-cs.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      filter: saturate(30%);
+      transition: all 0.3s linear;
     }
   }
 
-  a {
-    margin-bottom: 40px;
+  .unavailable {
+    div.background {
+      background-image: url("~@/assets/img/bg-unavailable.png");
+      filter: brightness(50%);
+    }
   }
 }
 
