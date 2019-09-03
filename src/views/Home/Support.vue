@@ -68,7 +68,7 @@ export default {
       width: 120px;
     }
     .ifce {
-      width: 180px;
+      width: 220px;
     }
     .lar {
       width: 140px;
