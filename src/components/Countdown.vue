@@ -111,4 +111,31 @@ export default {
     text-align: center;
   }
 }
+
+@media screen and (max-width: 992px) {
+  .countdown {
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    & .text {
+      margin: 0px;
+    }
+    & .digit {
+      font-size: 100px;
+      margin: 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .countdown {
+    & .text {
+      font-size: 17px;
+    }
+    & .digit {
+      font-size: 70px;
+      line-height: 1;
+    }
+  }
+}
 </style>

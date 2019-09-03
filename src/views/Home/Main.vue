@@ -55,6 +55,7 @@ export default {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    padding-top: 120px;
     background-color: transparent;
     text-align: center;
     transition: all 0.3s linear;
@@ -106,19 +107,35 @@ export default {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media screen and (max-width: 992px) {
   .main-section {
-    padding-top: 0px;
-    height: 500px;
-    h2 {
-      font-size: 2.5rem;
-      color: white;
-      text-align: center;
-    }
+    .available,
+    .unavailable {
+      h2 {
+        font-size: 2.5rem;
+      }
 
-    a {
-      margin-bottom: 10px;
+      .description {
+        display: none;
+      }
+
+      a {
+        margin-bottom: 50px;
+      }
     }
   }
+  // .main-section {
+  //   padding-top: 0px;
+  //   height: 500px;
+  //   h2 {
+  //     font-size: 2.5rem;
+  //     color: white;
+  //     text-align: center;
+  //   }
+
+  //   a {
+  //     margin-bottom: 10px;
+  //   }
+  // }
 }
 </style>
