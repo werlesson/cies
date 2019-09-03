@@ -46,8 +46,7 @@
           <a
             class="btn-register ml-auto mr-auto btn-block text-center"
             href="https://forms.gle/Qco39doRwpdHSNmg7"
-            >Inscreva-se!</a
-          >
+          >Inscreva-se!</a>
         </form>
       </div>
     </nav>
@@ -154,6 +153,8 @@ header {
 @media screen and (max-width: 992px) {
   .main-menu li a {
     padding-bottom: 28px;
+    padding-right: 0 !important;
+    margin-right: 0;
   }
 
   .navbar {
