@@ -12,8 +12,6 @@
     </section>-->
     <!-- Page top end-->
 
-    <div class="space-top"></div>
-
     <!-- Contact page -->
     <section class="contact-page pt-5 pb-5">
       <div class="container text-white">

@@ -11,7 +11,7 @@
               Durante este período, poderão ser inscritos membros individuais ou equipes de no mínimo 2 membros. Vale ressaltar que para confirmação da incrição cada um dos membros
               da equipe se dará através da doação de 1KG de alimento não perecível. A coleta destes alimentos será feita na recepção do campus IFCE Aracatí.
             </p>
-            <router-link to="/contact" class="read-more">
+            <router-link to="/local" class="read-more">
               Não sabe como chegar? Clique aqui!
               <img
                 src="../../assets/img/icons/double-arrow.png"

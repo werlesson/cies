@@ -2,10 +2,11 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home";
 import Blog from "./views/Blog";
-import Contact from "./views/Contact";
+import Local from "./views/Local";
 import Games from "./views/Games";
 import GameSingle from "./views/GameSingle";
 import Review from "./views/Review";
+import About from "./views/About";
 
 
 Vue.use(Router);
@@ -24,9 +25,9 @@ export default new Router({
       component: Blog
     },
     {
-      path: "/contact",
-      name: "contact",
-      component: Contact
+      path: "/local",
+      name: "local",
+      component: Local
     },
     {
       path: "/games",
@@ -42,6 +43,12 @@ export default new Router({
       path: "/review",
       name: "review",
       component: Review
+    }
+    ,
+    {
+      path: "/about",
+      name: "about",
+      component: About
     }
     // {
     //   path: "/about",

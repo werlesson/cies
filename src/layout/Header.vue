@@ -23,19 +23,16 @@
 
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav ml-auto mt-lg-0 main-menu primary-menu">
-          <li>
+          <li class="active">
             <router-link to="/">Página Inicial</router-link>
           </li>
           <li>
-            <router-link to="/contact">Local do Evento</router-link>
+            <router-link to="/local">Local do Evento</router-link>
           </li>
-          <!-- <li class="nav-item active">
-            <a class="nav-link" href="#">
-              Home
-              <span class="sr-only">(current)</span>
-            </a>
+          <li>
+            <router-link to="/about">Sobre</router-link>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
           </li>
           <li class="nav-item">
