@@ -6,7 +6,7 @@
         A Copa IFCE de e-Sports – CIES é um evento esportivo de jogos digitais que ocorre periodicamente no IFCE - Campus
           Aracati e em breve, Maracanaú. Um dos seus objetivos é proporcionar integração entre a acadêmia e comunidade promovendo 
           interação social, desportividade e incentivando a boa conduta com outros jogadores.
-          <br>
+          <br/>
           O projeto CIES não possui fins lucrativos e é incentivado e apoiado pelo IFCE Campus Aracati e coordenado por Docentes, Discentes e voluntários que
           se propõem a contribuir com o crescimento do evento e difusão do mesmo.
       </p>
