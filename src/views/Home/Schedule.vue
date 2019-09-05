@@ -30,7 +30,7 @@
             <h3>Hora de formar os Times</h3>
             <p>
               Durante este período ocorrerá a formação dos times. Jogadores que se inscreveram individualmente ou equipes com menos de 5 jogadores serão completadas randomicamente
-              com outros jogadores. O processo de formação das equipes se dará entre os 14.09.2019 a 16.09.2019 e será feito internamente pela comissão organizadora do evento.
+              com outros jogadores. O processo de formação das equipes se dará entre os dias 14.09.2019 a 16.09.2019 e será feito internamente pela comissão organizadora do evento.
             </p>
             <!-- <a href="#" class="read-more">
                 Read More
