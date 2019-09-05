@@ -8,8 +8,9 @@
             <div class="top-meta">02/09 a 13/09/2019 - Inscrições</div>
             <h3>Inscrições Abertas!</h3>
             <p>
-              Durante este período, poderão ser inscritos membros individuais ou equipes de no mínimo 2 membros. Vale ressaltar que para confirmação da incrição cada um dos membros
-              da equipe se dará através da doação de 1KG de alimento não perecível. A coleta destes alimentos será feita na recepção do campus IFCE Aracatí.
+              Durante este período, poderão ser inscritos membros individuais ou equipes de no mínimo 2 membros. Vale ressaltar que a confirmação da incrição cada um dos membros
+              da equipe se dará através da doação de 1KG de alimento não perecível. A coleta destes alimentos será feita na recepção do campus IFCE Aracatí e <strong>TODOS</strong>
+              os alimentos arrecadados serão doados.
             </p>
             <router-link to="/local" class="read-more">
               Não sabe como chegar? Clique aqui!
