@@ -8,10 +8,9 @@
         <img src="../assets/img/footer-right-pic.png" alt />
       </div>
       <div>
-        <a href="#" class="footer-logo">
+        <router-link class="footer-logo" to="/">
           <img src="../assets/img/cies-logo-white.svg" width="100" alt />
-          
-        </a>
+        </router-link>
         <p class="text-white pt-2">Copa IFCE de e-sports</p>
       </div>
 
