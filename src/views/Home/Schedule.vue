@@ -1,7 +1,7 @@
 <template>
   <section class="intro-section pt-5">
     <div class="container">
-      <h2 class="text-white pb-5">Datas Importantes</h2>
+      <h2 class="text-white pb-5">Datas e Ingormações Importantes Sobre a Competição</h2>
       <div class="row">
         <div class="col-md-4">
           <div class="intro-text-box text-box text-white">
@@ -30,8 +30,9 @@
             <div class="top-meta">14/09 a 16/09/2019 - Formação dos Times</div>
             <h3>Hora de formar os Times</h3>
             <p>
-              Durante este período ocorrerá a formação dos times. Jogadores que se inscreveram individualmente ou equipes com menos de 5 jogadores serão completadas randomicamente
-              com outros jogadores. O processo de formação das equipes se dará entre os dias 14.09.2019 a 16.09.2019 e será feito internamente pela comissão organizadora do evento.
+              Durante este período ocorrerá a formação dos times. Essa fase é exclusiva para jogadores que se inscreveram individualmente ou equipes com menos de 5 jogadores.
+              A organização criará um grupo do whatsapp para formar os time. A formação das equipes se dará pelos próprios jogadores (ou randomicamente, caso não haja um consenso).
+              O processo de formação das equipes se dará entre os dias 14.09.2019 a 16.09.2019 e será feito internamente pela comissão organizadora do evento.
             </p>
             <!-- <a href="#" class="read-more">
                 Read More
@@ -45,7 +46,8 @@
             <h3>Meu Time e Contra quem irei jogar.</h3>
             <p>
               Após a formação dos times ocorrerá a divulgação dos mesmos bem como a elaboração e divulgação da tabela oficial dos jogos do campeonato. A table irá dispor quais
-              times irão se enfrentar. Vale ressaltar que a primeira fase será online e os jogos serão feitos na plataforma da Gamers Club.
+              times irão se enfrentar. Será criado um grupo no whatsapp (também será enviado um email, mas o grupo possui mais agilidade) com os capitães para repassar informações
+               mais detalhadas aos jogadores. Vale ressaltar que a primeira fase será online e os jogos serão feitos na plataforma da Gamers Club.
             </p>
             <a href="https://gamersclub.com.br" class="read-more">
               Não conhece a plataforma da GC?
@@ -64,8 +66,9 @@
             <div class="top-meta">20/09 a 20/10/2019 - Etapa Online</div>
             <h3>Finalmente! Hora de Jogar.</h3>
             <p>
-              Durante este período, deverão ocorrer os jogos conforme apresentados na tabela do campeonato. Os confrontos irão ocorrer no formato MD1 e serão executados na plataforma da
-              Gamers Club. Com formato MD1, os times terão apenas uma chance de avançar a próxima fase, sendo a derrota, consequência de eliminação.
+              Durante este período, deverão ocorrer os jogos conforme apresentados na tabela do campeonato. Os confrontos irão ocorrer no formato MD1 e serão executados online,
+               na plataforma da <a href="https://gamersclub.com.br">Gamers Club</a>. É interessante que as equipes e jogadores que ainda não conhecem a plataforma, entrem previamente
+               e se preparem para evitar atrasos na hora de criar a partida. Peguem o perfil de todos os companheiros e montem seus times na GC.
             </p>
             <!-- <a href="#" class="read-more">
                 Não sabe como chegar? Clique aqui!
@@ -111,3 +114,8 @@
 <script>
 export default {};
 </script>
+<style lang="scss" scoped>
+a {
+  color: #B01BA5 !important;
+}
+</style>
