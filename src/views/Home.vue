@@ -2,6 +2,7 @@
   <div class="home">
     <main-page />
     <schedule />
+    <informs />
     <video-trailer />
     <feedback />
     <support />
@@ -14,6 +15,7 @@ import Schedule from "./Home/Schedule";
 import Support from "./Home/Support";
 import VideoTrailer from "./Home/Video";
 import Feedback from "./Home/Feedback";
+import Informs from "./Home/Informs";
 export default {
   name: "home",
   components: {
@@ -21,7 +23,8 @@ export default {
     Schedule,
     Support,
     VideoTrailer,
-    Feedback
+    Feedback,
+    Informs
   }
 };
 </script>
