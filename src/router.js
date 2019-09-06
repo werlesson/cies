@@ -7,6 +7,7 @@ import Games from "./views/Games";
 import GameSingle from "./views/GameSingle";
 import Review from "./views/Review";
 import About from "./views/About";
+import FrequentAsk from "./views/FrequentAsk";
 
 
 Vue.use(Router);
@@ -43,12 +44,16 @@ export default new Router({
       path: "/review",
       name: "review",
       component: Review
-    }
-    ,
+    },
     {
       path: "/about",
       name: "about",
       component: About
+    },
+    {
+      path: "/frequent-ask",
+      name: "frequent-ask",
+      component: FrequentAsk
     }
     // {
     //   path: "/about",

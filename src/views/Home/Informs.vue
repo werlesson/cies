@@ -25,10 +25,10 @@
           <strong>banimento</strong> da equipe beneficiada da competição e anulação da partida.
           <br />NÃO SERÃO ADMITIDOS AUXÍLIOS EXTERNOS DE NENHUM MODO. A CIES NÃO INCENTIVA A DESPORTIVIDADE. JOGUE LIMPO!
         </p>
-        <a href="#" class="read-more">
+        <!-- <a href="#" class="read-more">
           Veja Mais Dúvidas Frequentes
           <img src="../../assets/img/icons/double-arrow.png" alt="#" />
-        </a>
+        </a> -->
       </div>
     </div>
   </section>
@@ -53,9 +53,13 @@ export default {
 }
 
 .featured-bg {
-  background-image: url("~@/assets/img/featured-bg.jpg");
+  background-image: url("~@/assets/img/featured-bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+a {
+  color: #B01BA5 !important;
 }
 </style>

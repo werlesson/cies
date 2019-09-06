@@ -1,7 +1,7 @@
 <template>
   <section class="intro-section pt-5">
     <div class="container">
-      <h2 class="text-white pb-5">Datas e Ingormações Importantes Sobre a Competição</h2>
+      <h2 class="text-white pb-5">Datas e Informações Importantes</h2>
       <div class="row">
         <div class="col-md-4">
           <div class="intro-text-box text-box text-white">

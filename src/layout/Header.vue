@@ -29,6 +29,9 @@
           <li>
             <router-link to="/local">Local do Evento</router-link>
           </li>
+          <!-- <li>
+            <router-link to="/frequent-ask">Perguntas Frequentes</router-link>
+          </li> -->
           <li>
             <router-link to="/about">Sobre</router-link>
           </li>
