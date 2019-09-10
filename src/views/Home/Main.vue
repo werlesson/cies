@@ -1,14 +1,12 @@
 <template>
   <section class="main-section">
     <section class="available" v-if="isAvailableToSubscribe">
-      <h2>Inscrições Abertas!</h2>
+      <h2>{{title}}</h2>
 
       <countdown :date="deadline"></countdown>
 
       <div class="description">
-        <p>Terceira edição da copa CS:GO</p>
-        <p>Disponível até 13/09/2019</p>
-        <p>Copa IFCE de eSports</p>
+        <p v-for="{item, index} in description" :key="index">{{item}}</p>
       </div>
 
       <a href="https://forms.gle/J7mPvQHRHRgNKte89" class="site-btn">
@@ -36,6 +34,16 @@ import { mapGetters } from "vuex";
 import Countdown from "@/components/Countdown";
 
 export default {
+  data() {
+    return {
+      title: "Inscrições Abertas!",
+      description: [
+        "Terceira edição da copa CS:GO",
+        "Disponível até 13/09/2019",
+        "Copa IFCE de eSports"
+      ]
+    };
+  },
   components: {
     Countdown
   },
