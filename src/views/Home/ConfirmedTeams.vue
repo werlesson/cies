@@ -1,10 +1,15 @@
 <template>
   <section class="confirmed-teams">
-    <h1>Equipes Confirmadas</h1>
+    <h1 class="team-name text-uppercase">Equipes Confirmadas</h1>
 
     <article class="teams">
       <section class="team" v-for="(team, index) in teams" :key="index">
-        <h1 class="name">{{ team.name }}</h1>
+        <div class="footer-social-team d-flex justify-content-center pb-1">
+          <!-- <a :href="`${team.link}`">
+            <i class="fa fa-steam fa-2x"></i>
+          </a> -->
+        </div>
+        <h1 class="name team-name">{{ team.name }}</h1>
         <div class="logo">
           <img :src="team.logo" :alt="`${team.name} Logo`" />
         </div>
@@ -19,34 +24,39 @@ export default {
     return {
       teams: [
         {
-          name: "Virtus Pro",
+          name: "TOXIC Gaming",
           logo:
-            "https://rivalryglhf.cdn.prismic.io/rivalryglhf/43d025c1a9fe7d7da6a647a9682a71c6f9f990ad_virtus.pro-virtus-pro-vp-team-logo.png"
+            require("@/assets/img/teams/toxic.svg"),
+          link: "#"
         },
         {
           name: "Predators",
-          logo: require("@/assets/img/teams/predators.png")
+          logo: require("@/assets/img/teams/predators-white.svg")
         },
-        {
-          name: "Liquid Academy",
-          logo:
-            "https://rivalryglhf.cdn.prismic.io/rivalryglhf/65d9b15fb391b4c0334ed2db13018e33cd50f161_team-liquid-academy-lol.png"
-        },
-        {
-          name: "Misfits",
-          logo:
-            "https://rivalryglhf.cdn.prismic.io/rivalryglhf/1deaf1867f56d05fbc37e497723da5a157c1da24_lcs-misfits-gaming.png"
-        },
-        {
-          name: "Fnatic",
-          logo:
-            "https://rivalryglhf.cdn.prismic.io/rivalryglhf/671c9ef1c1e32d0a1e0536bdb8c044a95a97f594_fnatic-lol.png"
-        },
-        {
-          name: "Astralis",
-          logo:
-            "https://rivalryglhf.cdn.prismic.io/rivalryglhf/fd56370f07602220a5c3939b8f6cb61667dfa3f0_astralis-csgo.png"
-        }
+        // {
+        //   name: "Liquid Academy",
+        //   logo:
+        //     "https://rivalryglhf.cdn.prismic.io/rivalryglhf/65d9b15fb391b4c0334ed2db13018e33cd50f161_team-liquid-academy-lol.png",
+        //   link: "#"
+        // },
+        // {
+        //   name: "Misfits",
+        //   logo:
+        //     "https://rivalryglhf.cdn.prismic.io/rivalryglhf/1deaf1867f56d05fbc37e497723da5a157c1da24_lcs-misfits-gaming.png",
+        //   link: "#"
+        // },
+        // {
+        //   name: "Fnatic",
+        //   logo:
+        //     "https://rivalryglhf.cdn.prismic.io/rivalryglhf/671c9ef1c1e32d0a1e0536bdb8c044a95a97f594_fnatic-lol.png",
+        //   link: "#"
+        // },
+        // {
+        //   name: "Astralis",
+        //   logo:
+        //     "https://rivalryglhf.cdn.prismic.io/rivalryglhf/fd56370f07602220a5c3939b8f6cb61667dfa3f0_astralis-csgo.png",
+        //   link: "#"
+        // }
       ]
     };
   }
@@ -63,7 +73,7 @@ section.confirmed-teams {
       rgba(255, 255, 255, 0.9) 0%,
       rgba(129, 27, 137, 0.5) 100%
     ),
-    url("~@/assets/img/pattern-purple.png");
+    url("~@/assets/img/purple-polygon.svg");
 
   background-size: contain;
   background-position: top;
@@ -96,6 +106,15 @@ h1 {
   justify-content: center;
   flex-direction: column-reverse;
   margin: 25px 100px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    &:hover {
+      background-image: linear-gradient(
+       rgba(113, 5, 134, 0.637) 0%,
+       rgba(129, 27, 137, 0.5) 100%
+    ),
+    url("~@/assets/img/teams-bg.jpg");
+    color: white;
+		}
 }
 
 .teams .team h1.name {
@@ -117,5 +136,43 @@ h1 {
 
 .teams .team .logo img {
   height: 200px;
+}
+
+.footer-social-team {
+	// padding-top: 20px;
+  // padding-bottom: 40px;
+  width: 100%;
+  background-color: #FFF;
+  
+  	a {
+		display: -ms-inline-flex;
+		display: -webkit-inline-box;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+		width: 32px;
+		height: 32px;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		border-radius: 50%;
+		color: #b01ba5;
+		font-size: 12px;
+		margin-left: 13px;
+		-webkit-transition: all 0.3s;
+		-o-transition: all 0.3s;
+		transition: all 0.3s;
+
+		&:hover {
+      background: #b01ba5;
+      color: white;
+		}
+	}
+
+	a:first-child {
+		margin-left: 0;
+	}
 }
 </style>

@@ -26,6 +26,9 @@
           <li class="active">
             <router-link to="/">Página Inicial</router-link>
           </li>
+          <li class="active">
+            <router-link to="/teams">Times Confirmados</router-link>
+          </li>
           <li>
             <router-link to="/local">Local do Evento</router-link>
           </li>

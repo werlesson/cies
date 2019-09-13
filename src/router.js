@@ -8,6 +8,7 @@ import GameSingle from "./views/GameSingle";
 import Review from "./views/Review";
 import About from "./views/About";
 import FrequentAsk from "./views/FrequentAsk";
+import Teams from "./views/Teams";
 
 
 Vue.use(Router);
@@ -54,6 +55,11 @@ export default new Router({
       path: "/frequent-ask",
       name: "frequent-ask",
       component: FrequentAsk
+    },
+    {
+      path: "/teams",
+      name: "teams",
+      component: Teams
     }
     // {
     //   path: "/about",
