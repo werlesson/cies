@@ -48,9 +48,10 @@ export default {
 .support-section {
   display: flex;
   flex-direction: column;
-  background: #451855;
-  background: -webkit-linear-gradient(to right, #451855, #361855);
-  background: linear-gradient(to right, #451855, #361855);
+  // background: #451855;
+  background: #0c062e;
+  // background: -webkit-linear-gradient(to right, #451855, #361855);
+  // background: linear-gradient(to right, #451855, #361855);
   padding: 100px 8%;
   h2 {
     font-size: 30px;
