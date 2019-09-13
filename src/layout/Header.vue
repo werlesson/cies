@@ -31,7 +31,7 @@
           </li>
           <!-- <li>
             <router-link to="/frequent-ask">Perguntas Frequentes</router-link>
-          </li> -->
+          </li>-->
           <li>
             <router-link to="/about">Sobre</router-link>
           </li>
@@ -46,7 +46,8 @@
           <a
             class="btn-register ml-auto mr-auto btn-block text-center"
             href="https://forms.gle/Qco39doRwpdHSNmg7"
-          >Inscreva-se!</a>
+            >Inscreva-se!</a
+          >
         </form>
       </div>
     </nav>
