@@ -36,6 +36,16 @@ export default {
           name: "Misfits",
           logo:
             "https://rivalryglhf.cdn.prismic.io/rivalryglhf/1deaf1867f56d05fbc37e497723da5a157c1da24_lcs-misfits-gaming.png"
+        },
+        {
+          name: "Fnatic",
+          logo:
+            "https://rivalryglhf.cdn.prismic.io/rivalryglhf/671c9ef1c1e32d0a1e0536bdb8c044a95a97f594_fnatic-lol.png"
+        },
+        {
+          name: "Astralis",
+          logo:
+            "https://rivalryglhf.cdn.prismic.io/rivalryglhf/fd56370f07602220a5c3939b8f6cb61667dfa3f0_astralis-csgo.png"
         }
       ]
     };
@@ -45,6 +55,7 @@ export default {
 
 <style lang="scss" scoped>
 $pink: #811b89;
+$border: #fff;
 
 section.confirmed-teams {
   background-image: linear-gradient(
@@ -67,26 +78,30 @@ h1 {
 .teams {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   padding: 0 0 75px 0;
+  margin: 0 150px;
 }
 
 .teams .team {
-  border: 2px solid $pink;
-  width: 300px;
+  border: 2px solid $border;
+  min-width: 300px;
   height: 420px;
   background-image: url("~@/assets/img/teams-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  box-sizing: border-box;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   flex-direction: column-reverse;
+  margin: 25px 100px;
 }
 
 .teams .team h1.name {
   margin: 0;
   font-size: 32px;
-  background-color: #fff;
+  background-color: $border;
   width: 100%;
   padding: 10px 0;
   text-transform: uppercase;
