@@ -2,7 +2,13 @@
   <div class="svg-image">
     <svg viewBox="0 0 918 267" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g id="Ifce">
-        <circle id="Circle" cx="32.5988" cy="32.5988" r="32.5988" fill="#9F4BE1" />
+        <circle
+          id="Circle"
+          cx="32.5988"
+          cy="32.5988"
+          r="32.5988"
+          fill="#9F4BE1"
+        />
         <path
           id="Verde"
           fill-rule="evenodd"
@@ -37,7 +43,6 @@ export default {};
     }
   }
   &:hover {
-    transform: scale(0.99);
     #Verde {
       fill: #379846;
     }

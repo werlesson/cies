@@ -49,7 +49,6 @@ export default {};
   }
 
   &:hover {
-    transform: scale(0.99);
     #color-01 {
       stop-color: #ff0000;
     }
