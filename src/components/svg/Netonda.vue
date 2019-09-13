@@ -42,7 +42,6 @@ export default {};
     }
   }
   &:hover {
-    transform: scale(0.99);
     #Net {
       fill: #009346;
     }

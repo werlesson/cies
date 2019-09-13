@@ -3,7 +3,7 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
-const deadline = "Sep 14, 2019";
+const deadline = "Sep 20, 2019";
 
 export default new Vuex.Store({
   state: {

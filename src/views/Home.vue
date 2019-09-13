@@ -4,6 +4,7 @@
     <schedule />
     <informs />
     <video-trailer />
+    <ConfirmedTeams />
     <feedback />
     <support />
   </div>
@@ -16,6 +17,7 @@ import Support from "./Home/Support";
 import VideoTrailer from "./Home/Video";
 import Feedback from "./Home/Feedback";
 import Informs from "./Home/Informs";
+import ConfirmedTeams from "./Home/ConfirmedTeams";
 export default {
   name: "home",
   components: {
@@ -24,7 +26,8 @@ export default {
     Support,
     VideoTrailer,
     Feedback,
-    Informs
+    Informs,
+    ConfirmedTeams
   }
 };
 </script>

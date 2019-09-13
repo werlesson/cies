@@ -1,12 +1,12 @@
 <template>
   <section class="main-section">
     <section class="available" v-if="isAvailableToSubscribe">
-      <h2>{{title}}</h2>
+      <h2>{{ title }}</h2>
 
       <countdown :date="deadline"></countdown>
 
       <div class="description">
-        <p v-for="{item, index} in description" :key="index">{{item}}</p>
+        <p v-for="{ item, index } in description" :key="index">{{ item }}</p>
       </div>
 
       <a href="https://forms.gle/J7mPvQHRHRgNKte89" class="site-btn">
@@ -36,7 +36,7 @@ import Countdown from "@/components/Countdown";
 export default {
   data() {
     return {
-      title: "Inscrições Abertas!",
+      title: "Inscrições Prorrogadas!",
       description: [
         "Terceira edição da copa CS:GO",
         "Disponível até 13/09/2019",
