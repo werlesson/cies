@@ -9,29 +9,15 @@
         <footer>
           <h3>{{ team.name }}</h3>
           <div class="contact-team">
-            <a :href="`${team.steam}`">
+            <a :href="`${team.steam}`" :class="{inactiveLink: !team.steam}">
               <i class="fa fa-steam"></i>
             </a>
-            <a :href="`${team.gc}`">
+            <a :href="`${team.gc}`" :class="{inactiveLink: !team.gc}">
               <gc class="logo-support gc" />
             </a>
           </div>
         </footer>
       </div>
-      <!-- <section class="team" v-for="(team, index) in teams" :key="index">
-        <div class="footer-social-team d-flex justify-content-center pb-1">
-          <a :href="`${team.steam}`">
-            <i class="fa fa-steam fa-2x"></i>
-          </a>
-          <a :href="`${team.gc}`">
-            <gc class="logo-support gc" />
-          </a>
-        </div>
-        <h3 class="name">{{ team.name }}</h3>
-        <div class="logo">
-          <img :src="team.logo" :alt="`${team.name} Logo`" />
-        </div>
-      </section>-->
     </article>
   </section>
 </template>
@@ -77,7 +63,7 @@ export default {
         },
         {
           name: "VAC-eiros",
-          logo: require("@/assets/img/cies-logo-white.svg"),
+          logo: require("@/assets/img/teams/vac-eiros.png"),
           steam: "",
           gc: ""
         },
@@ -171,6 +157,15 @@ section.confirmed-teams {
           margin: 0 10px;
           width: 35px;
           height: 35px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 24px;
+          transition: all 0.25s ease;
+          img {
+            width: 100%;
+          }
           &:hover {
             background-color: #0c062e;
           }
@@ -178,6 +173,12 @@ section.confirmed-teams {
       }
     }
   }
+}
+
+.inactiveLink {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.25;
 }
 
 @media (max-width: 400px) {

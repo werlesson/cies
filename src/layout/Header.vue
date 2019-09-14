@@ -103,27 +103,7 @@ export default {
 <style lang="scss" scoped>
 header {
   position: fixed;
-  // height: 100px;
   padding: 0;
-}
-// .header-bar-warp {
-//   display: flex;
-//   align-items: center;
-//   // justify-content: center;
-//   padding: 15px 40px;
-//   height: 100%;
-//   nav {
-//     display: flex;
-//     flex-direction: row-reverse;
-//     align-items: center;
-//     justify-content: flex-start;
-//     .main-menu li a {
-//       padding-bottom: 0;
-//     }
-//   }
-// }
-
-header {
   background-color: rgb(8, 22, 36);
   transition: 0.3s all ease-out;
 

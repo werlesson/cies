@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500,600,700&display=swap');
 
@@ -27,7 +27,7 @@ body {
 	// font-family: 'Barlow Condensed', sans-serif;
 	// font-family: 'Merriweather', serif;
 	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
+	// font-smoothing: antialiased;
 }
 
 h1,
@@ -1428,8 +1428,6 @@ ol {
   Review section
 ---------------------*/
 
-.review-section {}
-
 .review-item {
 	margin-bottom: 87px;
 }
@@ -1510,8 +1508,6 @@ ol {
 /* ----------------
   Contact page
 ---------------------*/
-
-.contact-page {}
 
 .map {
 	iframe {
@@ -1723,10 +1719,6 @@ ol {
 @media only screen and (max-width: 767px) {
 	.header-bar-warp {
 		padding: 25px 20px 10px;
-	}
-
-	.main-menu.primary-menu {
-		// display: none;
 	}
 
 	.slicknav_menu {

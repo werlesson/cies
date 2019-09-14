@@ -27,16 +27,21 @@ svg {
 }
 
 .svg-image {
-  width: 32px;
-  height: 32px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
+  #gc-up {
+    fill: #fff;
+  }
+  #gc-down {
+    fill: #fff;
+  }
   &:hover {
     transition: all 0.2s ease;
-    background: #b01ba5;
     #gc {
       #gc-up {
         fill: #fff;
