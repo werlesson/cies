@@ -25,7 +25,7 @@
 import Gc from "@/components/svg/Gc";
 export default {
   components: {
-    Gc,
+    Gc
   },
   data() {
     return {
@@ -47,7 +47,7 @@ export default {
           logo: require("@/assets/img/teams/raven.png"),
           steam: "",
           gc: ""
-        },
+        }
       ]
     };
   }
@@ -97,15 +97,15 @@ h1 {
   justify-content: center;
   flex-direction: column-reverse;
   margin: 25px 100px;
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
-    &:hover {
-      background-image: linear-gradient(
-       rgba(113, 5, 134, 0.637) 0%,
-       rgba(129, 27, 137, 0.5) 100%
-    ),
-    url("~@/assets/img/teams-bg.jpg");
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  &:hover {
+    background-image: linear-gradient(
+        rgba(113, 5, 134, 0.637) 0%,
+        rgba(129, 27, 137, 0.5) 100%
+      ),
+      url("~@/assets/img/teams-bg.jpg");
     color: white;
-		}
+  }
 }
 
 .teams .team h1.name {
@@ -130,50 +130,47 @@ h1 {
 }
 
 .footer-social-team {
-	// padding-top: 20px;
+  // padding-top: 20px;
   // padding-bottom: 40px;
   width: 100%;
-  background-color: #FFF;
-  
-  	a {
-		display: -ms-inline-flex;
-		display: -webkit-inline-box;
-		display: -ms-inline-flexbox;
-		display: inline-flex;
-		width: 32px;
-		height: 32px;
-		-webkit-box-align: center;
-		-ms-flex-align: center;
-		align-items: center;
-		-webkit-box-pack: center;
-		-ms-flex-pack: center;
-		justify-content: center;
-		border-radius: 50%;
-		color: #b01ba5;
-		font-size: 12px;
-		margin-left: 13px;
-		-webkit-transition: all 0.3s;
-		-o-transition: all 0.3s;
-		transition: all 0.3s;
+  background-color: #fff;
+  transition: all 0.3s ease;
 
-		&:hover {
+  a {
+    display: -ms-inline-flex;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: 32px;
+    height: 32px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #b01ba5;
+    font-size: 12px;
+    margin-left: 13px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s ease;
+
+    &:hover {
       background: #b01ba5;
-      color: #FFF;
+      color: #fff;
     }
-	}
+  }
 
-	a:first-child {
-		margin-left: 0;
-	}
-}
-
-@media (max-width: 400px) {
-  .confirmed-teams h1 { 
-    font-size: 50px;
+  a:first-child {
+    margin-left: 0;
   }
 }
 
-.gc {
-  width: 24px !important;
+@media (max-width: 400px) {
+  .confirmed-teams h1 {
+    font-size: 50px;
+  }
 }
 </style>
