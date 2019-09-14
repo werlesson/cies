@@ -13,7 +13,7 @@
     <!-- Page top end-->
 
     <!-- Contact page -->
-    <section class="contact-page pt-5 pb-5">
+    <section class="contact-page pb-5">
       <div class="container text-white">
         <h2>Onde irá ocorrer?</h2>
         <p class="pl-5 pr-5 pb-5 pt-3">
@@ -88,7 +88,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-.contact {
-  margin-top: 100px;
+.contact-page {
+  padding-top: 120px;
 }
 </style>
