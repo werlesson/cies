@@ -1,6 +1,6 @@
 <template>
   <section class="support-section">
-    <h2 class="text-white">Apoio</h2>
+    <!-- <h2 class="text-white">Apoio</h2> -->
     <div class="content-support">
       <ifce class="logo-support ifce" />
       <lar class="logo-support lar" />
@@ -48,11 +48,8 @@ export default {
 .support-section {
   display: flex;
   flex-direction: column;
-  // background: #451855;
   background: #0c062e;
-  // background: -webkit-linear-gradient(to right, #451855, #361855);
-  // background: linear-gradient(to right, #451855, #361855);
-  padding: 100px 8%;
+  padding: 30px 8%;
   h2 {
     font-size: 30px;
     text-transform: uppercase;
