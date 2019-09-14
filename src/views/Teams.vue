@@ -12,9 +12,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss" scoped>
-.teams{
-  padding-top: 100px;
-}
-</style>
