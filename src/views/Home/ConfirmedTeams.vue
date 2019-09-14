@@ -45,8 +45,8 @@ export default {
         {
           name: "Raven",
           logo: require("@/assets/img/teams/raven.png"),
-          steam: "",
-          gc: ""
+          steam: "https://steamcommunity.com/groups/ravencsgoteam",
+          gc: "https://gamersclub.com.br/time/136398"
         }
       ]
     };
