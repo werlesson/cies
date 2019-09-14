@@ -5,9 +5,12 @@
     <article class="teams">
       <section class="team" v-for="(team, index) in teams" :key="index">
         <div class="footer-social-team d-flex justify-content-center pb-1">
-          <!-- <a :href="`${team.link}`">
+          <a v-if="team.steam" :href="`${team.steam}`">
             <i class="fa fa-steam fa-2x"></i>
-          </a> -->
+          </a>
+          <a v-if="team.gc" :href="`${team.gc}`">
+            <img src="@/assets/img/icons/gc.svg" width="24px" height="24px" alt />
+          </a>
         </div>
         <h1 class="name team-name">{{ team.name }}</h1>
         <div class="logo">
@@ -25,38 +28,22 @@ export default {
       teams: [
         {
           name: "TOXIC Gaming",
-          logo:
-            require("@/assets/img/teams/toxic.svg"),
-          link: "#"
+          logo: require("@/assets/img/teams/toxic.svg"),
+          steam: "https://steamcommunity.com/groups/toxiggamiing",
+          gc: ""
         },
         {
           name: "Predators",
-          logo: require("@/assets/img/teams/predators-white.svg")
+          logo: require("@/assets/img/teams/predators-white.svg"),
+          steam: "https://steamcommunity.com/groups/predatorsgg",
+          gc: "https://gamersclub.com.br/time/135530"
         },
-        // {
-        //   name: "Liquid Academy",
-        //   logo:
-        //     "https://rivalryglhf.cdn.prismic.io/rivalryglhf/65d9b15fb391b4c0334ed2db13018e33cd50f161_team-liquid-academy-lol.png",
-        //   link: "#"
-        // },
-        // {
-        //   name: "Misfits",
-        //   logo:
-        //     "https://rivalryglhf.cdn.prismic.io/rivalryglhf/1deaf1867f56d05fbc37e497723da5a157c1da24_lcs-misfits-gaming.png",
-        //   link: "#"
-        // },
-        // {
-        //   name: "Fnatic",
-        //   logo:
-        //     "https://rivalryglhf.cdn.prismic.io/rivalryglhf/671c9ef1c1e32d0a1e0536bdb8c044a95a97f594_fnatic-lol.png",
-        //   link: "#"
-        // },
-        // {
-        //   name: "Astralis",
-        //   logo:
-        //     "https://rivalryglhf.cdn.prismic.io/rivalryglhf/fd56370f07602220a5c3939b8f6cb61667dfa3f0_astralis-csgo.png",
-        //   link: "#"
-        // }
+        {
+          name: "Raven",
+          logo: require("@/assets/img/teams/raven.png"),
+          steam: "",
+          gc: ""
+        },
       ]
     };
   }
@@ -167,12 +154,21 @@ h1 {
 
 		&:hover {
       background: #b01ba5;
-      color: white;
-		}
+      color: #FFF;
+    }
+    svg:hover {
+      fill: #FFF;
+    }
 	}
 
 	a:first-child {
 		margin-left: 0;
 	}
+}
+
+@media (max-width: 400px) {
+  .confirmed-teams h1 { 
+    font-size: 50px;
+  }
 }
 </style>
