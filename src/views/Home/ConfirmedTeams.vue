@@ -47,7 +47,31 @@ export default {
           logo: require("@/assets/img/teams/raven.png"),
           steam: "https://steamcommunity.com/groups/ravencsgoteam",
           gc: "https://gamersclub.com.br/time/136398"
-        }
+        },
+        {
+          name: "NATUS7 GAMING",
+          logo: require("@/assets/img/cies-logo-white.svg"),
+          steam: "",
+          gc: ""
+        },
+        {
+          name: "a7-Ventu's Team",
+          logo: require("@/assets/img/cies-logo-white.svg"),
+          steam: "",
+          gc: ""
+        },
+        {
+          name: "VAC-eiros",
+          logo: require("@/assets/img/cies-logo-white.svg"),
+          steam: "",
+          gc: ""
+        },
+        {
+          name: "As ppks",
+          logo: require("@/assets/img/cies-logo-white.svg"),
+          steam: "",
+          gc: ""
+        },
       ]
     };
   }
