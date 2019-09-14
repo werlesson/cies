@@ -9,7 +9,7 @@
             <i class="fa fa-steam fa-2x"></i>
           </a>
           <a v-if="team.gc" :href="`${team.gc}`">
-            <img src="@/assets/img/icons/gc.svg" width="24px" height="24px" alt />
+            <gc class="logo-support gc" />
           </a>
         </div>
         <h1 class="name team-name">{{ team.name }}</h1>
@@ -22,7 +22,11 @@
 </template>
 
 <script>
+import Gc from "@/components/svg/Gc";
 export default {
+  components: {
+    Gc,
+  },
   data() {
     return {
       teams: [
@@ -156,9 +160,6 @@ h1 {
       background: #b01ba5;
       color: #FFF;
     }
-    svg:hover {
-      fill: #FFF;
-    }
 	}
 
 	a:first-child {
@@ -170,5 +171,9 @@ h1 {
   .confirmed-teams h1 { 
     font-size: 50px;
   }
+}
+
+.gc {
+  width: 24px !important;
 }
 </style>
