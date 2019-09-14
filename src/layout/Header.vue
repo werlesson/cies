@@ -18,7 +18,7 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <img src="@/assets/img/menu-toggle.svg" width="35" alt />
+        <img src="@/assets/img/menu-toggle.svg" width="30" alt />
       </button>
 
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
@@ -49,8 +49,7 @@
           <a
             class="btn-register ml-auto mr-auto btn-block text-center"
             href="https://forms.gle/Qco39doRwpdHSNmg7"
-            >Inscreva-se!</a
-          >
+          >Inscreva-se!</a>
         </form>
       </div>
     </nav>
@@ -104,7 +103,7 @@ export default {
 <style lang="scss" scoped>
 header {
   position: fixed;
-  height: 100px;
+  // height: 100px;
   padding: 0;
 }
 // .header-bar-warp {
@@ -147,7 +146,7 @@ header {
 }
 
 .site-logo {
-  width: 75px;
+  width: 60px;
 }
 
 .main-menu li a {
@@ -155,6 +154,10 @@ header {
 }
 
 @media screen and (max-width: 992px) {
+  .site-logo {
+    width: 50px;
+  }
+
   .main-menu li a {
     padding-bottom: 28px;
     padding-right: 0 !important;

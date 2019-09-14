@@ -85,6 +85,7 @@ export default {
 
 .countdown {
   display: flex;
+  transform: scale(0.75);
 
   .block {
     display: flex;

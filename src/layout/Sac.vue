@@ -1,9 +1,16 @@
 <template>
   <section class="sac" :class="{none: lastScrollPosition < OFFSET}">
-    <div class="closed">
-      <img src="@/assets/img/info.svg" width="10" alt />
+    <div class="sac-closed" :class="{none: sac_open}" @click="sac_open = true">
+      <!-- <img src="@/assets/img/info.svg" width="10" alt /> -->
+      <p>Comentários</p>
+      <!-- <i class="far fa-comment-dots"></i> -->
+      <!-- <i class="fa fa-facebook"></i> -->
+      <i class="fa fa-commenting-o"></i>
     </div>
-    <div class="open">
+    <div class="sac-open" :class="{none: !sac_open}">
+      <div class="circle-close" @click="sac_open = false">
+        <i class="fa fa-close"></i>
+      </div>
       <p class="text-center">{{title}}</p>
       <a class="btn-register text-center" :href="linkForm">Clique aqui</a>
     </div>
@@ -18,7 +25,8 @@ export default {
         "Descreva o problema que encontrou ou compartilhe suas ideias conosco!",
       linkForm: "https://forms.gle/kjnH3ffGUcMf7qeX6",
       lastScrollPosition: 0,
-      OFFSET: 30
+      OFFSET: 200,
+      sac_open: false
     };
   },
   mounted() {
@@ -52,61 +60,69 @@ export default {
 
 <style lang="scss" scoped>
 .none {
-  transform: scale(0);
+  transform: scale(0) !important;
 }
-.sac {
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-  height: 50px;
-  width: 50px;
-  border-radius: 25% 25% 0 25%;
+
+.circle-close {
+  width: 30px;
+  height: 30px;
+  right: 15px;
+  top: -15px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
-  transition: all 0.2s ease;
-  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2);
-  &::after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    height: 0;
-    width: 0;
-    border: 15px solid transparent;
-    border-left-color: white;
-    right: -12px;
-    bottom: 0px;
-    transform: rotate(-70deg);
-  }
-  .open {
-    padding: 25px;
+  background-color: #b71dae;
+  color: white;
+  position: absolute;
+}
+
+.sac {
+  z-index: 10;
+  transition: all 0.3s ease;
+  .sac-closed {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: fixed;
+    right: -50px;
+    bottom: calc(50% - 24px);
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    background-color: #b71dae;
     color: white;
-    opacity: 0;
-    transform: scale(0);
-    position: absolute;
-  }
-  .closed {
-    transform: scale(1);
-    position: absolute;
-  }
-  &:hover {
-    height: 200px;
-    width: 280px;
-    border-radius: 7% 7% 0 7%;
-    justify-content: space-between;
-    .open {
-      opacity: 1;
-      transition: opacity 0.2s ease 0.1s;
-      display: flex;
-      flex-direction: column;
-      transform: scale(1);
+    transform: rotate(-90deg);
+    padding: 15px;
+    width: 150px;
+    p {
+      margin: 0;
+      color: white;
     }
-    .closed {
-      transform: scale(0);
+    i {
+      margin-right: 10px;
+      transform: rotate(90deg);
     }
+  }
+
+  .sac-open {
+    transition: all 0.3s ease;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 250px;
+    right: 60px;
+    bottom: calc(50% - 90px);
+    height: 180px;
+    padding: 20px;
+    border-radius: 10px;
   }
 }
+
 .btn-register {
   background-color: #451855;
   padding: 10px 20px;
@@ -117,6 +133,34 @@ export default {
   &:hover {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0);
     transform: scale(0.95);
+  }
+}
+
+@media (max-width: 992px) {
+  .sac {
+    .sac-closed {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      bottom: 20px;
+      padding: 5px;
+      right: 20px;
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+      p {
+        display: none;
+      }
+      i {
+        margin: 0;
+      }
+    }
+    .sac-open {
+      position: fixed;
+      right: 20px;
+      bottom: 80px;
+    }
   }
 }
 </style>
