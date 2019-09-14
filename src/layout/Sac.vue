@@ -79,7 +79,6 @@ export default {
 
 .sac {
   z-index: 10;
-  transition: all 0.3s ease;
   .sac-closed {
     transition: all 0.3s ease;
     cursor: pointer;
