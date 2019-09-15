@@ -2,7 +2,7 @@
   <section class="confirmed-teams">
     <h1 class="text-uppercase">Equipes</h1>
     <article class="teams">
-      <div class="team" v-for="(team, index) in teams" :key="index">
+      <div class="team" v-for="(team, index) in teamsSort" :key="index">
         <header>
           <img :src="team.logo" :alt="`${team.name} Logo`" />
         </header>
@@ -72,9 +72,36 @@ export default {
           logo: require("@/assets/img/cies-logo-white.svg"),
           steam: "",
           gc: ""
+        },
+        {
+          name: "Touro Russo",
+          logo: require("@/assets/img/cies-logo-white.svg"),
+          steam: "",
+          gc: ""
+        },
+        {
+          name: "Only Silvers",
+          logo: require("@/assets/img/cies-logo-white.svg"),
+          steam: "",
+          gc: ""
         }
       ]
     };
+  },
+  computed: {
+    teamsSort() {
+      return this.teams.sort(function(a, b) {
+        let value1 = a.name.toUpperCase();
+        let value2 = b.name.toUpperCase();
+        if (value1 > value2) {
+          return 1;
+        }
+        if (value1 < value2) {
+          return -1;
+        }
+        return 0;
+      });
+    }
   }
 };
 </script>
@@ -137,7 +164,6 @@ section.confirmed-teams {
     footer {
       flex: 1;
       width: 100%;
-      // background-color: rgba(white, 0.2);
       display: flex;
       align-items: center;
       justify-content: center;
