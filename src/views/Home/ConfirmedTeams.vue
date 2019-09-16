@@ -1,6 +1,6 @@
 <template>
   <section class="confirmed-teams">
-    <h1 class="text-uppercase">Equipes</h1>
+    <h1 class="text-uppercase">{{ teamsSort.length }} Equipes Confirmadas</h1>
     <article class="teams">
       <div class="team" v-for="(team, index) in teamsSort" :key="index">
         <header>
@@ -9,10 +9,10 @@
         <footer>
           <h3>{{ team.name }}</h3>
           <div class="contact-team">
-            <a :href="`${team.steam}`" :class="{inactiveLink: !team.steam}">
+            <a :href="`${team.steam}`" :class="{ inactiveLink: !team.steam }">
               <i class="fa fa-steam"></i>
             </a>
-            <a :href="`${team.gc}`" :class="{inactiveLink: !team.gc}">
+            <a :href="`${team.gc}`" :class="{ inactiveLink: !team.gc }">
               <gc class="logo-support gc" />
             </a>
           </div>
@@ -24,6 +24,7 @@
 
 <script>
 import Gc from "@/components/svg/Gc";
+
 export default {
   components: {
     Gc
@@ -51,8 +52,8 @@ export default {
         },
         {
           name: "NATUS7 GAMING",
-          logo: require("@/assets/img/cies-logo-white.svg"),
-          steam: "",
+          logo: require("@/assets/img/teams/natus.png"),
+          steam: "https://steamcommunity.com/groups/natus7g",
           gc: ""
         },
         {
@@ -90,17 +91,9 @@ export default {
   },
   computed: {
     teamsSort() {
-      return this.teams.sort(function(a, b) {
-        let value1 = a.name.toUpperCase();
-        let value2 = b.name.toUpperCase();
-        if (value1 > value2) {
-          return 1;
-        }
-        if (value1 < value2) {
-          return -1;
-        }
-        return 0;
-      });
+      const teams = this.teams;
+
+      return teams.sort((a, b) => a.name.toUpperCase() > b.name.toUpperCase());
     }
   }
 };
