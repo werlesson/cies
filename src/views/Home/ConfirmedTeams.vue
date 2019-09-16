@@ -54,7 +54,7 @@ export default {
           name: "NATUS7 GAMING",
           logo: require("@/assets/img/teams/natus.png"),
           steam: "https://steamcommunity.com/groups/natus7g",
-          gc: ""
+          gc: "https://gamersclub.com.br/time/101392"
         },
         {
           name: "a7-Ventu's Team",
