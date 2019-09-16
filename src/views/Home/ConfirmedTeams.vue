@@ -64,17 +64,17 @@ export default {
         {
           name: "VAC-eiros",
           logo: require("@/assets/img/teams/vac-eiros.png"),
-          steam: "",
-          gc: ""
+          steam: "https://steamcommunity.com/groups/vac-eiros",
+          gc: "https://gamersclub.com.br/time/136411"
         },
         {
           name: "As ppks",
           logo: require("@/assets/img/teams/as-ppks.png"),
-          steam: "",
+          steam: "https://steamcommunity.com/groups/csdasppks",
           gc: ""
         },
         {
-          name: "Touro Russo",
+          name: "Brazilian Bulls",
           logo: require("@/assets/img/cies-logo-white.svg"),
           steam: "",
           gc: ""
