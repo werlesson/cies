@@ -13,7 +13,7 @@
       @enter="enter"
       @afterEnter="afterEnter"
     >
-      <router-view />
+      <router-view class="main-content" />
     </transition>
 
     <footer-layout />
@@ -60,6 +60,16 @@ export default {
 </script>
 
 <style scoped>
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition-duration: 200ms;
@@ -70,6 +80,6 @@ export default {
 
 .fade-enter,
 .fade-leave-active {
-  opacity: 0;
+  opacity: 0.7;
 }
 </style>
