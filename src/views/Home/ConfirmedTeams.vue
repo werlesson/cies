@@ -57,7 +57,7 @@ export default {
         },
         {
           name: "a7-Ventu's Team",
-          logo: require("@/assets/img/cies-logo-white.svg"),
+          logo: require("@/assets/img/teams/ventus.png"),
           steam: "",
           gc: ""
         },
@@ -69,7 +69,7 @@ export default {
         },
         {
           name: "As ppks",
-          logo: require("@/assets/img/cies-logo-white.svg"),
+          logo: require("@/assets/img/teams/as-ppks.png"),
           steam: "",
           gc: ""
         },
@@ -81,7 +81,7 @@ export default {
         },
         {
           name: "Only Silvers",
-          logo: require("@/assets/img/cies-logo-white.svg"),
+          logo: require("@/assets/img/teams/only-silvers.png"),
           steam: "",
           gc: ""
         }
