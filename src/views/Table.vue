@@ -5,24 +5,24 @@
       <table class="table text-white table-striped table-hover table-borderless text-center">
       <thead class="thead-dark">
         <tr>
+          <th class="col-2px-fail"></th>
           <th scope="col" v-for="(header, i) in table.headers" :key="i">{{header}}</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(row, j) in table.rows" :key="j">
-          <th scope="row">{{j+1}}</th>
-          <!-- <td v-for="(v, index) in row" :key="index">{{v}}</td> -->
-            <td class="name-logo row">
-              <div class="col-md-7">
-                <span>{{row[1]}}</span>
-              </div>
-              <div class="col-md-4 minha-classe" :id="row[0]"></div>
-              <div class="col-md-1"></div>
-            </td>
-          <td>{{row[2]}}</td>
-          <td>{{row[3]}}</td>
-          <td>{{row[4]}}</td>
-          <td>{{row[5]}}</td>
+        <tr v-for="(row, j) in teamsSortColocacao" :key="j">
+          <td :class="j<4 ? 'col-2px-sucess' : 'col-2px-fail'"></td>
+          <td scope="row"> {{j+1}} </td>
+          <td class="name-logo row">
+            <div class="col-md-5">
+              <span class="team-nome">{{row.equipe}}</span>
+            </div>
+            <div class="col-md-4 minha-classe" :id="row.cod"></div>
+          </td>
+          <td>{{row.j}}</td>
+          <td>{{row.v}}</td>
+          <td>{{row.d}}</td>
+          <td>{{row.sr}}</td>
         </tr>
       </tbody>
     </table>
@@ -34,33 +34,70 @@
 export default {
   data(){
     return {
-      title: "Tabela de Jogos",
+      title: "Tabela de Classificação",
       table: {
         headers: ["#", "Equipe", "J", "V", "D", "SR"],
-        rows: [ 
-          ["avt", "a7-Ventu's Team","0","0","0", "0"],
-          ["app", "As ppks",        "0","0","0", "0"],
-          ["bbl", "Brazilian Bulls","0","0","0", "0"], 
-          ["n7g", "NATUS7 GAMING",  "0","0","0", "0"],
-          ["ols", "Only Silvers",   "0","0","0", "0"],
-          ["pdt", "Predators",      "0","0","0", "0"],
-          ["rvn", "Raven",          "0","0","0", "0"],
-          ["txg", "TOXIC Gaming",   "0","0","0", "0"],
-          ["vac", "VAC-eiros",      "0","0","0", "0"]
+        rows: [
+          {cod: "avt", equipe: "a7-Ventu's Team", j: "0", v: "0", d: "0", sr: "0"},
+          {cod: "app", equipe: "As ppks",         j: "0", v: "0", d: "0", sr: "0"},
+          {cod: "bbl", equipe: "Brazilian Bulls", j: "0", v: "0", d: "0", sr: "0"},
+          {cod: "n7g", equipe: "NATUS7 GAMING",   j: "0", v: "0", d: "0", sr: "0"},
+          {cod: "ols", equipe: "Only Silvers",    j: "0", v: "0", d: "0", sr: "0"},
+          {cod: "pdt", equipe: "Predators",       j: "0", v: "0", d: "0", sr: "0"},
+          {cod: "rvn", equipe: "Raven",           j: "0", v: "0", d: "0", sr: "0"},
+          {cod: "txg", equipe: "TOXIC Gaming",    j: "0", v: "0", d: "0", sr: "0"},
+          {cod: "vac", equipe: "VAC-eiros",       j: "0", v: "0", d: "0", sr: "0"}
         ]
       }
     }
   },
   computed: {
-    teamsSort() {
-      return this.rows.sort(function(a, b) {
-        let value1 = a[0].toUpperCase();
-        let value2 = b[0].toUpperCase();
-        if (value1 > value2) {
+    teamsSortName() {
+      return this.table.rows.sort(function(a, b) {
+        let equipeA = a.equipe.toUpperCase();
+        let equipeB = b.equipe.toUpperCase();
+        if (equipeA > equipeB) {
           return 1;
         }
-        if (value1 < value2) {
+        if (equipeA < equipeB) {
           return -1;
+        }
+        return 0;
+      });
+    },
+
+    //Vitoria>Saldo de Rounds > Nome
+    teamsSortColocacao() {
+      return this.table.rows.sort(function(a, b) {
+        let vitA = a.v;
+        let vitB = b.v;
+        if (vitA < vitB) {
+          return 1;
+        }
+        else if (vitA > vitB) {
+          return -1;
+        }
+        else if (vitA == vitB){
+          let srA = a.sr;
+          let srB = b.sr;
+          if (srA < srB) {
+          return 1;
+          }
+          else if (srA > srB) {
+            return -1;
+          }
+          else if (srA == srB){
+            let equipeA = a.equipe.toUpperCase();
+            let equipeB = b.equipe.toUpperCase();
+            if (equipeA > equipeB) {
+              return 1;
+            }
+            if (equipeA < equipeB) {
+              return -1;
+            }
+            return 0;
+          }
+          return 0;
         }
         return 0;
       });
@@ -81,12 +118,10 @@ export default {
 .table-hover tr {
   &:hover{
     color: #FFF !important;
-    font-weight: bolder !important;
+    // font-weight: bolder !important;
     background-color: rgba(0,0,0,0.3);
   }
 }
-
-
 
 .name-logo {
   display: flex;
@@ -105,6 +140,60 @@ export default {
   #rvn {
     background-image: url("~@/assets/img/teams/raven-min.png");
   }
+  #txg {
+    background-image: url("~@/assets/img/teams/toxic-min.png");
+  }
+  #pdt {
+    background-image: url("~@/assets/img/teams/predators-min.png");
+  }
+  #avt {
+    background-image: url("~@/assets/img/teams/ventus-min.png");
+  }
+  #app {
+    background-image: url("~@/assets/img/teams/as-ppk-min.png");
+  }
+  #n7g {
+    background-image: url("~@/assets/img/teams/natus-min.png");
+  }
+  #ols {
+    background-image: url("~@/assets/img/teams/only-silver-min.png");
+  }
+  #bbl {
+    background-image: url("~@/assets/img/teams/default-min.png");
+  }
+}
+
+//tbody {
+// tr:nth-child(-n+4){
+//   td:nth-child(1){
+//     border-left: 4px outset rgba(0, 0, 255, 0.7) ;
+//   }
+// }
+//   tr:nth-child(+n+5){
+//     td:nth-child(1){
+//       border-left: 4px solid rgba(255, 0, 0, 0.7) ;
+//     }
+//   }
+//}
+
+.col-2px-sucess {
+  width: 4px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background:rgba(blue, 0.7);
+}
+
+.col-2px-fail {
+  width: 4px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background:rgba(red, 0.6);
+}
+
+.team-nome {
+  text-transform: uppercase;
 }
 
 </style>
