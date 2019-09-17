@@ -9,6 +9,7 @@ import Review from "./views/Review";
 import About from "./views/About";
 import FrequentAsk from "./views/FrequentAsk";
 import Teams from "./views/Teams";
+import Table from "./views/Table";
 
 
 Vue.use(Router);
@@ -60,6 +61,11 @@ export default new Router({
       path: "/teams",
       name: "teams",
       component: Teams
+    },
+    {
+      path: "/table",
+      name: "table",
+      component: Table
     }
     // {
     //   path: "/about",

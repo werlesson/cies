@@ -1,8 +1,8 @@
 <template>
   <section class="confirmed-teams">
-    <h1 class="text-uppercase">{{ teamsSort.length }} Equipes Confirmadas</h1>
+    <h1 class="text-uppercase">{{ teamsSort2.length }} Equipes Confirmadas</h1>
     <article class="teams">
-      <div class="team" v-for="(team, index) in teamsSort" :key="index">
+      <div class="team" v-for="(team, index) in teamsSort2" :key="index">
         <header>
           <img :src="team.logo" :alt="`${team.name} Logo`" />
         </header>
@@ -94,6 +94,19 @@ export default {
       const teams = this.teams;
 
       return teams.sort((a, b) => a.name.toUpperCase() > b.name.toUpperCase());
+    },
+    teamsSort2() {
+      return this.teams.sort(function(a, b) {
+        let value1 = a.name.toUpperCase();
+        let value2 = b.name.toUpperCase();
+        if (value1 > value2) {
+          return 1;
+        }
+        if (value1 < value2) {
+          return -1;
+        }
+        return 0;
+      });
     }
   }
 };
