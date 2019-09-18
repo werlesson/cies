@@ -23,6 +23,10 @@ export default new Router({
       component: Home
     },
     {
+      path: "*",
+      redirect: "/"
+    },
+    {
       path: "/blog",
       name: "blog",
       component: Blog
