@@ -77,7 +77,7 @@ export default {
         {
           name: "Brazilian Bulls",
           logo: require("@/assets/img/teams/brazilian-bulls.png"),
-          steam: "",
+          steam: "https://steamcommunity.com/groups/brzllnblls",
           gc: ""
         },
         {
