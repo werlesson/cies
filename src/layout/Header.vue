@@ -26,10 +26,10 @@
           <li class="active">
             <router-link to="/">Página Inicial</router-link>
           </li>
-          <li class="">
+          <li class>
             <router-link to="/teams">Equipes Confirmadas</router-link>
           </li>
-          <li class="">
+          <li class>
             <router-link to="/table">Tabela</router-link>
           </li>
           <li>
@@ -52,7 +52,8 @@
           <a
             class="btn-register ml-auto mr-auto btn-block text-center"
             href="https://forms.gle/Qco39doRwpdHSNmg7"
-          >Inscreva-se!</a>
+            >Inscreva-se!</a
+          >
         </form>
       </div>
     </nav>

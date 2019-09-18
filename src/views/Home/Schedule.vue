@@ -52,9 +52,9 @@
             <p>
               Após a formação dos times ocorrerá a divulgação dos mesmos bem
               como a elaboração e divulgação da tabela oficial dos jogos do
-              campeonato. A tabela irá dispor quais times irão se enfrentar. Será
-              criado um grupo no whatsapp (também será enviado um email, mas o
-              grupo possui mais agilidade) com os capitães para repassar
+              campeonato. A tabela irá dispor quais times irão se enfrentar.
+              Será criado um grupo no whatsapp (também será enviado um email,
+              mas o grupo possui mais agilidade) com os capitães para repassar
               informações mais detalhadas aos jogadores. Vale ressaltar que a
               primeira fase será online e os jogos serão feitos na plataforma da
               Gamers Club.

@@ -11,13 +11,13 @@ import FrequentAsk from "./views/FrequentAsk";
 import Teams from "./views/Teams";
 import Table from "./views/Table";
 
-
 Vue.use(Router);
 
 export default new Router({
   mode: "history",
   base: process.env.BASE_URL,
-  routes: [{
+  routes: [
+    {
       path: "/",
       name: "home",
       component: Home
