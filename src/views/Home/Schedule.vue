@@ -37,8 +37,7 @@
               whatsapp para formar os time. A formação das equipes se dará pelos
               próprios jogadores (ou randomicamente, caso não haja um consenso).
               O processo de formação das equipes se dará entre os dias
-              14.09.2019 a 16.09.2019 e será feito internamente pela comissão
-              organizadora do evento.
+              14.09.2019 a 20.09.2019.
             </p>
             <!-- <a href="#" class="read-more">
                 Read More
@@ -53,7 +52,7 @@
             <p>
               Após a formação dos times ocorrerá a divulgação dos mesmos bem
               como a elaboração e divulgação da tabela oficial dos jogos do
-              campeonato. A table irá dispor quais times irão se enfrentar. Será
+              campeonato. A tabela irá dispor quais times irão se enfrentar. Será
               criado um grupo no whatsapp (também será enviado um email, mas o
               grupo possui mais agilidade) com os capitães para repassar
               informações mais detalhadas aos jogadores. Vale ressaltar que a
