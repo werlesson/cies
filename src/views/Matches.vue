@@ -1,32 +1,35 @@
 <template>
   <section class="contact-page pb-5">
     <div class="container text-white">
-      <h2 class="pb-5">{{ title }}</h2>
+      <h2 class="pb-5">Tabela de Classificação</h2>
       <table
         class="table text-white table-striped table-hover table-borderless text-center"
       >
         <thead class="thead-dark">
           <tr>
             <th class="col-2px-fail"></th>
-            <th scope="col" v-for="(header, i) in table.headers" :key="i">
-              {{ header }}
-            </th>
+            <th scope="col" title="Posição">#</th>
+            <th scope="col">Equipe</th>
+            <th scope="col" title="Partidas Disputadas">J</th>
+            <th scope="col" title="Vitórias">V</th>
+            <th scope="col" title="Derrotas">D</th>
+            <th scope="col" title="Saldo de Rounds">SR</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(row, j) in teamsSortColocacao" :key="j">
-            <td :class="j < 4 ? 'col-2px-sucess' : 'col-2px-fail'"></td>
-            <td scope="row">{{ j + 1 }}</td>
+          <tr v-for="(row, index) in teamsSortColocacao" :key="index">
+            <td :class="index < 4 ? 'col-2px-sucess' : 'col-2px-fail'"></td>
+            <td scope="row">{{ index + 1 }}</td>
             <td class="name-logo row">
               <div class="col-md-5">
-                <span class="team-nome">{{ row.equipe }}</span>
+                <span class="team-nome">{{ row.name }}</span>
               </div>
-              <div class="col-md-4 minha-classe" :id="row.cod"></div>
+              <span class="col-md-4 logo" :id="row.id"></span>
             </td>
-            <td>{{ row.j }}</td>
-            <td>{{ row.v }}</td>
-            <td>{{ row.d }}</td>
-            <td>{{ row.sr }}</td>
+            <td>{{ row.matches }}</td>
+            <td>{{ row.wins }}</td>
+            <td>{{ row.defeats }}</td>
+            <td>{{ row.diff }}</td>
           </tr>
         </tbody>
       </table>
@@ -38,96 +41,106 @@
 export default {
   data() {
     return {
-      title: "Tabela de Classificação",
       table: {
-        headers: ["#", "Equipe", "J", "V", "D", "SR"],
         rows: [
           {
-            cod: "avt",
-            equipe: "a7-Ventu's Team",
-            j: "0",
-            v: "0",
-            d: "0",
-            sr: "0"
-          },
-          { cod: "app", equipe: "As ppks", j: "0", v: "0", d: "0", sr: "0" },
-          {
-            cod: "bbl",
-            equipe: "Brazilian Bulls",
-            j: "0",
-            v: "0",
-            d: "0",
-            sr: "0"
+            id: "avt",
+            name: "a7-Ventu's Team",
+            matches: "0",
+            wins: "0",
+            defeats: "0",
+            diff: "0"
           },
           {
-            cod: "n7g",
-            equipe: "NATUS7 GAMING",
-            j: "0",
-            v: "0",
-            d: "0",
-            sr: "0"
+            id: "app",
+            name: "As ppks",
+            matches: "0",
+            wins: "0",
+            defeats: "0",
+            diff: "0"
           },
           {
-            cod: "ols",
-            equipe: "Only Silvers",
-            j: "0",
-            v: "0",
-            d: "0",
-            sr: "0"
+            id: "bbl",
+            name: "Brazilian Bulls",
+            matches: "0",
+            wins: "0",
+            defeats: "0",
+            diff: "0"
           },
-          { cod: "pdt", equipe: "Predators", j: "0", v: "0", d: "0", sr: "0" },
-          { cod: "rvn", equipe: "Raven", j: "0", v: "0", d: "0", sr: "0" },
           {
-            cod: "txg",
-            equipe: "TOXIC Gaming",
-            j: "0",
-            v: "0",
-            d: "0",
-            sr: "0"
+            id: "n7g",
+            name: "NATUS7 GAMING",
+            matches: "0",
+            wins: "0",
+            defeats: "0",
+            diff: "0"
           },
-          { cod: "vac", equipe: "VAC-eiros", j: "0", v: "0", d: "0", sr: "0" }
+          {
+            id: "ols",
+            name: "Only Silvers",
+            matches: "0",
+            wins: "0",
+            defeats: "0",
+            diff: "0"
+          },
+          {
+            id: "pdt",
+            name: "Predators",
+            matches: "0",
+            wins: "0",
+            defeats: "0",
+            diff: "0"
+          },
+          {
+            id: "rvn",
+            name: "Raven",
+            matches: "0",
+            wins: "0",
+            defeats: "0",
+            diff: "0"
+          },
+          {
+            id: "txg",
+            name: "TOXIC Gaming",
+            matches: "0",
+            wins: "0",
+            defeats: "0",
+            diff: "0"
+          },
+          {
+            id: "vac",
+            name: "VAC-eiros",
+            matches: "0",
+            wins: "0",
+            defeats: "0",
+            diff: "0"
+          }
         ]
       }
     };
   },
   computed: {
-    teamsSortName() {
-      const rows = this.table.rows;
-
-      return rows.sort(function(a, b) {
-        let equipeA = a.equipe.toUpperCase();
-        let equipeB = b.equipe.toUpperCase();
-        if (equipeA > equipeB) {
-          return 1;
-        }
-        if (equipeA < equipeB) {
-          return -1;
-        }
-        return 0;
-      });
-    },
-
     //Vitoria>Saldo de Rounds > Nome
     teamsSortColocacao() {
       const rows = this.table.rows;
 
       return rows.sort(function(a, b) {
-        let vitA = a.v;
-        let vitB = b.v;
+        let vitA = a.wins;
+        let vitB = b.wins;
         if (vitA < vitB) {
           return 1;
         } else if (vitA > vitB) {
           return -1;
         } else if (vitA == vitB) {
-          let srA = a.sr;
-          let srB = b.sr;
+          let srA = a.diff;
+          let srB = b.diff;
           if (srA < srB) {
             return 1;
           } else if (srA > srB) {
             return -1;
           } else if (srA == srB) {
-            let equipeA = a.equipe.toUpperCase();
-            let equipeB = b.equipe.toUpperCase();
+            let equipeA = a.name.toUpperCase();
+            let equipeB = b.name.toUpperCase();
             if (equipeA > equipeB) {
               return 1;
             }
@@ -160,7 +173,7 @@ export default {
     // font-weight: bolder !important;
     background-color: rgba(0, 0, 0, 0.3);
 
-    & > .name-logo .minha-classe {
+    & > .name-logo .logo {
       background-size: 80%;
     }
   }
@@ -170,7 +183,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  .minha-classe {
+  .logo {
     flex: 1;
     height: 40px;
     background-repeat: no-repeat;
