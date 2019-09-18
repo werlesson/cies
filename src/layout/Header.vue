@@ -30,7 +30,7 @@
             <router-link to="/teams">Equipes Confirmadas</router-link>
           </li>
           <li class>
-            <router-link to="/table">Tabela</router-link>
+            <router-link to="/matches">Partidas</router-link>
           </li>
           <li>
             <router-link to="/local">Local do Evento</router-link>

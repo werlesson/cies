@@ -159,6 +159,10 @@ export default {
     color: #fff !important;
     // font-weight: bolder !important;
     background-color: rgba(0, 0, 0, 0.3);
+
+    & > .name-logo .minha-classe {
+      background-size: 80%;
+    }
   }
 }
 
@@ -170,35 +174,46 @@ export default {
     flex: 1;
     height: 40px;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
+    background-origin: content-box;
+    transition: background-size 300ms ease-out;
+
+    &:hover {
+      background-size: 80%;
+    }
   }
   #vac {
-    background-image: url("~@/assets/img/teams/vac-min.png");
+    background-image: url("~@/assets/img/teams/vac-eiros.png");
   }
   #rvn {
-    background-image: url("~@/assets/img/teams/raven-min.png");
+    background-image: url("~@/assets/img/teams/raven.png");
+    background-position-y: 45%;
   }
   #txg {
-    background-image: url("~@/assets/img/teams/toxic-min.png");
+    background-image: url("~@/assets/img/teams/toxic.svg");
   }
   #pdt {
-    background-image: url("~@/assets/img/teams/predators-min.png");
+    background-image: url("~@/assets/img/teams/predators-white.svg");
+    background-position-y: 60%;
   }
   #avt {
-    background-image: url("~@/assets/img/teams/ventus-min.png");
+    background-image: url("~@/assets/img/teams/ventus.png");
+    background-position-y: 70%;
   }
   #app {
-    background-image: url("~@/assets/img/teams/as-ppk-min.png");
+    background-image: url("~@/assets/img/teams/as-ppks.png");
   }
   #n7g {
-    background-image: url("~@/assets/img/teams/natus-min.png");
+    background-image: url("~@/assets/img/teams/natus.png");
+    background-position-y: 30%;
   }
   #ols {
-    background-image: url("~@/assets/img/teams/only-silver-min.png");
+    background-image: url("~@/assets/img/teams/only-silvers.png");
   }
   #bbl {
-    background-image: url("~@/assets/img/teams/brazilian-bulls-min.png");
+    background-image: url("~@/assets/img/teams/brazilian-bulls.png");
+    background-position-y: 48%;
   }
 }
 
