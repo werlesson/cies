@@ -76,7 +76,7 @@ export default {
         },
         {
           name: "Brazilian Bulls",
-          logo: require("@/assets/img/cies-logo-white.svg"),
+          logo: require("@/assets/img/teams/brazilian-bulls.png"),
           steam: "",
           gc: ""
         },

@@ -159,7 +159,7 @@ export default {
     background-image: url("~@/assets/img/teams/only-silver-min.png");
   }
   #bbl {
-    background-image: url("~@/assets/img/teams/default-min.png");
+    background-image: url("~@/assets/img/teams/brazilian-bulls-min.png");
   }
 }
 
