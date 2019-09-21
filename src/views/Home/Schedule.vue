@@ -4,7 +4,7 @@
       <h2 class="text-white pb-5">Datas e Informações Importantes</h2>
       <div class="row">
         <div class="col-md-4">
-          <div class="intro-text-box text-box text-white">
+          <div class="intro-text-box text-box text-white period-inactive">
             <div class="top-meta">02/09 a 20/09/2019 - Inscrições</div>
             <h3>Inscrições Abertas!</h3>
             <p>
@@ -18,7 +18,10 @@
             </p>
             <router-link to="/local" class="read-more">
               Não sabe como chegar? Clique aqui!
-              <img src="../../assets/img/icons/double-arrow.png" alt="#" />
+              <img
+                src="../../assets/img/icons/double-arrow.png"
+                alt="#"
+              />
             </router-link>
             <!-- <a href="#" class="read-more">
                 Não sabe como chegar? Clique aqui!
@@ -61,7 +64,10 @@
             </p>
             <a href="https://gamersclub.com.br" class="read-more">
               Não conhece a plataforma da GC?
-              <img src="../../assets/img/icons/double-arrow.png" alt="#" />
+              <img
+                src="../../assets/img/icons/double-arrow.png"
+                alt="#"
+              />
             </a>
           </div>
         </div>
@@ -76,7 +82,9 @@
               Durante este período, deverão ocorrer os jogos conforme
               apresentados na tabela do campeonato. Os confrontos irão ocorrer
               no formato MD1 e serão executados online, na plataforma da
-              <a href="https://gamersclub.com.br">Gamers Club</a>. É
+              <a
+                href="https://gamersclub.com.br"
+              >Gamers Club</a>. É
               interessante que as equipes e jogadores que ainda não conhecem a
               plataforma, entrem previamente e se preparem para evitar atrasos
               na hora de criar a partida. Peguem o perfil de todos os
@@ -133,5 +141,23 @@ export default {};
 <style lang="scss" scoped>
 a {
   color: #b01ba5 !important;
+}
+
+.period-active {
+  border: 2px outset #b01ba5;
+  border-radius: 3%;
+  // background: rgba(53, 21, 86, 0.5) !important;
+}
+
+.period-inactive {
+  p {
+    color: #68647d8a;
+  }
+  h3 {
+    color: #68647d8a;
+  }
+  .top-meta {
+    color: #68647d8a;
+  }
 }
 </style>

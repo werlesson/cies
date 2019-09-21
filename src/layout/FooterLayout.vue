@@ -39,7 +39,7 @@
         <a href="https://www.instagram.com/ciesoficial">
           <i class="fa fa-instagram fa-2x"></i>
         </a>
-        <a href="https://twitch.tv/MatheusTF7">
+        <a href="https://www.twitch.tv/ciesoficial">
           <i class="fa fa-twitch fa-2x"></i>
         </a>
       </div>
