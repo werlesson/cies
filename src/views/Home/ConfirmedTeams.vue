@@ -85,6 +85,24 @@ export default {
           logo: require("@/assets/img/teams/only-silvers.png"),
           steam: "",
           gc: ""
+        },
+        {
+          name: "Xablau Gaming",
+          logo: require("@/assets/img/teams/xablau-gaming.png"),
+          steam: "",
+          gc: ""
+        },
+        {
+          name: "Brotherhood",
+          logo: require("@/assets/img/teams/brotherhood.png"),
+          steam: "",
+          gc: ""
+        },
+        {
+          name: "Kommando CHOSK",
+          logo: require("@/assets/img/cies-logo-white.svg"),
+          steam: "",
+          gc: ""
         }
       ]
     };
