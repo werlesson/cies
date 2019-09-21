@@ -93,7 +93,7 @@ export default {
       margin-bottom: 40px;
 
       &:hover ~ div.background {
-        filter: none;
+        filter: brightness(70%);
       }
     }
 
