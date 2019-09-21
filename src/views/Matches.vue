@@ -2,7 +2,10 @@
   <section class="contact-page pb-5">
     <div class="container text-white">
       <h2 class="pb-5">Tabela de Classificação</h2>
-      <table class="table text-white table-striped table-hover table-borderless text-center">
+      <h4>Grupo A</h4>
+      <table
+        class="table text-white table-striped table-hover table-borderless text-center"
+      >
         <thead class="thead-dark">
           <tr>
             <th class="col-2px-fail"></th>
@@ -15,8 +18,41 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(row, index) in teamsSortColocacao" :key="index">
-            <td :class="index < 4 ? 'col-2px-sucess' : 'col-2px-fail'"></td>
+          <tr v-for="(row, index) in sortedGroupA" :key="index">
+            <td :class="index < 2 ? 'col-2px-sucess' : 'col-2px-fail'"></td>
+            <td scope="row">{{ index + 1 }}</td>
+            <td class="name-logo row">
+              <div class="col-md-5">
+                <span class="team-nome">{{ row.name }}</span>
+              </div>
+              <span class="col-md-4 logo" :id="row.id"></span>
+            </td>
+            <td>{{ row.matches }}</td>
+            <td>{{ row.wins }}</td>
+            <td>{{ row.defeats }}</td>
+            <td>{{ row.diff }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h4>Grupo B</h4>
+      <table
+        class="table text-white table-striped table-hover table-borderless text-center"
+      >
+        <thead class="thead-dark">
+          <tr>
+            <th class="col-2px-fail"></th>
+            <th scope="col" title="Posição">#</th>
+            <th scope="col">Equipe</th>
+            <th scope="col" title="Partidas Disputadas">J</th>
+            <th scope="col" title="Vitórias">V</th>
+            <th scope="col" title="Derrotas">D</th>
+            <th scope="col" title="Saldo de Rounds">SR</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(row, index) in sortedGroupB" :key="index">
+            <td :class="index < 2 ? 'col-2px-sucess' : 'col-2px-fail'"></td>
             <td scope="row">{{ index + 1 }}</td>
             <td class="name-logo row">
               <div class="col-md-5">
@@ -36,117 +72,33 @@
 </template>
 
 <script>
+import { createNamespacedHelpers } from "vuex";
+
+const { mapGetters } = createNamespacedHelpers("teams");
+
 export default {
   data() {
     return {
-      table: {
-        rows: [
-          {
-            id: "avt",
-            name: "a7-Ventu's Team",
-            matches: "0",
-            wins: "0",
-            defeats: "0",
-            diff: "0"
-          },
-          {
-            id: "app",
-            name: "As ppks",
-            matches: "0",
-            wins: "0",
-            defeats: "0",
-            diff: "0"
-          },
-          {
-            id: "bbl",
-            name: "Brazilian Bulls",
-            matches: "0",
-            wins: "0",
-            defeats: "0",
-            diff: "0"
-          },
-          {
-            id: "n7g",
-            name: "NATUS7 GAMING",
-            matches: "0",
-            wins: "0",
-            defeats: "0",
-            diff: "0"
-          },
-          {
-            id: "ols",
-            name: "Only Silvers",
-            matches: "0",
-            wins: "0",
-            defeats: "0",
-            diff: "0"
-          },
-          {
-            id: "pdt",
-            name: "Predators",
-            matches: "0",
-            wins: "0",
-            defeats: "0",
-            diff: "0"
-          },
-          {
-            id: "rvn",
-            name: "Raven",
-            matches: "0",
-            wins: "0",
-            defeats: "0",
-            diff: "0"
-          },
-          {
-            id: "txg",
-            name: "TOXIC Gaming",
-            matches: "0",
-            wins: "0",
-            defeats: "0",
-            diff: "0"
-          },
-          {
-            id: "vac",
-            name: "VAC-eiros",
-            matches: "0",
-            wins: "0",
-            defeats: "0",
-            diff: "0"
-          },
-          {
-            id: "xbg",
-            name: "Xablau Gaming",
-            matches: "0",
-            wins: "0",
-            defeats: "0",
-            diff: "0"
-          },
-          {
-            id: "bth",
-            name: "Brotherhood",
-            matches: "0",
-            wins: "0",
-            defeats: "0",
-            diff: "0"
-          },
-          {
-            id: "kmc",
-            name: "Kommando CHOSK",
-            matches: "0",
-            wins: "0",
-            defeats: "0",
-            diff: "0"
-          }
-        ]
-      }
+      sortedGroupA: [],
+      sortedGroupB: []
     };
   },
-  computed: {
-    //Vitoria>Saldo de Rounds > Nome
-    teamsSortColocacao() {
-      const rows = this.table.rows;
 
-      return rows.sort(function(a, b) {
+  mounted() {
+    const groupA = this.getByGroup("A");
+    this.sortedGroupA = this.teamsSortColocacao(groupA);
+    const groupB = this.getByGroup("B");
+    this.sortedGroupB = this.teamsSortColocacao(groupB);
+  },
+
+  computed: {
+    ...mapGetters(["getByGroup"])
+  },
+
+  methods: {
+    //Vitoria>Saldo de Rounds > Nome
+    teamsSortColocacao(arr) {
+      return arr.sort(function(a, b) {
         let vitA = a.wins;
         let vitB = b.wins;
         if (vitA < vitB) {
@@ -184,6 +136,11 @@ export default {
 // .contact-page {
 //   padding-top: 120px;
 // }
+
+table tbody tr td {
+  padding: 0.25rem;
+  vertical-align: middle;
+}
 
 .thead-dark th {
   background-color: #1b0d36 !important;

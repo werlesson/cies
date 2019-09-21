@@ -23,93 +23,20 @@
 </template>
 
 <script>
+import { createNamespacedHelpers } from "vuex";
 import Gc from "@/components/svg/Gc";
+const { mapGetters } = createNamespacedHelpers("teams");
 
 export default {
   components: {
     Gc
   },
-  data() {
-    return {
-      teams: [
-        {
-          name: "TOXIC Gaming",
-          logo: require("@/assets/img/teams/toxic.svg"),
-          steam: "https://steamcommunity.com/groups/toxiggamiing",
-          gc: "https://gamersclub.com.br/time/126573"
-        },
-        {
-          name: "Predators",
-          logo: require("@/assets/img/teams/predators-white.svg"),
-          steam: "https://steamcommunity.com/groups/predatorsgg",
-          gc: "https://gamersclub.com.br/time/135530"
-        },
-        {
-          name: "Raven",
-          logo: require("@/assets/img/teams/raven.png"),
-          steam: "https://steamcommunity.com/groups/ravencsgoteam",
-          gc: "https://gamersclub.com.br/time/136398"
-        },
-        {
-          name: "NATUS7 GAMING",
-          logo: require("@/assets/img/teams/natus.png"),
-          steam: "https://steamcommunity.com/groups/natus7g",
-          gc: "https://gamersclub.com.br/time/101392"
-        },
-        {
-          name: "a7-Ventu's Team",
-          logo: require("@/assets/img/teams/ventus.png"),
-          steam: "https://steamcommunity.com/groups/ventusbr",
-          gc: "https://gamersclub.com.br/time/122255"
-        },
-        {
-          name: "VAC-eiros",
-          logo: require("@/assets/img/teams/vac-eiros.png"),
-          steam: "https://steamcommunity.com/groups/vac-eiros",
-          gc: "https://gamersclub.com.br/time/136411"
-        },
-        {
-          name: "As ppks",
-          logo: require("@/assets/img/teams/as-ppks.png"),
-          steam: "https://steamcommunity.com/groups/csdasppks",
-          gc: "https://gamersclub.com.br/time/136623"
-        },
-        {
-          name: "Brazilian Bulls",
-          logo: require("@/assets/img/teams/brazilian-bulls.png"),
-          steam: "https://steamcommunity.com/groups/brzllnblls",
-          gc: ""
-        },
-        {
-          name: "Only Silvers",
-          logo: require("@/assets/img/teams/only-silvers.png"),
-          steam: "",
-          gc: ""
-        },
-        {
-          name: "Xablau Gaming",
-          logo: require("@/assets/img/teams/xablau-gaming.png"),
-          steam: "",
-          gc: ""
-        },
-        {
-          name: "Brotherhood",
-          logo: require("@/assets/img/teams/brotherhood.png"),
-          steam: "",
-          gc: ""
-        },
-        {
-          name: "Kommando CHOSK",
-          logo: require("@/assets/img/cies-logo-white.svg"),
-          steam: "",
-          gc: ""
-        }
-      ]
-    };
-  },
+
   computed: {
+    ...mapGetters(["confirmedTeams"]),
+
     teamsSort() {
-      const teams = this.teams;
+      const teams = this.confirmedTeams;
 
       return teams.sort(function(a, b) {
         let value1 = a.name.toUpperCase();

@@ -7,7 +7,7 @@ import "jquery";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Theme from './plugins/theme';
+import Theme from "./plugins/theme";
 
 Vue.use(Theme);
 
