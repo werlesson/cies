@@ -2,9 +2,7 @@
   <section class="contact-page pb-5">
     <div class="container text-white">
       <h2 class="pb-5">Tabela de Classificação</h2>
-      <table
-        class="table text-white table-striped table-hover table-borderless text-center"
-      >
+      <table class="table text-white table-striped table-hover table-borderless text-center">
         <thead class="thead-dark">
           <tr>
             <th class="col-2px-fail"></th>
@@ -110,6 +108,30 @@ export default {
           {
             id: "vac",
             name: "VAC-eiros",
+            matches: "0",
+            wins: "0",
+            defeats: "0",
+            diff: "0"
+          },
+          {
+            id: "xbg",
+            name: "Xablau Gaming",
+            matches: "0",
+            wins: "0",
+            defeats: "0",
+            diff: "0"
+          },
+          {
+            id: "bth",
+            name: "Brotherhood",
+            matches: "0",
+            wins: "0",
+            defeats: "0",
+            diff: "0"
+          },
+          {
+            id: "kmc",
+            name: "Kommando CHOSK",
             matches: "0",
             wins: "0",
             defeats: "0",
@@ -226,6 +248,21 @@ export default {
   }
   #bbl {
     background-image: url("~@/assets/img/teams/brazilian-bulls.png");
+    background-position-y: 44%;
+  }
+  #xbg {
+    background-image: url("~@/assets/img/teams/xablau-gaming.png");
+    background-position-y: 32%;
+  }
+  #bth {
+    background-image: url("~@/assets/img/teams/brotherhood.png");
+    background-position-y: 48%;
+    &:hover {
+      background-size: 48%;
+    }
+  }
+  #kmc {
+    background-image: url("~@/assets/img/cies-logo-white.svg");
     background-position-y: 48%;
   }
 }
