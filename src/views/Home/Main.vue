@@ -20,9 +20,15 @@
     <section class="unavailable" v-else>
       <h2>Inscrições Encerradas</h2>
 
-      <!-- <div class="description">
-        <p>Mensagem pra quem chegou tarde</p></p>
-      </div>-->
+      <div class="description">
+        <p>Acompanhe nosso campeonato</p>
+        <p>Muitas emoções estão por vir</p>
+      </div>
+
+      <router-link to="/teams" class="site-btn">
+        Ver Equipes Confirmadas
+        <img src="@/assets/img/icons/double-arrow.png" alt="#" />
+      </router-link>
 
       <div class="background"></div>
     </section>

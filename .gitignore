@@ -21,4 +21,5 @@ yarn-error.log*
 *.sw?
 
 #firebase
-*.cache
+hosting.*.cache
+.firebase
