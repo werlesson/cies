@@ -137,7 +137,19 @@ export default {
       {
         name: "Kommando CHOSK",
         id: "kmc",
-        logo: require("@/assets/img/cies-logo-white.svg"),
+        logo: require("@/assets/img/teams/kommando.png"),
+        steam: "https://steamcommunity.com/groups/KommandoChosk",
+        gc: "https://gamersclub.com.br/time/137193",
+        matches: 0,
+        wins: 0,
+        defeats: 0,
+        diff: 0,
+        group: ""
+      },
+      {
+        name: "Pros Don't Fake",
+        id: "pdf",
+        logo: require("@/assets/img/teams/pdf.png"),
         steam: "",
         gc: "",
         matches: 0,
