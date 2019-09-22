@@ -18,7 +18,10 @@
             </p>
             <router-link to="/local" class="read-more">
               Não sabe como chegar? Clique aqui!
-              <img src="../../assets/img/icons/double-arrow.png" alt="#" />
+              <img
+                src="../../assets/img/icons/double-arrow.png"
+                alt="#"
+              />
             </router-link>
             <!-- <a href="#" class="read-more">
                 Não sabe como chegar? Clique aqui!
@@ -27,7 +30,7 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="intro-text-box text-box text-white">
+          <div class="intro-text-box text-box text-white period-inactive">
             <div class="top-meta">21/09 a 22/09/2019 - Formação dos Times</div>
             <h3>Hora de formar os Times</h3>
             <p>
@@ -46,7 +49,7 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="intro-text-box text-box text-white">
+          <div class="intro-text-box text-box text-white period-inactive">
             <div class="top-meta">22/09/19 - Divulgação da Tabela e Times</div>
             <h3>Meu Time e Contra quem irei jogar.</h3>
             <p>
@@ -61,7 +64,10 @@
             </p>
             <a href="https://gamersclub.com.br" class="read-more">
               Não conhece a plataforma da GC?
-              <img src="../../assets/img/icons/double-arrow.png" alt="#" />
+              <img
+                src="../../assets/img/icons/double-arrow.png"
+                alt="#"
+              />
             </a>
           </div>
         </div>
@@ -76,7 +82,9 @@
               Durante este período, deverão ocorrer os jogos conforme
               apresentados na tabela do campeonato. Os confrontos irão ocorrer
               no formato MD1 e serão executados online, na plataforma da
-              <a href="https://gamersclub.com.br">Gamers Club</a>. É
+              <a
+                href="https://gamersclub.com.br"
+              >Gamers Club</a>. É
               interessante que as equipes e jogadores que ainda não conhecem a
               plataforma, entrem previamente e se preparem para evitar atrasos
               na hora de criar a partida. Peguem o perfil de todos os

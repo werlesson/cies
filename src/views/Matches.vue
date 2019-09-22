@@ -3,17 +3,13 @@
     <div class="container text-white">
       <h2 class="pb-5">Tabela de Classificação</h2>
       <h4>Grupo A</h4>
-      <table
-        class="table text-white table-striped table-hover table-borderless text-center"
-      >
+      <table class="table text-white table-striped table-hover table-borderless text-center">
         <thead class="thead-dark">
           <tr>
             <th class="col-2px-fail"></th>
             <th class="fixed-width" scope="col" title="Posição">#</th>
             <th scope="col">Equipe</th>
-            <th class="fixed-width" scope="col" title="Partidas Disputadas">
-              J
-            </th>
+            <th class="fixed-width" scope="col" title="Partidas Disputadas">J</th>
             <th class="fixed-width" scope="col" title="Vitórias">V</th>
             <th class="fixed-width" scope="col" title="Derrotas">D</th>
             <th class="fixed-width" scope="col" title="Saldo de Rounds">SR</th>
@@ -38,17 +34,13 @@
       </table>
 
       <h4>Grupo B</h4>
-      <table
-        class="table text-white table-striped table-hover table-borderless text-center"
-      >
+      <table class="table text-white table-striped table-hover table-borderless text-center">
         <thead class="thead-dark">
           <tr>
             <th class="col-2px-fail"></th>
             <th class="fixed-width" scope="col" title="Posição">#</th>
             <th scope="col">Equipe</th>
-            <th class="fixed-width" scope="col" title="Partidas Disputadas">
-              J
-            </th>
+            <th class="fixed-width" scope="col" title="Partidas Disputadas">J</th>
             <th class="fixed-width" scope="col" title="Vitórias">V</th>
             <th class="fixed-width" scope="col" title="Derrotas">D</th>
             <th class="fixed-width" scope="col" title="Saldo de Rounds">SR</th>
@@ -71,6 +63,64 @@
           </tr>
         </tbody>
       </table>
+
+      <div class="pb-5"></div>
+      <hr />
+
+      <!-- CONFRONTOS MANUAL GRUPO A -->
+      <h3 class="pt-5 pb-3">Confrontos Grupo A</h3>
+      <div class="grupo-a" v-for="(row, index) in gamesA" :key="index">
+        <h4
+          v-if="index == 4"
+          class="pt-3 pb-3"
+        >Rodada {{index+1}} - Inicio em {{getDataToDisplay(index, "A")}} e fim em 20/9/2019</h4>
+        <h4 v-else class="pt-3 pb-3">Rodada {{index+1}} - Inicio em {{getDataToDisplay(index, "A")}}</h4>
+        <table class="table text-white table-striped table-hover table-borderless text-center">
+          <thead class="thead-dark">
+            <tr v-if="index == 0">
+              <th scope="col">Equipe 1</th>
+              <th scope="col"></th>
+              <th scope="col">Equipe 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(row, index2) in row" :key="index2">
+              <td scope="row">{{teams[row[0]]}}</td>
+              <td scope="row">x</td>
+              <td scope="row">{{teams[row[1]]}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pb-5"></div>
+      <hr />
+
+      <!-- CONFRONTOS MANUAL GRUPO B -->
+      <h3 class="pt-5 pb-3">Confrontos Grupo B</h3>
+      <div class="grupo-a" v-for="(row, index) in gamesB" :key="index">
+        <h4
+          v-if="index == 6"
+          class="pt-3 pb-3"
+        >Rodada {{index+1}} - Inicio em {{getDataToDisplay(index)}} e fim em 20/9/2019</h4>
+        <h4 v-else class="pt-3 pb-3">Rodada {{index+1}} - Inicio em {{getDataToDisplay(index)}}</h4>
+        <table class="table text-white table-striped table-hover table-borderless text-center">
+          <thead class="thead-dark">
+            <tr v-if="index == 0">
+              <th scope="col">Equipe 1</th>
+              <th scope="col"></th>
+              <th scope="col">Equipe 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(row, index2) in row" :key="index2">
+              <td scope="row">{{teams[row[0]]}}</td>
+              <td scope="row">x</td>
+              <td scope="row">{{teams[row[1]]}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 </template>
@@ -103,6 +153,56 @@ export default {
       const groupB = this.getByGroup("B");
       return this.teamsSortColocacao(groupB);
     }
+  },
+
+  data() {
+    return {
+      teams: [
+        "Não Joga",
+        "a7-Ventu's Team",
+        "As ppks",
+        "Brazilian Bulls",
+        "Brotherhood",
+        "Kommando", // CHOSK
+        "NATUS7 GAMING",
+        "Only Silvers",
+        "PREDATORS",
+        "Pros Don't Fake",
+        "Raven",
+        "Toxic Gaming",
+        "VAC-eiros",
+        "Xablau Gaming"
+      ],
+      gamesA: [
+        // rodada 1
+        [[11, 12], [2, 7], [5, 10]],
+        // rodada 2
+        [[11, 7], [12, 10], [2, 5]],
+        // rodada 3
+        [[11, 10], [7, 5], [12, 2]],
+        // rodada 4
+        [[11, 5], [10, 2], [7, 12]],
+        // rodada 5
+        [[11, 2], [5, 12], [10, 7]]
+      ],
+      gamesB: [
+        // rodada 1
+        [[3, 13], [4, 6], [8, 9], [0, 1]],
+        // rodada 2
+        [[3, 6], [13, 9], [4, 1], [8, 0]],
+        // rodada 3
+        [[3, 9], [6, 1], [13, 0], [4, 8]],
+        // rodada 4
+        [[3, 1], [9, 0], [6, 8], [13, 4]],
+        // rodada 5
+        [[3, 0], [1, 8], [9, 4], [6, 13]],
+        // rodada 6
+        [[3, 8], [0, 4], [1, 13], [9, 6]],
+        // rodada 7
+        [[3, 4], [8, 13], [0, 6], [1, 9]]
+      ],
+      dataAtual: new Date()
+    };
   },
 
   methods: {
@@ -139,6 +239,32 @@ export default {
         }
         return 0;
       });
+    },
+
+    getDataToDisplay(increment = 0, grupo = "B") {
+      let dataInicial = new Date(2019, 9, 23, 0, 0, 0);
+      let dataFinal = new Date(2019, 10, 22, 0, 0, 0);
+
+      dataInicial.setDate(
+        dataInicial.getDate() + increment * (grupo == "A" ? 6 : 4)
+      );
+
+      if (dataInicial > dataFinal)
+        return (
+          dataFinal.getDate() +
+          "/" +
+          dataFinal.getMonth() +
+          "/" +
+          dataFinal.getFullYear()
+        );
+
+      return (
+        dataInicial.getDate() +
+        "/" +
+        dataInicial.getMonth() +
+        "/" +
+        dataInicial.getFullYear()
+      );
     }
   }
 };
