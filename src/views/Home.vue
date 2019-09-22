@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <main-page />
+    <!-- <main-page /> -->
     <video-twitch />
     <schedule />
     <!-- <informs /> -->
