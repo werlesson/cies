@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <main-page />
+    <video-twitch />
     <schedule />
     <!-- <informs /> -->
     <video-trailer />
@@ -18,10 +19,12 @@ import VideoTrailer from "./Home/Video";
 // import Feedback from "./Home/Feedback";
 // import Informs from "./Home/Informs";
 // import ConfirmedTeams from "./Home/ConfirmedTeams";
+import VideoTwitch from "./Home/VideoTwitch";
 export default {
   name: "home",
   components: {
     MainPage,
+    VideoTwitch,
     Schedule,
     Support,
     VideoTrailer
