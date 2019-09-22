@@ -8,10 +8,10 @@ export default {
         logo: require("@/assets/img/teams/toxic.svg"),
         steam: "https://steamcommunity.com/groups/toxiggamiing",
         gc: "https://gamersclub.com.br/time/126573",
-        matches: "0",
-        wins: "0",
-        defeats: "0",
-        diff: "0",
+        matches: 0,
+        wins: 0,
+        defeats: 0,
+        diff: 0,
         group: ""
       },
       {
@@ -20,10 +20,10 @@ export default {
         logo: require("@/assets/img/teams/predators-white.svg"),
         steam: "https://steamcommunity.com/groups/predatorsgg",
         gc: "https://gamersclub.com.br/time/135530",
-        matches: "0",
-        wins: "0",
-        defeats: "0",
-        diff: "0",
+        matches: 0,
+        wins: 0,
+        defeats: 0,
+        diff: 0,
         group: ""
       },
       {
@@ -32,10 +32,10 @@ export default {
         logo: require("@/assets/img/teams/raven.png"),
         steam: "https://steamcommunity.com/groups/ravencsgoteam",
         gc: "https://gamersclub.com.br/time/136398",
-        matches: "0",
-        wins: "0",
-        defeats: "0",
-        diff: "0",
+        matches: 0,
+        wins: 0,
+        defeats: 0,
+        diff: 0,
         group: ""
       },
       {
@@ -44,10 +44,10 @@ export default {
         logo: require("@/assets/img/teams/natus.png"),
         steam: "https://steamcommunity.com/groups/natus7g",
         gc: "https://gamersclub.com.br/time/101392",
-        matches: "0",
-        wins: "0",
-        defeats: "0",
-        diff: "0",
+        matches: 0,
+        wins: 0,
+        defeats: 0,
+        diff: 0,
         group: ""
       },
       {
@@ -56,10 +56,10 @@ export default {
         logo: require("@/assets/img/teams/ventus.png"),
         steam: "https://steamcommunity.com/groups/ventusbr",
         gc: "https://gamersclub.com.br/time/122255",
-        matches: "0",
-        wins: "0",
-        defeats: "0",
-        diff: "0",
+        matches: 0,
+        wins: 0,
+        defeats: 0,
+        diff: 0,
         group: ""
       },
       {
@@ -68,10 +68,10 @@ export default {
         logo: require("@/assets/img/teams/vac-eiros.png"),
         steam: "https://steamcommunity.com/groups/vac-eiros",
         gc: "https://gamersclub.com.br/time/136411",
-        matches: "0",
-        wins: "0",
-        defeats: "0",
-        diff: "0",
+        matches: 0,
+        wins: 0,
+        defeats: 0,
+        diff: 0,
         group: ""
       },
       {
@@ -80,10 +80,10 @@ export default {
         logo: require("@/assets/img/teams/as-ppks.png"),
         steam: "https://steamcommunity.com/groups/csdasppks",
         gc: "https://gamersclub.com.br/time/136623",
-        matches: "0",
-        wins: "0",
-        defeats: "0",
-        diff: "0",
+        matches: 0,
+        wins: 0,
+        defeats: 0,
+        diff: 0,
         group: ""
       },
       {
@@ -92,10 +92,10 @@ export default {
         logo: require("@/assets/img/teams/brazilian-bulls.png"),
         steam: "https://steamcommunity.com/groups/brzllnblls",
         gc: "",
-        matches: "0",
-        wins: "0",
-        defeats: "0",
-        diff: "0",
+        matches: 0,
+        wins: 0,
+        defeats: 0,
+        diff: 0,
         group: ""
       },
       {
@@ -104,10 +104,10 @@ export default {
         logo: require("@/assets/img/teams/only-silvers.png"),
         steam: "",
         gc: "",
-        matches: "0",
-        wins: "0",
-        defeats: "0",
-        diff: "0",
+        matches: 0,
+        wins: 0,
+        defeats: 0,
+        diff: 0,
         group: ""
       },
       {
@@ -116,10 +116,10 @@ export default {
         logo: require("@/assets/img/teams/xablau-gaming.png"),
         steam: "",
         gc: "",
-        matches: "0",
-        wins: "0",
-        defeats: "0",
-        diff: "0",
+        matches: 0,
+        wins: 0,
+        defeats: 0,
+        diff: 0,
         group: ""
       },
       {
@@ -128,10 +128,10 @@ export default {
         logo: require("@/assets/img/teams/brotherhood.png"),
         steam: "",
         gc: "",
-        matches: "0",
-        wins: "0",
-        defeats: "0",
-        diff: "0",
+        matches: 0,
+        wins: 0,
+        defeats: 0,
+        diff: 0,
         group: ""
       },
       {
@@ -140,13 +140,14 @@ export default {
         logo: require("@/assets/img/cies-logo-white.svg"),
         steam: "",
         gc: "",
-        matches: "0",
-        wins: "0",
-        defeats: "0",
-        diff: "0",
+        matches: 0,
+        wins: 0,
+        defeats: 0,
+        diff: 0,
         group: ""
       }
-    ]
+    ],
+    matches: []
   },
 
   getters: {
@@ -169,14 +170,32 @@ export default {
   },
 
   actions: {
-    // updateAvailability({ commit }, isAvailableToSubscribe) {
-    //   commit("UP_AVAILABILITY", isAvailableToSubscribe);
-    // }
+    addResult({ commit }, data) {
+      commit("ADD_RESULT", data);
+    }
   },
 
   mutations: {
-    // UP_AVAILABILITY(state, isAvailableToSubscribe) {
-    //   state.isAvailableToSubscribe = isAvailableToSubscribe;
-    // }
+    ADD_RESULT(state, data) {
+      const team1 = state.teams.find(team => team.id === data.team1);
+      const team2 = state.teams.find(team => team.id === data.team2);
+
+      // matches.push(data);
+      team1.matches++;
+      team2.matches++;
+      if (data.scores[0] > data.scores[1]) {
+        team1.wins++;
+        team2.defeats++;
+        const diff = data.scores[0] - data.scores[1];
+        team1.diff += diff;
+        team2.diff -= diff;
+      } else {
+        team1.defeats++;
+        team2.wins++;
+        const diff = data.scores[1] - data.scores[0];
+        team1.diff -= diff;
+        team2.diff += diff;
+      }
+    }
   }
 };

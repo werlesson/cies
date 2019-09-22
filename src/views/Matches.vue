@@ -74,29 +74,43 @@
 <script>
 import { createNamespacedHelpers } from "vuex";
 
-const { mapGetters } = createNamespacedHelpers("teams");
+const { mapGetters, mapActions } = createNamespacedHelpers("teams");
 
 export default {
-  data() {
-    return {
-      sortedGroupA: [],
-      sortedGroupB: []
-    };
-  },
-
   mounted() {
-    const groupA = this.getByGroup("A");
-    this.sortedGroupA = this.teamsSortColocacao(groupA);
-    const groupB = this.getByGroup("B");
-    this.sortedGroupB = this.teamsSortColocacao(groupB);
+    this.addResult({
+      team1: "bth",
+      team2: "kmc",
+      scores: [19, 15],
+      map: "de_mirage"
+    });
+
+    this.addResult({
+      team1: "ols",
+      team2: "xbg",
+      scores: [16, 14],
+      map: "de_dust2"
+    });
   },
 
   computed: {
-    ...mapGetters(["getByGroup"])
+    ...mapGetters(["getByGroup"]),
+
+    sortedGroupA() {
+      const groupA = this.getByGroup("");
+      return this.teamsSortColocacao(groupA);
+    },
+
+    sortedGroupB() {
+      const groupB = this.getByGroup("B");
+      return this.teamsSortColocacao(groupB);
+    }
   },
 
   methods: {
-    //Vitoria>Saldo de Rounds > Nome
+    ...mapActions(["addResult"]),
+
+    // Vitoria > Saldo de Rounds > Nome
     teamsSortColocacao(arr) {
       return arr.sort(function(a, b) {
         let vitA = a.wins;
