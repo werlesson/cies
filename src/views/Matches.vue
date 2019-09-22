@@ -239,8 +239,12 @@ table {
     }
   }
   #kmc {
-    background-image: url("~@/assets/img/cies-logo-white.svg");
+    background-image: url("~@/assets/img/teams/kommando.png");
     background-position-y: 48%;
+  }
+  #pdf {
+    background-image: url("~@/assets/img/teams/pdf.png");
+    background-position-y: 18%;
   }
 }
 
