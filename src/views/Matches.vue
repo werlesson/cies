@@ -86,7 +86,8 @@ export default {
     //   team1: "TEAM_ID",
     //   team2: "TEAM_ID",
     //   scores: [16, 14],
-    //   map: "de_dust2"
+    //   map: "de_dust2",
+    //   date: new Date()
     // });
   },
 

@@ -196,6 +196,14 @@ export default {
         team1.diff -= diff;
         team2.diff += diff;
       }
+
+      // state.matches.push({
+      //   team1: team1.name,
+      //   team2: team2.name,
+      //   scores: data.scores,
+      //   map: data.map
+      // });
+      // console.log(state.matches);
     }
   }
 };
