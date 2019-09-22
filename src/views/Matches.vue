@@ -9,12 +9,14 @@
         <thead class="thead-dark">
           <tr>
             <th class="col-2px-fail"></th>
-            <th scope="col" title="Posição">#</th>
+            <th class="fixed-width" scope="col" title="Posição">#</th>
             <th scope="col">Equipe</th>
-            <th scope="col" title="Partidas Disputadas">J</th>
-            <th scope="col" title="Vitórias">V</th>
-            <th scope="col" title="Derrotas">D</th>
-            <th scope="col" title="Saldo de Rounds">SR</th>
+            <th class="fixed-width" scope="col" title="Partidas Disputadas">
+              J
+            </th>
+            <th class="fixed-width" scope="col" title="Vitórias">V</th>
+            <th class="fixed-width" scope="col" title="Derrotas">D</th>
+            <th class="fixed-width" scope="col" title="Saldo de Rounds">SR</th>
           </tr>
         </thead>
         <tbody>
@@ -42,12 +44,14 @@
         <thead class="thead-dark">
           <tr>
             <th class="col-2px-fail"></th>
-            <th scope="col" title="Posição">#</th>
+            <th class="fixed-width" scope="col" title="Posição">#</th>
             <th scope="col">Equipe</th>
-            <th scope="col" title="Partidas Disputadas">J</th>
-            <th scope="col" title="Vitórias">V</th>
-            <th scope="col" title="Derrotas">D</th>
-            <th scope="col" title="Saldo de Rounds">SR</th>
+            <th class="fixed-width" scope="col" title="Partidas Disputadas">
+              J
+            </th>
+            <th class="fixed-width" scope="col" title="Vitórias">V</th>
+            <th class="fixed-width" scope="col" title="Derrotas">D</th>
+            <th class="fixed-width" scope="col" title="Saldo de Rounds">SR</th>
           </tr>
         </thead>
         <tbody>
@@ -78,26 +82,19 @@ const { mapGetters, mapActions } = createNamespacedHelpers("teams");
 
 export default {
   mounted() {
-    this.addResult({
-      team1: "bth",
-      team2: "kmc",
-      scores: [19, 15],
-      map: "de_mirage"
-    });
-
-    this.addResult({
-      team1: "ols",
-      team2: "xbg",
-      scores: [16, 14],
-      map: "de_dust2"
-    });
+    // this.addResult({
+    //   team1: "TEAM_ID",
+    //   team2: "TEAM_ID",
+    //   scores: [16, 14],
+    //   map: "de_dust2"
+    // });
   },
 
   computed: {
     ...mapGetters(["getByGroup"]),
 
     sortedGroupA() {
-      const groupA = this.getByGroup("");
+      const groupA = this.getByGroup("A");
       return this.teamsSortColocacao(groupA);
     },
 
@@ -110,7 +107,7 @@ export default {
   methods: {
     ...mapActions(["addResult"]),
 
-    // Vitoria > Saldo de Rounds > Nome
+    // Vitórias > Saldo de Rounds > Nome
     teamsSortColocacao(arr) {
       return arr.sort(function(a, b) {
         let vitA = a.wins;
@@ -151,9 +148,15 @@ export default {
 //   padding-top: 120px;
 // }
 
-table tbody tr td {
-  padding: 0.25rem;
-  vertical-align: middle;
+table {
+  thead tr th.fixed-width {
+    width: 5rem;
+  }
+
+  tbody tr td {
+    padding: 0.25rem;
+    vertical-align: middle;
+  }
 }
 
 .thead-dark th {
@@ -176,6 +179,8 @@ table tbody tr td {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: left;
+
   .logo {
     flex: 1;
     height: 40px;
