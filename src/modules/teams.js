@@ -12,7 +12,7 @@ export default {
         wins: 0,
         defeats: 0,
         diff: 0,
-        group: ""
+        group: "A"
       },
       {
         name: "Predators",
@@ -24,7 +24,7 @@ export default {
         wins: 0,
         defeats: 0,
         diff: 0,
-        group: ""
+        group: "B"
       },
       {
         name: "Raven",
@@ -36,7 +36,7 @@ export default {
         wins: 0,
         defeats: 0,
         diff: 0,
-        group: ""
+        group: "A"
       },
       {
         name: "NATUS7 GAMING",
@@ -48,7 +48,7 @@ export default {
         wins: 0,
         defeats: 0,
         diff: 0,
-        group: ""
+        group: "B"
       },
       {
         name: "a7-Ventu's Team",
@@ -60,7 +60,7 @@ export default {
         wins: 0,
         defeats: 0,
         diff: 0,
-        group: ""
+        group: "B"
       },
       {
         name: "VAC-eiros",
@@ -72,7 +72,7 @@ export default {
         wins: 0,
         defeats: 0,
         diff: 0,
-        group: ""
+        group: "A"
       },
       {
         name: "As ppks",
@@ -84,7 +84,7 @@ export default {
         wins: 0,
         defeats: 0,
         diff: 0,
-        group: ""
+        group: "A"
       },
       {
         name: "Brazilian Bulls",
@@ -96,7 +96,7 @@ export default {
         wins: 0,
         defeats: 0,
         diff: 0,
-        group: ""
+        group: "B"
       },
       {
         name: "Only Silvers",
@@ -108,7 +108,7 @@ export default {
         wins: 0,
         defeats: 0,
         diff: 0,
-        group: ""
+        group: "A"
       },
       {
         name: "Xablau Gaming",
@@ -120,7 +120,7 @@ export default {
         wins: 0,
         defeats: 0,
         diff: 0,
-        group: ""
+        group: "B"
       },
       {
         name: "Brotherhood",
@@ -132,7 +132,7 @@ export default {
         wins: 0,
         defeats: 0,
         diff: 0,
-        group: ""
+        group: "B"
       },
       {
         name: "Kommando CHOSK",
@@ -144,7 +144,7 @@ export default {
         wins: 0,
         defeats: 0,
         diff: 0,
-        group: ""
+        group: "A"
       },
       {
         name: "Pros Don't Fake",
@@ -156,7 +156,7 @@ export default {
         wins: 0,
         defeats: 0,
         diff: 0,
-        group: ""
+        group: "B"
       }
     ],
     matches: []
