@@ -18,15 +18,15 @@
     </section>
 
     <section class="unavailable" v-else>
-      <h2>Inscrições Encerradas</h2>
+      <h2>A FASE ONLINE ESTÁ ABERTA!</h2>
 
       <div class="description">
         <p>Acompanhe nosso campeonato</p>
         <p>Muitas emoções estão por vir</p>
       </div>
 
-      <router-link to="/teams" class="site-btn">
-        Ver Equipes Confirmadas
+      <router-link to="/matches" class="site-btn">
+        Ver Confrontos e Datas
         <img src="@/assets/img/icons/double-arrow.png" alt="#" />
       </router-link>
 
@@ -115,7 +115,7 @@ export default {
 
   .unavailable {
     div.background {
-      background-image: url("~@/assets/img/bg-unavailable.png");
+      background-image: url("~@/assets/img/stadium-bg.jpg");
       filter: brightness(50%);
     }
   }
