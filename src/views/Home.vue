@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <main-page />
-    <video-twitch />
+    <!-- <video-twitch /> -->
     <schedule />
     <!-- <informs /> -->
     <video-trailer />
