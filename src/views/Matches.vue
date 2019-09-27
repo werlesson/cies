@@ -3,13 +3,17 @@
     <div class="container text-white">
       <h2 class="pb-5">Tabela de Classificação</h2>
       <h4>Grupo A</h4>
-      <table class="table text-white table-striped table-hover table-borderless text-center">
+      <table
+        class="table text-white table-striped table-hover table-borderless text-center"
+      >
         <thead class="thead-dark">
           <tr>
             <th class="col-2px-fail"></th>
             <th class="fixed-width" scope="col" title="Posição">#</th>
             <th scope="col">Equipe</th>
-            <th class="fixed-width" scope="col" title="Partidas Disputadas">J</th>
+            <th class="fixed-width" scope="col" title="Partidas Disputadas">
+              J
+            </th>
             <th class="fixed-width" scope="col" title="Vitórias">V</th>
             <th class="fixed-width" scope="col" title="Derrotas">D</th>
             <th class="fixed-width" scope="col" title="Saldo de Rounds">SR</th>
@@ -34,13 +38,17 @@
       </table>
 
       <h4>Grupo B</h4>
-      <table class="table text-white table-striped table-hover table-borderless text-center">
+      <table
+        class="table text-white table-striped table-hover table-borderless text-center"
+      >
         <thead class="thead-dark">
           <tr>
             <th class="col-2px-fail"></th>
             <th class="fixed-width" scope="col" title="Posição">#</th>
             <th scope="col">Equipe</th>
-            <th class="fixed-width" scope="col" title="Partidas Disputadas">J</th>
+            <th class="fixed-width" scope="col" title="Partidas Disputadas">
+              J
+            </th>
             <th class="fixed-width" scope="col" title="Vitórias">V</th>
             <th class="fixed-width" scope="col" title="Derrotas">D</th>
             <th class="fixed-width" scope="col" title="Saldo de Rounds">SR</th>
@@ -70,12 +78,16 @@
       <!-- CONFRONTOS MANUAL GRUPO A -->
       <h3 class="pt-5 pb-3">Confrontos Grupo A</h3>
       <div class="grupo-a" v-for="(row, index) in gamesA" :key="index">
-        <h4
-          v-if="index == 4"
-          class="pt-3 pb-3"
-        >Rodada {{index+1}} - Inicio em {{getDataToDisplay(index, "A")}} e fim em 20/9/2019</h4>
-        <h4 v-else class="pt-3 pb-3">Rodada {{index+1}} - Inicio em {{getDataToDisplay(index, "A")}}</h4>
-        <table class="table text-white table-striped table-hover table-borderless text-center">
+        <h4 v-if="index == 4" class="pt-3 pb-3">
+          Rodada {{ index + 1 }} - Inicio em
+          {{ getDataToDisplay(index, "A") }} e fim em 20/9/2019
+        </h4>
+        <h4 v-else class="pt-3 pb-3">
+          Rodada {{ index + 1 }} - Inicio em {{ getDataToDisplay(index, "A") }}
+        </h4>
+        <table
+          class="table text-white table-striped table-hover table-borderless text-center"
+        >
           <thead class="thead-dark">
             <tr v-if="index == 0">
               <th scope="col">Equipe 1</th>
@@ -85,9 +97,9 @@
           </thead>
           <tbody>
             <tr v-for="(row, index2) in row" :key="index2">
-              <td scope="row">{{teams[row[0]]}}</td>
+              <td scope="row">{{ teams[row[0]] }}</td>
               <td scope="row">x</td>
-              <td scope="row">{{teams[row[1]]}}</td>
+              <td scope="row">{{ teams[row[1]] }}</td>
             </tr>
           </tbody>
         </table>
@@ -99,12 +111,16 @@
       <!-- CONFRONTOS MANUAL GRUPO B -->
       <h3 class="pt-5 pb-3">Confrontos Grupo B</h3>
       <div class="grupo-a" v-for="(row, index) in gamesB" :key="index">
-        <h4
-          v-if="index == 6"
-          class="pt-3 pb-3"
-        >Rodada {{index+1}} - Inicio em {{getDataToDisplay(index)}} e fim em 20/9/2019</h4>
-        <h4 v-else class="pt-3 pb-3">Rodada {{index+1}} - Inicio em {{getDataToDisplay(index)}}</h4>
-        <table class="table text-white table-striped table-hover table-borderless text-center">
+        <h4 v-if="index == 6" class="pt-3 pb-3">
+          Rodada {{ index + 1 }} - Inicio em {{ getDataToDisplay(index) }} e fim
+          em 20/9/2019
+        </h4>
+        <h4 v-else class="pt-3 pb-3">
+          Rodada {{ index + 1 }} - Inicio em {{ getDataToDisplay(index) }}
+        </h4>
+        <table
+          class="table text-white table-striped table-hover table-borderless text-center"
+        >
           <thead class="thead-dark">
             <tr v-if="index == 0">
               <th scope="col">Equipe 1</th>
@@ -114,9 +130,9 @@
           </thead>
           <tbody>
             <tr v-for="(row, index2) in row" :key="index2">
-              <td scope="row">{{teams[row[0]]}}</td>
+              <td scope="row">{{ teams[row[0]] }}</td>
               <td scope="row">x</td>
-              <td scope="row">{{teams[row[1]]}}</td>
+              <td scope="row">{{ teams[row[1]] }}</td>
             </tr>
           </tbody>
         </table>
@@ -132,13 +148,21 @@ const { mapGetters, mapActions } = createNamespacedHelpers("teams");
 
 export default {
   mounted() {
-    // this.addResult({
-    //   team1: "TEAM_ID",
-    //   team2: "TEAM_ID",
-    //   scores: [16, 14],
-    //   map: "de_dust2",
-    //   date: new Date()
-    // });
+    this.addResult({
+      team1: "kmc",
+      team2: "rvn",
+      scores: [16, 10],
+      map: "de_dust2",
+      date: "26/10/2019"
+    });
+
+    this.addResult({
+      team1: "xbg",
+      team2: "bbl",
+      scores: [16, 7],
+      map: "de_cache",
+      date: "26/10/2019"
+    });
   },
 
   computed: {
