@@ -18,11 +18,16 @@
     </section>
 
     <section class="unavailable" v-else>
-      <h2>A FASE ONLINE ESTÁ ABERTA!</h2>
+      <h2>ASSISTA A TRANSMISSÃO DOS JOGOS! A Partir das 20h, Xablau Gaming x Brazilian Bulls</h2>
 
       <div class="description">
-        <p>Acompanhe nosso campeonato</p>
-        <p>Muitas emoções estão por vir</p>
+        <p>assista em uma das opções disponíveis:</p>
+        <p>
+          <a href="https://www.twitch.tv/ivomarsan">Twitch ch 1</a>
+        </p>
+        <p>
+          <a href="https://www.twitch.tv/matheustf7">Twitch ch 2</a>
+        </p>
       </div>
 
       <router-link to="/matches" class="site-btn">
