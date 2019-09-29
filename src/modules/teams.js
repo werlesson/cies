@@ -103,7 +103,7 @@ export default {
         id: "ols",
         logo: require("@/assets/img/teams/only-silvers.png"),
         steam: "",
-        gc: "",
+        gc: "https://gamersclub.com.br/time/137824",
         matches: 0,
         wins: 0,
         defeats: 0,
