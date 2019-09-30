@@ -163,6 +163,14 @@ export default {
       map: "de_cache",
       date: "26/10/2019"
     });
+
+    this.addResult({
+      team1: "bth",
+      team2: "n7g",
+      scores: [16, 14],
+      map: "de_mirage",
+      date: "28/10/2019"
+    });
   },
 
   computed: {
