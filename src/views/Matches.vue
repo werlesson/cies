@@ -96,7 +96,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(row, index2) in row" :key="index2">
+            <tr v-for="(row, index) in row" :key="index">
               <td scope="row">{{ teams[row[0]] }}</td>
               <td scope="row">x</td>
               <td scope="row">{{ teams[row[1]] }}</td>
@@ -129,7 +129,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(row, index2) in row" :key="index2">
+            <tr v-for="(row, index) in row" :key="index">
               <td scope="row">{{ teams[row[0]] }}</td>
               <td scope="row">x</td>
               <td scope="row">{{ teams[row[1]] }}</td>
@@ -148,8 +148,6 @@ const { mapGetters, mapActions } = createNamespacedHelpers("teams");
 
 export default {
   mounted() {
-    this.reset();
-
     this.addResult({
       team1: "kmc",
       team2: "rvn",
@@ -240,7 +238,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(["addResult"]),
+    ...mapActions(["reset", "addResult"]),
 
     // Vitórias > Saldo de Rounds > Nome
     teamsSortColocacao(arr) {
@@ -300,6 +298,10 @@ export default {
         dataInicial.getFullYear()
       );
     }
+  },
+
+  beforeDestroy() {
+    this.reset();
   }
 };
 </script>
