@@ -148,6 +148,8 @@ const { mapGetters, mapActions } = createNamespacedHelpers("teams");
 
 export default {
   mounted() {
+    this.reset();
+
     this.addResult({
       team1: "kmc",
       team2: "rvn",
