@@ -75,68 +75,25 @@
       <div class="pb-5"></div>
       <hr />
 
-      <!-- CONFRONTOS MANUAL GRUPO A -->
-      <h3 class="pt-5 pb-3">Confrontos Grupo A</h3>
-      <div class="grupo-a" v-for="(row, index) in gamesA" :key="index">
-        <h4 v-if="index == 4" class="pt-3 pb-3">
-          Rodada {{ index + 1 }} - Inicio em
-          {{ getDataToDisplay(index, "A") }} e fim em 20/9/2019
-        </h4>
-        <h4 v-else class="pt-3 pb-3">
-          Rodada {{ index + 1 }} - Inicio em {{ getDataToDisplay(index, "A") }}
-        </h4>
-        <table
-          class="table text-white table-striped table-hover table-borderless text-center"
+      <h3 class="pt-5 pb-3">Resultados</h3>
+      <section class="results">
+        <div
+          class="prev-match"
+          v-for="(match, index) in matchesPrev"
+          :key="index"
+          :style="{ 'background-image': `url(${match.map})` }"
         >
-          <thead class="thead-dark">
-            <tr v-if="index == 0">
-              <th scope="col">Equipe 1</th>
-              <th scope="col"></th>
-              <th scope="col">Equipe 2</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(row, index) in row" :key="index">
-              <td scope="row">{{ teams[row[0]] }}</td>
-              <td scope="row">x</td>
-              <td scope="row">{{ teams[row[1]] }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="pb-5"></div>
-      <hr />
-
-      <!-- CONFRONTOS MANUAL GRUPO B -->
-      <h3 class="pt-5 pb-3">Confrontos Grupo B</h3>
-      <div class="grupo-a" v-for="(row, index) in gamesB" :key="index">
-        <h4 v-if="index == 6" class="pt-3 pb-3">
-          Rodada {{ index + 1 }} - Inicio em {{ getDataToDisplay(index) }} e fim
-          em 20/9/2019
-        </h4>
-        <h4 v-else class="pt-3 pb-3">
-          Rodada {{ index + 1 }} - Inicio em {{ getDataToDisplay(index) }}
-        </h4>
-        <table
-          class="table text-white table-striped table-hover table-borderless text-center"
-        >
-          <thead class="thead-dark">
-            <tr v-if="index == 0">
-              <th scope="col">Equipe 1</th>
-              <th scope="col"></th>
-              <th scope="col">Equipe 2</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(row, index) in row" :key="index">
-              <td scope="row">{{ teams[row[0]] }}</td>
-              <td scope="row">x</td>
-              <td scope="row">{{ teams[row[1]] }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+          <div class="card">
+            <p class="teams">
+              <span class="winner">{{ match.team1 }}</span>
+              {{ match.scores[0] }} vs {{ match.scores[1] }}
+              <span class="loser">{{ match.team2 }}</span>
+            </p>
+            <p class="date">{{ match.date | moment("dddd, DD/MM HH:mm") }}</p>
+            <a :href="match.lobby"></a>
+          </div>
+        </div>
+      </section>
     </div>
   </section>
 </template>
@@ -147,13 +104,18 @@ import { createNamespacedHelpers } from "vuex";
 const { mapGetters, mapActions } = createNamespacedHelpers("teams");
 
 export default {
+  created() {
+    this.reset();
+  },
+
   mounted() {
     this.addResult({
       team1: "kmc",
       team2: "rvn",
       scores: [16, 10],
       map: "de_dust2",
-      date: "26/10/2019"
+      date: new Date("2019-10-26 19:54"),
+      lobby: "https://gamersclub.com.br/lobby/partida/5867571"
     });
 
     this.addResult({
@@ -161,7 +123,8 @@ export default {
       team2: "bbl",
       scores: [16, 7],
       map: "de_cache",
-      date: "26/10/2019"
+      date: new Date("2019-10-26 21:58"),
+      lobby: "https://gamersclub.com.br/lobby/partida/5868878"
     });
 
     this.addResult({
@@ -169,12 +132,13 @@ export default {
       team2: "n7g",
       scores: [16, 14],
       map: "de_mirage",
-      date: "28/10/2019"
+      date: new Date("2019-10-28 22:51"),
+      lobby: "https://gamersclub.com.br/lobby/partida/5883752"
     });
   },
 
   computed: {
-    ...mapGetters(["getByGroup"]),
+    ...mapGetters(["getByGroup", "matchesPrev"]),
 
     sortedGroupA() {
       const groupA = this.getByGroup("A");
@@ -185,56 +149,6 @@ export default {
       const groupB = this.getByGroup("B");
       return this.teamsSortColocacao(groupB);
     }
-  },
-
-  data() {
-    return {
-      teams: [
-        "Não Joga",
-        "a7-Ventu's Team",
-        "As ppks",
-        "Brazilian Bulls",
-        "Brotherhood",
-        "Kommando", // CHOSK
-        "NATUS7 GAMING",
-        "Only Silvers",
-        "PREDATORS",
-        "Pros Don't Fake",
-        "Raven",
-        "Toxic Gaming",
-        "VAC-eiros",
-        "Xablau Gaming"
-      ],
-      gamesA: [
-        // rodada 1
-        [[11, 12], [2, 7], [5, 10]],
-        // rodada 2
-        [[11, 7], [12, 10], [2, 5]],
-        // rodada 3
-        [[11, 10], [7, 5], [12, 2]],
-        // rodada 4
-        [[11, 5], [10, 2], [7, 12]],
-        // rodada 5
-        [[11, 2], [5, 12], [10, 7]]
-      ],
-      gamesB: [
-        // rodada 1
-        [[3, 13], [4, 6], [8, 9], [0, 1]],
-        // rodada 2
-        [[3, 6], [13, 9], [4, 1], [8, 0]],
-        // rodada 3
-        [[3, 9], [6, 1], [13, 0], [4, 8]],
-        // rodada 4
-        [[3, 1], [9, 0], [6, 8], [13, 4]],
-        // rodada 5
-        [[3, 0], [1, 8], [9, 4], [6, 13]],
-        // rodada 6
-        [[3, 8], [0, 4], [1, 13], [9, 6]],
-        // rodada 7
-        [[3, 4], [8, 13], [0, 6], [1, 9]]
-      ],
-      dataAtual: new Date()
-    };
   },
 
   methods: {
@@ -271,32 +185,6 @@ export default {
         }
         return 0;
       });
-    },
-
-    getDataToDisplay(increment = 0, grupo = "B") {
-      let dataInicial = new Date(2019, 9, 23, 0, 0, 0);
-      let dataFinal = new Date(2019, 10, 22, 0, 0, 0);
-
-      dataInicial.setDate(
-        dataInicial.getDate() + increment * (grupo == "A" ? 6 : 4)
-      );
-
-      if (dataInicial > dataFinal)
-        return (
-          dataFinal.getDate() +
-          "/" +
-          dataFinal.getMonth() +
-          "/" +
-          dataFinal.getFullYear()
-        );
-
-      return (
-        dataInicial.getDate() +
-        "/" +
-        dataInicial.getMonth() +
-        "/" +
-        dataInicial.getFullYear()
-      );
     }
   },
 
@@ -441,5 +329,72 @@ table {
 
 .team-nome {
   text-transform: uppercase;
+}
+
+.results {
+  display: flex;
+}
+.prev-match {
+  border: none;
+  box-sizing: border-box;
+  box-shadow: 0px 8px 16px -4px rgba(0, 0, 0, 0.5);
+  background-size: 100% 100%;
+  background-position: center;
+  border-radius: 0;
+  height: 202px;
+  width: 279px;
+  margin: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0;
+  flex-grow: 1;
+  min-width: 15rem;
+  transition: background-size 100ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-size: 105% 105%;
+  }
+
+  div.card {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+
+    .teams {
+      font-size: 20px;
+      text-align: center;
+
+      .winner,
+      .loser {
+        display: block;
+        font-size: 26px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-shadow: 1px 1px 1px #000;
+      }
+
+      .winner {
+        color: green;
+      }
+
+      .loser {
+        color: red;
+      }
+    }
+    .date {
+      text-align: center;
+    }
+
+    a {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+  }
 }
 </style>

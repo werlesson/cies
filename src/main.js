@@ -10,6 +10,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Theme from "./plugins/theme";
 
 Vue.use(Theme);
+const moment = require("moment");
+require("moment/locale/pt-br");
+
+Vue.use(require("vue-moment"), {
+  moment
+});
 
 Vue.config.productionTip = false;
 
