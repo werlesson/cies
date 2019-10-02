@@ -85,6 +85,7 @@ export default {
       match.map = data.map;
       match.date = data.date;
       match.lobby = data.lobby;
+      match.teams = [team1.name, team2.name];
 
       team1.matches++;
       team2.matches++;

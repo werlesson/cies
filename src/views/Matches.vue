@@ -150,7 +150,7 @@ export default {
       scores: [16, 10],
       map: "de_dust2",
       date: new Date("2019-09-26 19:54"),
-      lobby: "https://gamersclub.com.br/lobby/partida/5867571"
+      lobby: "https://gamersclub.com.br/lobby/partida/5868003"
     });
 
     this.addMatch({
