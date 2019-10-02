@@ -81,11 +81,11 @@
       >
         <tbody>
           <tr v-for="(match, index) in matchesNext" :key="index">
-            <td class="next-logos" :class="match.teamsId[0]">
+            <td class="next-logos left" :class="match.teamsId[0]">
               <span>{{ match.teams[0] }}</span>
             </td>
             <td>vs</td>
-            <td class="next-logos" :class="match.teamsId[1]">
+            <td class="next-logos right" :class="match.teamsId[1]">
               <span>{{ match.teams[1] }}</span>
             </td>
             <td>{{ match.date | moment("dddd, DD/MM HH:mm") }}</td>
@@ -107,16 +107,16 @@
         >
           <div class="card">
             <p class="teams">
-              <span :class="match.scores ? 'winner' : ''">
-                {{ match.teams[0] }}
-              </span>
+              <span :class="match.scores ? 'winner' : ''">{{
+                match.teams[0]
+              }}</span>
               <span v-if="match.scores"
                 >{{ match.scores[0] }} vs {{ match.scores[1] }}</span
               >
               <span v-else>vs</span>
-              <span :class="match.scores ? 'loser' : ''">{{
-                match.teams[1]
-              }}</span>
+              <span :class="match.scores ? 'loser' : ''">
+                {{ match.teams[1] }}
+              </span>
             </p>
             <p class="date">{{ match.date | moment("dddd, DD/MM HH:mm") }}</p>
             <a :href="match.lobby"></a>
@@ -501,12 +501,12 @@ table {
   background-size: contain;
   background-repeat: no-repeat;
 
-  &:first-child {
+  &.left {
     padding-right: 4rem;
     text-align: right;
     background-position-x: right;
   }
-  &:last-child {
+  &.right {
     padding-left: 4rem;
     text-align: left;
   }
