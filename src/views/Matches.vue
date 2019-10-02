@@ -89,9 +89,13 @@
               <span>{{ match.teams[1] }}</span>
             </td>
             <td>{{ match.date | moment("dddd, DD/MM HH:mm") }}</td>
+            <td>Grupo {{ match.group }}</td>
           </tr>
         </tbody>
       </table>
+
+      <div class="pb-5"></div>
+      <hr />
 
       <h3 class="pt-5 pb-3">Resultados</h3>
       <section class="results">
@@ -474,11 +478,11 @@ table {
       }
 
       .winner {
-        color: green;
+        color: #27ae60;
       }
 
       .loser {
-        color: red;
+        color: #e74c3c;
       }
     }
     .date {

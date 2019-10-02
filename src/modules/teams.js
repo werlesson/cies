@@ -68,7 +68,9 @@ export default {
       state.matches.push({
         teamsId: ascTeamsId,
         teams: [team1.name, team2.name],
-        date: data.date
+        date: data.date,
+        group:
+          team1.group === team2.group ? team1.group : "Grupos Errados, Moral"
       });
     },
 
