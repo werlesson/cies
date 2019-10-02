@@ -1,42 +1,3 @@
-const MapBackgrounds = [
-  {
-    map: "de_train",
-    bg: "https://gamersclub.com.br/images/sv_maps/1.png"
-  },
-  {
-    map: "de_overpass",
-    bg: "https://gamersclub.com.br/images/sv_maps/2.png"
-  },
-  {
-    map: "de_nuke",
-    bg: "https://gamersclub.com.br/images/sv_maps/3.png"
-  },
-  {
-    map: "de_mirage",
-    bg: "https://gamersclub.com.br/images/sv_maps/4.png"
-  },
-  {
-    map: "de_inferno",
-    bg: "https://gamersclub.com.br/images/sv_maps/5.png"
-  },
-  {
-    map: "de_dust2",
-    bg: "https://gamersclub.com.br/images/sv_maps/6.png"
-  },
-  {
-    map: "de_cbble",
-    bg: "https://gamersclub.com.br/images/sv_maps/7.png"
-  },
-  {
-    map: "de_cache",
-    bg: "https://gamersclub.com.br/images/sv_maps/8.png"
-  },
-  {
-    map: "de_vertigo",
-    bg: "https://gamersclub.com.br/images/sv_maps/96.png"
-  }
-];
-
 const _teams = () => [
   {
     name: "TOXIC Gaming",
@@ -198,4 +159,4 @@ const _teams = () => [
 
 const _matches = () => [];
 
-export { MapBackgrounds, _teams, _matches };
+export { _teams, _matches };

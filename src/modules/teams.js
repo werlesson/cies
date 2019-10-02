@@ -1,4 +1,4 @@
-import { MapBackgrounds, _teams, _matches } from "./exports";
+import { _teams, _matches } from "./exports";
 
 export default {
   namespaced: true,
@@ -25,8 +25,18 @@ export default {
     getByGroup(state) {
       return group => state.teams.filter(team => team.group === group);
     },
+    getTeamById(state) {
+      return teamId => state.teams.find(team => team.id === teamId);
+    },
     matchesPrev(state) {
-      return state.matches.filter(match => match.date > new Date());
+      return state.matches
+        .filter(match => match.date < new Date())
+        .sort((a, b) => +new Date(a.date) - +new Date(b.date));
+    },
+    matchesNext(state) {
+      return state.matches
+        .filter(match => match.date > new Date())
+        .sort((a, b) => +new Date(a.date) - +new Date(b.date));
     }
   },
 
@@ -35,8 +45,12 @@ export default {
       commit("RESET");
     },
 
-    addResult({ commit }, data) {
-      commit("ADD_RESULT", data);
+    addMatch({ commit }, data) {
+      commit("ADD_MATCH", data);
+    },
+
+    upMatch({ commit }, data) {
+      commit("UP_MATCH", data);
     }
   },
 
@@ -46,11 +60,32 @@ export default {
       state.matches = _matches();
     },
 
-    ADD_RESULT(state, data) {
-      const team1 = state.teams.find(team => team.id === data.team1);
-      const team2 = state.teams.find(team => team.id === data.team2);
+    ADD_MATCH(state, data) {
+      const ascTeamsId = data.teams.sort();
+      const team1 = this.getters["teams/getTeamById"](ascTeamsId[0]);
+      const team2 = this.getters["teams/getTeamById"](ascTeamsId[1]);
 
-      // matches.push(data);
+      state.matches.push({
+        teamsId: ascTeamsId,
+        teams: [team1.name, team2.name],
+        date: data.date
+      });
+    },
+
+    UP_MATCH(state, data) {
+      const team1 = this.getters["teams/getTeamById"](data.teamsId[0]);
+      const team2 = this.getters["teams/getTeamById"](data.teamsId[1]);
+      const ascTeamsId = data.teamsId.sort();
+
+      const match = state.matches.find(
+        match => JSON.stringify(match.teamsId) === JSON.stringify(ascTeamsId)
+      );
+
+      match.scores = data.scores;
+      match.map = data.map;
+      match.date = data.date;
+      match.lobby = data.lobby;
+
       team1.matches++;
       team2.matches++;
       if (data.scores[0] > data.scores[1]) {
@@ -66,16 +101,6 @@ export default {
         team1.diff -= diff;
         team2.diff += diff;
       }
-
-      state.matches.push({
-        team1: team1.name,
-        team2: team2.name,
-        scores: data.scores,
-        map: MapBackgrounds.find(map => data.map === map.map).bg,
-        date: data.date,
-        lobby: data.lobby
-      });
-      // console.log("matches", state.matches);
     }
   }
 };

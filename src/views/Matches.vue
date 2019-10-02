@@ -27,7 +27,7 @@
               <div class="col-md-5">
                 <span class="team-nome">{{ row.name }}</span>
               </div>
-              <span class="col-md-4 logo" :id="row.id"></span>
+              <span class="col-md-4 logo" :class="row.id"></span>
             </td>
             <td>{{ row.matches }}</td>
             <td>{{ row.wins }}</td>
@@ -62,7 +62,7 @@
               <div class="col-md-5">
                 <span class="team-nome">{{ row.name }}</span>
               </div>
-              <span class="col-md-4 logo" :id="row.id"></span>
+              <span class="col-md-4 logo" :class="row.id"></span>
             </td>
             <td>{{ row.matches }}</td>
             <td>{{ row.wins }}</td>
@@ -75,19 +75,44 @@
       <div class="pb-5"></div>
       <hr />
 
+      <h3 class="pt-5 pb-3">Próximos Confrontos</h3>
+      <table
+        class="table text-white table-striped table-hover table-borderless text-center"
+      >
+        <tbody>
+          <tr v-for="(match, index) in matchesNext" :key="index">
+            <td class="next-logos" :class="match.teamsId[0]">
+              <span>{{ match.teams[0] }}</span>
+            </td>
+            <td>vs</td>
+            <td class="next-logos" :class="match.teamsId[1]">
+              <span>{{ match.teams[1] }}</span>
+            </td>
+            <td>{{ match.date | moment("dddd, DD/MM HH:mm") }}</td>
+          </tr>
+        </tbody>
+      </table>
+
       <h3 class="pt-5 pb-3">Resultados</h3>
       <section class="results">
         <div
           class="prev-match"
           v-for="(match, index) in matchesPrev"
           :key="index"
-          :style="{ 'background-image': `url(${match.map})` }"
+          :class="match.map"
         >
           <div class="card">
             <p class="teams">
-              <span class="winner">{{ match.team1 }}</span>
-              {{ match.scores[0] }} vs {{ match.scores[1] }}
-              <span class="loser">{{ match.team2 }}</span>
+              <span :class="match.scores ? 'winner' : ''">
+                {{ match.teams[0] }}
+              </span>
+              <span v-if="match.scores"
+                >{{ match.scores[0] }} vs {{ match.scores[1] }}</span
+              >
+              <span v-else>vs</span>
+              <span :class="match.scores ? 'loser' : ''">{{
+                match.teams[1]
+              }}</span>
             </p>
             <p class="date">{{ match.date | moment("dddd, DD/MM HH:mm") }}</p>
             <a :href="match.lobby"></a>
@@ -104,41 +129,89 @@ import { createNamespacedHelpers } from "vuex";
 const { mapGetters, mapActions } = createNamespacedHelpers("teams");
 
 export default {
+  data() {
+    return {
+      nextMatches: []
+    };
+  },
+
   created() {
     this.reset();
   },
 
   mounted() {
-    this.addResult({
-      team1: "kmc",
-      team2: "rvn",
+    this.addMatch({
+      teams: ["rvn", "kmc"],
+      date: new Date("2019-09-26 20:00")
+    });
+
+    this.upMatch({
+      teamsId: ["kmc", "rvn"],
       scores: [16, 10],
       map: "de_dust2",
-      date: new Date("2019-10-26 19:54"),
+      date: new Date("2019-09-26 19:54"),
       lobby: "https://gamersclub.com.br/lobby/partida/5867571"
     });
 
-    this.addResult({
-      team1: "xbg",
-      team2: "bbl",
+    this.addMatch({
+      teams: ["xbg", "bbl"],
+      date: new Date("2019-09-26 20:00")
+    });
+
+    this.upMatch({
+      teamsId: ["xbg", "bbl"],
       scores: [16, 7],
       map: "de_cache",
-      date: new Date("2019-10-26 21:58"),
+      date: new Date("2019-09-26 21:58"),
       lobby: "https://gamersclub.com.br/lobby/partida/5868878"
     });
 
-    this.addResult({
-      team1: "bth",
-      team2: "n7g",
+    this.addMatch({
+      teams: ["bth", "n7g"],
+      date: new Date("2019-09-26 20:00")
+    });
+
+    this.upMatch({
+      teamsId: ["bth", "n7g"],
       scores: [16, 14],
       map: "de_mirage",
-      date: new Date("2019-10-28 22:51"),
+      date: new Date("2019-09-28 22:51"),
       lobby: "https://gamersclub.com.br/lobby/partida/5883752"
+    });
+
+    this.addMatch({
+      teams: ["bth", "avt"],
+      date: new Date("2019-10-03 23:30")
+    });
+
+    this.addMatch({
+      teams: ["vac", "ols"],
+      date: new Date("2019-10-02 23:00")
+    });
+
+    this.addMatch({
+      teams: ["vac", "app"],
+      date: new Date("2019-10-03 23:00")
+    });
+
+    this.addMatch({
+      teams: ["pdt", "n7g"],
+      date: new Date("2019-10-02 22:00")
+    });
+
+    this.addMatch({
+      teams: ["pdt", "pdf"],
+      date: new Date("2019-10-06 15:00")
+    });
+
+    this.addMatch({
+      teams: ["pdt", "bth"],
+      date: new Date("2019-10-06 17:00")
     });
   },
 
   computed: {
-    ...mapGetters(["getByGroup", "matchesPrev"]),
+    ...mapGetters(["getByGroup", "matchesPrev", "matchesNext"]),
 
     sortedGroupA() {
       const groupA = this.getByGroup("A");
@@ -152,7 +225,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(["reset", "addResult"]),
+    ...mapActions(["reset", "addMatch", "upMatch"]),
 
     // Vitórias > Saldo de Rounds > Nome
     teamsSortColocacao(arr) {
@@ -195,6 +268,46 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// Logos
+.vac {
+  background-image: url("~@/assets/img/teams/vac-eiros.png");
+}
+.rvn {
+  background-image: url("~@/assets/img/teams/raven.png");
+}
+.txg {
+  background-image: url("~@/assets/img/teams/toxic.svg");
+}
+.pdt {
+  background-image: url("~@/assets/img/teams/predators-white.svg");
+}
+.avt {
+  background-image: url("~@/assets/img/teams/ventus.png");
+}
+.app {
+  background-image: url("~@/assets/img/teams/as-ppks.png");
+}
+.n7g {
+  background-image: url("~@/assets/img/teams/natus.png");
+}
+.ols {
+  background-image: url("~@/assets/img/teams/only-silvers.png");
+}
+.bbl {
+  background-image: url("~@/assets/img/teams/brazilian-bulls.png");
+}
+.xbg {
+  background-image: url("~@/assets/img/teams/xablau-gaming.png");
+}
+.bth {
+  background-image: url("~@/assets/img/teams/brotherhood.png");
+}
+.kmc {
+  background-image: url("~@/assets/img/teams/kommando.png");
+}
+.pdf {
+  background-image: url("~@/assets/img/teams/pdf.png");
+}
 // .contact-page {
 //   padding-top: 120px;
 // }
@@ -245,55 +358,34 @@ table {
       background-size: 80%;
     }
   }
-  #vac {
-    background-image: url("~@/assets/img/teams/vac-eiros.png");
-  }
-  #rvn {
-    background-image: url("~@/assets/img/teams/raven.png");
+  .rvn {
     background-position-y: 45%;
   }
-  #txg {
-    background-image: url("~@/assets/img/teams/toxic.svg");
-  }
-  #pdt {
-    background-image: url("~@/assets/img/teams/predators-white.svg");
+  .pdt {
     background-position-y: 60%;
   }
-  #avt {
-    background-image: url("~@/assets/img/teams/ventus.png");
+  .avt {
     background-position-y: 70%;
   }
-  #app {
-    background-image: url("~@/assets/img/teams/as-ppks.png");
-  }
-  #n7g {
-    background-image: url("~@/assets/img/teams/natus.png");
+  .n7g {
     background-position-y: 30%;
   }
-  #ols {
-    background-image: url("~@/assets/img/teams/only-silvers.png");
-  }
-  #bbl {
-    background-image: url("~@/assets/img/teams/brazilian-bulls.png");
+  .bbl {
     background-position-y: 44%;
   }
-  #xbg {
-    background-image: url("~@/assets/img/teams/xablau-gaming.png");
+  .xbg {
     background-position-y: 32%;
   }
-  #bth {
-    background-image: url("~@/assets/img/teams/brotherhood.png");
+  .bth {
     background-position-y: 48%;
     &:hover {
-      background-size: 48%;
+      background-size: 48% !important;
     }
   }
-  #kmc {
-    background-image: url("~@/assets/img/teams/kommando.png");
+  .kmc {
     background-position-y: 48%;
   }
-  #pdf {
-    background-image: url("~@/assets/img/teams/pdf.png");
+  .pdf {
     background-position-y: 18%;
   }
 }
@@ -333,22 +425,23 @@ table {
 
 .results {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .prev-match {
+  flex-grow: 0;
   border: none;
   box-sizing: border-box;
   box-shadow: 0px 8px 16px -4px rgba(0, 0, 0, 0.5);
   background-size: 100% 100%;
   background-position: center;
+  background-image: url("~@/assets/img/teams-bg.jpg");
+  background-repeat: no-repeat;
   border-radius: 0;
   height: 202px;
-  width: 279px;
-  margin: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  width: 270px;
+  margin: 0.5rem;
   padding: 0;
-  flex-grow: 1;
   min-width: 15rem;
   transition: background-size 100ms ease-in-out;
 
@@ -368,6 +461,8 @@ table {
     .teams {
       font-size: 20px;
       text-align: center;
+      display: flex;
+      flex-direction: column;
 
       .winner,
       .loser {
@@ -396,5 +491,46 @@ table {
       position: absolute;
     }
   }
+}
+
+.next-logos {
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &:first-child {
+    padding-right: 4rem;
+    text-align: right;
+    background-position-x: right;
+  }
+  &:last-child {
+    padding-left: 4rem;
+    text-align: left;
+  }
+}
+
+// Maps
+.de_train {
+  background-image: url("https://gamersclub.com.br/images/sv_maps/1.png");
+}
+.de_overpass {
+  background-image: url("https://gamersclub.com.br/images/sv_maps/2.png");
+}
+.de_nuke {
+  background-image: url("https://gamersclub.com.br/images/sv_maps/3.png");
+}
+.de_mirage {
+  background-image: url("https://gamersclub.com.br/images/sv_maps/4.png");
+}
+.de_inferno {
+  background-image: url("https://gamersclub.com.br/images/sv_maps/5.png");
+}
+.de_dust2 {
+  background-image: url("https://gamersclub.com.br/images/sv_maps/6.png");
+}
+.de_cache {
+  background-image: url("https://gamersclub.com.br/images/sv_maps/8.png");
+}
+.de_vertigo {
+  background-image: url("https://gamersclub.com.br/images/sv_maps/96.png");
 }
 </style>
