@@ -352,6 +352,14 @@ export default {
     //   date: new Date("2019-10-02 22:32"),
     //   lobby: "https://gamersclub.com.br/lobby/partida/5912028"
     // });
+
+    // this.upMatch({
+    //   teams: ["rvn", "txg"],
+    //   scores: [16, 1],
+    //   map: "de_cache",
+    //   date: new Date("2019-10-03 18:02"),
+    //   lobby: "https://gamersclub.com.br/lobby/partida/5916545"
+    // });
   },
 
   computed: {
