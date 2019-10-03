@@ -107,16 +107,16 @@
         >
           <div class="card">
             <p class="teams">
-              <span :class="match.scores ? 'winner' : ''">{{
-                match.teams[0]
-              }}</span>
+              <span :class="match.scores ? 'winner' : ''">
+                {{ match.teams[0] }}
+              </span>
               <span v-if="match.scores"
                 >{{ match.scores[0] }} vs {{ match.scores[1] }}</span
               >
               <span v-else>vs</span>
-              <span :class="match.scores ? 'loser' : ''">
-                {{ match.teams[1] }}
-              </span>
+              <span :class="match.scores ? 'loser' : ''">{{
+                match.teams[1]
+              }}</span>
             </p>
             <p class="date">{{ match.date | moment("dddd, DD/MM HH:mm") }}</p>
             <a :href="match.lobby"></a>
@@ -188,10 +188,10 @@ export default {
       date: new Date("2019-10-03 23:30")
     });
 
-    this.addMatch({
-      teams: ["vac", "ols"],
-      date: new Date("2019-10-02 23:00")
-    });
+    // this.addMatch({
+    //   teams: ["vac", "ols"],
+    //   date: new Date("2019-10-02 23:00")
+    // });
 
     this.addMatch({
       teams: ["vac", "app"],
@@ -212,6 +212,19 @@ export default {
       teams: ["pdt", "bth"],
       date: new Date("2019-10-06 17:00")
     });
+
+    this.addMatch({
+      teams: ["rvn", "txg"],
+      date: new Date("2019-10-03 19:00")
+    });
+
+    // this.upMatch({
+    //   teams: ["pdt", "n7g"],
+    //   scores: [16, 10],
+    //   map: "de_dust2",
+    //   date: new Date("2019-10-02 22:32"),
+    //   lobby: "https://gamersclub.com.br/lobby/partida/5912028"
+    // });
   },
 
   computed: {
