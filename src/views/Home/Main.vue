@@ -18,10 +18,15 @@
     </section>
 
     <section class="unavailable" v-else>
-      <h2>Sem transmissões hoje</h2>
+      <h2>
+        Live na Twitch as 20h
+        <i class="fa fa-twitch"></i>
+      </h2>
+      <h2>Predators x NATUS7</h2>
+      <h2>Toxic x Raven</h2>
 
       <div class>
-        <p class="text-white">Siga nossos canais:</p>
+        <p class="text-white">Assista em um dos canais:</p>
         <p>
           <a href="https://www.twitch.tv/ivomarsan">Twitch ch 1</a>
         </p>
