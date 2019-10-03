@@ -35,8 +35,10 @@ export default {
     },
     matchesNext(state) {
       return state.matches
-        .filter(match => match.date > new Date())
-        .sort((a, b) => +new Date(a.date) - +new Date(b.date));
+        .filter(match => match.date > new Date() || match.date === "TBA")
+        .sort(
+          (a, b) => +new Date(a.date) - +new Date(b.date) || a.date === "TBA"
+        );
     }
   },
 
@@ -68,7 +70,7 @@ export default {
       state.matches.push({
         teamsId: ascTeamsId,
         teams: [team1.name, team2.name],
-        date: data.date,
+        date: data.date ? data.date : "TBA",
         group:
           team1.group === team2.group ? team1.group : "Grupos Errados, Moral"
       });

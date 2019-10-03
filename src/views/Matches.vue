@@ -3,13 +3,17 @@
     <div class="container text-white">
       <h2 class="pb-5">Tabela de Classificação</h2>
       <h4>Grupo A</h4>
-      <table class="table text-white table-striped table-hover table-borderless text-center">
+      <table
+        class="table text-white table-striped table-hover table-borderless text-center"
+      >
         <thead class="thead-dark">
           <tr>
             <th class="col-2px-fail"></th>
             <th class="fixed-width" scope="col" title="Posição">#</th>
             <th scope="col">Equipe</th>
-            <th class="fixed-width" scope="col" title="Partidas Disputadas">J</th>
+            <th class="fixed-width" scope="col" title="Partidas Disputadas">
+              J
+            </th>
             <th class="fixed-width" scope="col" title="Vitórias">V</th>
             <th class="fixed-width" scope="col" title="Derrotas">D</th>
             <th class="fixed-width" scope="col" title="Saldo de Rounds">SR</th>
@@ -34,13 +38,17 @@
       </table>
 
       <h4>Grupo B</h4>
-      <table class="table text-white table-striped table-hover table-borderless text-center">
+      <table
+        class="table text-white table-striped table-hover table-borderless text-center"
+      >
         <thead class="thead-dark">
           <tr>
             <th class="col-2px-fail"></th>
             <th class="fixed-width" scope="col" title="Posição">#</th>
             <th scope="col">Equipe</th>
-            <th class="fixed-width" scope="col" title="Partidas Disputadas">J</th>
+            <th class="fixed-width" scope="col" title="Partidas Disputadas">
+              J
+            </th>
             <th class="fixed-width" scope="col" title="Vitórias">V</th>
             <th class="fixed-width" scope="col" title="Derrotas">D</th>
             <th class="fixed-width" scope="col" title="Saldo de Rounds">SR</th>
@@ -68,21 +76,39 @@
       <hr />
 
       <h3 class="pt-5 pb-3">Próximos Confrontos</h3>
-      <table class="table text-white table-striped table-hover table-borderless text-center">
+      <table
+        class="table text-white table-striped table-hover table-borderless text-center"
+      >
         <tbody>
-          <tr v-for="(match, index) in matchesNext" :key="index">
+          <tr
+            v-for="(match, index) in matchesNext"
+            :key="index"
+            :class="match.date === 'TBA' ? 'tba' : ''"
+            v-show="match.date !== 'TBA' || toConfirmShow === true"
+          >
             <td class="next-logos left" :class="match.teamsId[0]">
-              <span>{{ match.teams[0] }}</span>
+              <span :class="match.date === 'TBA' ? 'tba' : ''">{{
+                match.teams[0]
+              }}</span>
             </td>
             <td>vs</td>
             <td class="next-logos right" :class="match.teamsId[1]">
-              <span>{{ match.teams[1] }}</span>
+              <span :class="match.date === 'TBA' ? 'tba' : ''">{{
+                match.teams[1]
+              }}</span>
             </td>
             <td>{{ match.date | moment("dddd, DD/MM HH:mm") }}</td>
             <td>Grupo {{ match.group }}</td>
           </tr>
         </tbody>
       </table>
+      <button class="btn btn-light" @click="toConfirmShow = !toConfirmShow">
+        {{
+          toConfirmShow === false
+            ? "Ver confrontos a confirmar"
+            : "Ocultar confrontos"
+        }}
+      </button>
 
       <div class="pb-5"></div>
       <hr />
@@ -98,13 +124,15 @@
           <div class="card">
             <p class="teams">
               <span :class="match.scores ? 'winner' : ''">
-                {{
-                match.teams[0]
-                }}
+                {{ match.teams[0] }}
               </span>
-              <span v-if="match.scores">{{ match.scores[0] }} vs {{ match.scores[1] }}</span>
+              <span v-if="match.scores"
+                >{{ match.scores[0] }} vs {{ match.scores[1] }}</span
+              >
               <span v-else>vs</span>
-              <span :class="match.scores ? 'loser' : ''">{{ match.teams[1] }}</span>
+              <span :class="match.scores ? 'loser' : ''">{{
+                match.teams[1]
+              }}</span>
             </p>
             <p class="date">{{ match.date | moment("dddd, DD/MM HH:mm") }}</p>
             <a :href="match.lobby"></a>
@@ -123,7 +151,7 @@ const { mapGetters, mapActions } = createNamespacedHelpers("teams");
 export default {
   data() {
     return {
-      nextMatches: []
+      toConfirmShow: false
     };
   },
 
@@ -176,15 +204,117 @@ export default {
       date: new Date("2019-10-03 23:30")
     });
 
-    // this.addMatch({
-    //   teams: ["vac", "ols"],
-    //   date: new Date("2019-10-02 23:00")
-    // });
+    this.addMatch({
+      teams: ["vac", "txg"]
+    });
 
-    // this.addMatch({
-    //   teams: ["vac", "app"],
-    //   date: new Date("2019-10-03 23:00")
-    // });
+    this.addMatch({
+      teams: ["ols", "app"]
+    });
+
+    this.addMatch({
+      teams: ["ols", "txg"]
+    });
+
+    this.addMatch({
+      teams: ["vac", "rvn"]
+    });
+
+    this.addMatch({
+      teams: ["app", "kmc"]
+    });
+
+    this.addMatch({
+      teams: ["ols", "kmc"]
+    });
+
+    this.addMatch({
+      teams: ["app", "vac"]
+    });
+
+    this.addMatch({
+      teams: ["txg", "kmc"]
+    });
+
+    this.addMatch({
+      teams: ["app", "rvn"]
+    });
+
+    this.addMatch({
+      teams: ["vac", "ols"]
+    });
+
+    this.addMatch({
+      teams: ["app", "txg"]
+    });
+
+    this.addMatch({
+      teams: ["vac", "kmc"]
+    });
+
+    this.addMatch({
+      teams: ["rvn", "ols"]
+    });
+
+    this.addMatch({
+      teams: ["bbl", "n7g"]
+    });
+
+    this.addMatch({
+      teams: ["pdf", "xbg"]
+    });
+
+    this.addMatch({
+      teams: ["bbl", "pdf"]
+    });
+
+    this.addMatch({
+      teams: ["n7g", "avt"]
+    });
+
+    this.addMatch({
+      teams: ["bbl", "avt"]
+    });
+
+    this.addMatch({
+      teams: ["xbg", "bth"]
+    });
+
+    this.addMatch({
+      teams: ["avt", "pdt"]
+    });
+
+    this.addMatch({
+      teams: ["bth", "pdf"]
+    });
+
+    this.addMatch({
+      teams: ["n7g", "xbg"]
+    });
+
+    this.addMatch({
+      teams: ["bbl", "pdt"]
+    });
+
+    this.addMatch({
+      teams: ["avt", "xbg"]
+    });
+
+    this.addMatch({
+      teams: ["n7g", "pdf"]
+    });
+
+    this.addMatch({
+      teams: ["bbl", "bth"]
+    });
+
+    this.addMatch({
+      teams: ["pdt", "xbg"]
+    });
+
+    this.addMatch({
+      teams: ["avt", "pdf"]
+    });
 
     this.addMatch({
       teams: ["pdt", "n7g"],
@@ -498,6 +628,10 @@ table {
   }
 }
 
+.tba {
+  color: gray;
+  font-size: 90%;
+}
 .next-logos {
   background-size: contain;
   background-repeat: no-repeat;
