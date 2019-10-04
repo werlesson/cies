@@ -579,8 +579,10 @@ table {
 
 .results {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  height: 242px;
+  overflow-x: scroll;
 }
 .prev-match {
   flex-grow: 0;

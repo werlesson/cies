@@ -31,7 +31,7 @@ export default {
     matchesPrev(state) {
       return state.matches
         .filter(match => match.date < new Date())
-        .sort((a, b) => +new Date(a.date) - +new Date(b.date));
+        .sort((a, b) => +new Date(b.date) - +new Date(a.date));
     },
     matchesNext(state) {
       return state.matches
