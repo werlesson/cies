@@ -3,17 +3,13 @@
     <div class="container text-white">
       <h2 class="pb-5">Tabela de Classificação</h2>
       <h4>Grupo A</h4>
-      <table
-        class="table text-white table-striped table-hover table-borderless text-center"
-      >
+      <table class="table text-white table-striped table-hover table-borderless text-center">
         <thead class="thead-dark">
           <tr>
             <th class="col-2px-fail"></th>
             <th class="fixed-width" scope="col" title="Posição">#</th>
             <th scope="col">Equipe</th>
-            <th class="fixed-width" scope="col" title="Partidas Disputadas">
-              J
-            </th>
+            <th class="fixed-width" scope="col" title="Partidas Disputadas">J</th>
             <th class="fixed-width" scope="col" title="Vitórias">V</th>
             <th class="fixed-width" scope="col" title="Derrotas">D</th>
             <th class="fixed-width" scope="col" title="Saldo de Rounds">SR</th>
@@ -38,17 +34,13 @@
       </table>
 
       <h4>Grupo B</h4>
-      <table
-        class="table text-white table-striped table-hover table-borderless text-center"
-      >
+      <table class="table text-white table-striped table-hover table-borderless text-center">
         <thead class="thead-dark">
           <tr>
             <th class="col-2px-fail"></th>
             <th class="fixed-width" scope="col" title="Posição">#</th>
             <th scope="col">Equipe</th>
-            <th class="fixed-width" scope="col" title="Partidas Disputadas">
-              J
-            </th>
+            <th class="fixed-width" scope="col" title="Partidas Disputadas">J</th>
             <th class="fixed-width" scope="col" title="Vitórias">V</th>
             <th class="fixed-width" scope="col" title="Derrotas">D</th>
             <th class="fixed-width" scope="col" title="Saldo de Rounds">SR</th>
@@ -76,9 +68,7 @@
       <hr />
 
       <h3 class="pt-5 pb-3">Próximos Confrontos</h3>
-      <table
-        class="table text-white table-striped table-hover table-borderless text-center"
-      >
+      <table class="table text-white table-striped table-hover table-borderless text-center">
         <tbody>
           <tr
             v-for="(match, index) in matchesNext"
@@ -87,30 +77,22 @@
             v-show="match.date !== 'TBA' || toConfirmShow === true"
           >
             <td class="next-logos left" :class="match.teamsId[0]">
-              <span :class="match.date === 'TBA' ? 'tba' : ''">
-                {{ match.teams[0] }}
-              </span>
+              <span :class="match.date === 'TBA' ? 'tba' : ''">{{ match.teams[0] }}</span>
             </td>
             <td>vs</td>
             <td class="next-logos right" :class="match.teamsId[1]">
-              <span :class="match.date === 'TBA' ? 'tba' : ''">
-                {{ match.teams[1] }}
-              </span>
+              <span :class="match.date === 'TBA' ? 'tba' : ''">{{ match.teams[1] }}</span>
             </td>
             <td>{{ match.date | moment("dddd, DD/MM HH:mm") }}</td>
             <td>Grupo {{ match.group }}</td>
           </tr>
         </tbody>
       </table>
-      <button
-        class="btn btn-light"
-        @click="toConfirmShow = !toConfirmShow"
-        style="color: #b01ba5"
-      >
+      <button class="btn btn-light" @click="toConfirmShow = !toConfirmShow" style="color: #b01ba5">
         {{
-          toConfirmShow === false
-            ? "Ver confrontos a confirmar"
-            : "Ocultar confrontos"
+        toConfirmShow === false
+        ? "Ver confrontos a confirmar"
+        : "Ocultar confrontos"
         }}
       </button>
 
@@ -127,23 +109,19 @@
         >
           <div class="card">
             <p class="teams">
-              <span :class="match.scores ? 'winner' : ''">{{
+              <span :class="match.scores ? 'winner' : ''">
+                {{
                 match.teams[0]
-              }}</span>
-              <span v-if="match.scores"
-                >{{ match.scores[0] }} vs {{ match.scores[1] }}</span
-              >
-              <span v-else>vs</span>
-              <span :class="match.scores ? 'loser' : ''">
-                {{ match.teams[1] }}
+                }}
               </span>
+              <span v-if="match.scores">{{ match.scores[0] }} vs {{ match.scores[1] }}</span>
+              <span v-else>vs</span>
+              <span :class="match.scores ? 'loser' : ''">{{ match.teams[1] }}</span>
             </p>
             <p v-if="!match.scores" style="margin: 0; text-align: center;">
               <span class="badge badge-danger">Aguardando Resultados</span>
             </p>
-            <p v-else class="date">
-              {{ match.date | moment("dddd, DD/MM HH:mm") }}
-            </p>
+            <p v-else class="date">{{ match.date | moment("dddd, DD/MM HH:mm") }}</p>
             <a :href="match.lobby"></a>
           </div>
         </div>
@@ -379,7 +357,7 @@ export default {
   methods: {
     ...mapActions(["reset", "addMatch", "upMatch"]),
 
-    // Vitórias > Saldo de Rounds > Nome
+    // Vitórias > Derrotas > Saldo de Rounds > Nome
     teamsSortColocacao(arr) {
       return arr.sort(function(a, b) {
         let vitA = a.wins;
@@ -389,22 +367,30 @@ export default {
         } else if (vitA > vitB) {
           return -1;
         } else if (vitA == vitB) {
-          let srA = a.diff;
-          let srB = b.diff;
-          if (srA < srB) {
+          let dA = a.defeats;
+          let dB = b.defeats;
+          if (dA > dB) {
             return 1;
-          } else if (srA > srB) {
+          } else if (dA < dB) {
             return -1;
-          } else if (srA == srB) {
-            let equipeA = a.name.toUpperCase();
-            let equipeB = b.name.toUpperCase();
-            if (equipeA > equipeB) {
+          } else if (dA == dB) {
+            let srA = a.diff;
+            let srB = b.diff;
+            if (srA < srB) {
               return 1;
-            }
-            if (equipeA < equipeB) {
+            } else if (srA > srB) {
               return -1;
+            } else if (srA == srB) {
+              let equipeA = a.name.toUpperCase();
+              let equipeB = b.name.toUpperCase();
+              if (equipeA > equipeB) {
+                return 1;
+              }
+              if (equipeA < equipeB) {
+                return -1;
+              }
+              return 0;
             }
-            return 0;
           }
           return 0;
         }
