@@ -87,15 +87,15 @@
             v-show="match.date !== 'TBA' || toConfirmShow === true"
           >
             <td class="next-logos left" :class="match.teamsId[0]">
-              <span :class="match.date === 'TBA' ? 'tba' : ''">
-                {{ match.teams[0] }}
-              </span>
+              <span :class="match.date === 'TBA' ? 'tba' : ''">{{
+                match.teams[0]
+              }}</span>
             </td>
             <td>vs</td>
             <td class="next-logos right" :class="match.teamsId[1]">
-              <span :class="match.date === 'TBA' ? 'tba' : ''">
-                {{ match.teams[1] }}
-              </span>
+              <span :class="match.date === 'TBA' ? 'tba' : ''">{{
+                match.teams[1]
+              }}</span>
             </td>
             <td>{{ match.date | moment("dddd, DD/MM HH:mm") }}</td>
             <td>Grupo {{ match.group }}</td>
@@ -127,16 +127,16 @@
         >
           <div class="card">
             <p class="teams">
-              <span :class="match.scores ? 'winner' : ''">{{
-                match.teams[0]
-              }}</span>
+              <span :class="match.scores ? 'winner' : ''">
+                {{ match.teams[0] }}
+              </span>
               <span v-if="match.scores"
                 >{{ match.scores[0] }} vs {{ match.scores[1] }}</span
               >
               <span v-else>vs</span>
-              <span :class="match.scores ? 'loser' : ''">
-                {{ match.teams[1] }}
-              </span>
+              <span :class="match.scores ? 'loser' : ''">{{
+                match.teams[1]
+              }}</span>
             </p>
             <p v-if="!match.scores" style="margin: 0; text-align: center;">
               <span class="badge badge-danger">Aguardando Resultados</span>
@@ -391,30 +391,22 @@ export default {
         } else if (vitA > vitB) {
           return -1;
         } else if (vitA == vitB) {
-          let dA = a.defeats;
-          let dB = b.defeats;
-          if (dA > dB) {
+          let srA = a.diff;
+          let srB = b.diff;
+          if (srA < srB) {
             return 1;
-          } else if (dA < dB) {
+          } else if (srA > srB) {
             return -1;
-          } else if (dA == dB) {
-            let srA = a.diff;
-            let srB = b.diff;
-            if (srA < srB) {
+          } else if (srA == srB) {
+            let equipeA = a.name.toUpperCase();
+            let equipeB = b.name.toUpperCase();
+            if (equipeA > equipeB) {
               return 1;
-            } else if (srA > srB) {
-              return -1;
-            } else if (srA == srB) {
-              let equipeA = a.name.toUpperCase();
-              let equipeB = b.name.toUpperCase();
-              if (equipeA > equipeB) {
-                return 1;
-              }
-              if (equipeA < equipeB) {
-                return -1;
-              }
-              return 0;
             }
+            if (equipeA < equipeB) {
+              return -1;
+            }
+            return 0;
           }
           return 0;
         }
