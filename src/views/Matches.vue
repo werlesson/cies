@@ -3,13 +3,17 @@
     <div class="container text-white">
       <h2 class="pb-5">Tabela de Classificação</h2>
       <h4>Grupo A</h4>
-      <table class="table text-white table-striped table-hover table-borderless text-center">
+      <table
+        class="table text-white table-striped table-hover table-borderless text-center"
+      >
         <thead class="thead-dark">
           <tr>
             <th class="col-2px-fail"></th>
             <th class="fixed-width" scope="col" title="Posição">#</th>
             <th scope="col">Equipe</th>
-            <th class="fixed-width" scope="col" title="Partidas Disputadas">J</th>
+            <th class="fixed-width" scope="col" title="Partidas Disputadas">
+              J
+            </th>
             <th class="fixed-width" scope="col" title="Vitórias">V</th>
             <th class="fixed-width" scope="col" title="Derrotas">D</th>
             <th class="fixed-width" scope="col" title="Saldo de Rounds">SR</th>
@@ -34,13 +38,17 @@
       </table>
 
       <h4>Grupo B</h4>
-      <table class="table text-white table-striped table-hover table-borderless text-center">
+      <table
+        class="table text-white table-striped table-hover table-borderless text-center"
+      >
         <thead class="thead-dark">
           <tr>
             <th class="col-2px-fail"></th>
             <th class="fixed-width" scope="col" title="Posição">#</th>
             <th scope="col">Equipe</th>
-            <th class="fixed-width" scope="col" title="Partidas Disputadas">J</th>
+            <th class="fixed-width" scope="col" title="Partidas Disputadas">
+              J
+            </th>
             <th class="fixed-width" scope="col" title="Vitórias">V</th>
             <th class="fixed-width" scope="col" title="Derrotas">D</th>
             <th class="fixed-width" scope="col" title="Saldo de Rounds">SR</th>
@@ -68,7 +76,9 @@
       <hr />
 
       <h3 class="pt-5 pb-3">Próximos Confrontos</h3>
-      <table class="table text-white table-striped table-hover table-borderless text-center">
+      <table
+        class="table text-white table-striped table-hover table-borderless text-center"
+      >
         <tbody>
           <tr
             v-for="(match, index) in matchesNext"
@@ -78,17 +88,13 @@
           >
             <td class="next-logos left" :class="match.teamsId[0]">
               <span :class="match.date === 'TBA' ? 'tba' : ''">
-                {{
-                match.teams[0]
-                }}
+                {{ match.teams[0] }}
               </span>
             </td>
             <td>vs</td>
             <td class="next-logos right" :class="match.teamsId[1]">
               <span :class="match.date === 'TBA' ? 'tba' : ''">
-                {{
-                match.teams[1]
-                }}
+                {{ match.teams[1] }}
               </span>
             </td>
             <td>{{ match.date | moment("dddd, DD/MM HH:mm") }}</td>
@@ -96,11 +102,15 @@
           </tr>
         </tbody>
       </table>
-      <button class="btn btn-light" @click="toConfirmShow = !toConfirmShow" style="color: #b01ba5">
+      <button
+        class="btn btn-light"
+        @click="toConfirmShow = !toConfirmShow"
+        style="color: #b01ba5"
+      >
         {{
-        toConfirmShow === false
-        ? "Ver confrontos a confirmar"
-        : "Ocultar confrontos"
+          toConfirmShow === false
+            ? "Ver confrontos a confirmar"
+            : "Ocultar confrontos"
         }}
       </button>
 
@@ -117,19 +127,23 @@
         >
           <div class="card">
             <p class="teams">
-              <span :class="match.scores ? 'winner' : ''">{{ match.teams[0] }}</span>
-              <span v-if="match.scores">{{ match.scores[0] }} vs {{ match.scores[1] }}</span>
+              <span :class="match.scores ? 'winner' : ''">{{
+                match.teams[0]
+              }}</span>
+              <span v-if="match.scores"
+                >{{ match.scores[0] }} vs {{ match.scores[1] }}</span
+              >
               <span v-else>vs</span>
               <span :class="match.scores ? 'loser' : ''">
-                {{
-                match.teams[1]
-                }}
+                {{ match.teams[1] }}
               </span>
             </p>
             <p v-if="!match.scores" style="margin: 0; text-align: center;">
               <span class="badge badge-danger">Aguardando Resultados</span>
             </p>
-            <p v-else class="date">{{ match.date | moment("dddd, DD/MM HH:mm") }}</p>
+            <p v-else class="date">
+              {{ match.date | moment("dddd, DD/MM HH:mm") }}
+            </p>
             <a :href="match.lobby"></a>
           </div>
         </div>
@@ -290,7 +304,8 @@ export default {
     });
 
     this.addMatch({
-      teams: ["bbl", "pdt"]
+      teams: ["bbl", "pdt"],
+      date: new Date("2019-10-10 21:30")
     });
 
     this.addMatch({
@@ -348,6 +363,14 @@ export default {
       map: "de_cache",
       date: new Date("2019-10-03 18:02"),
       lobby: "https://gamersclub.com.br/lobby/partida/5916545"
+    });
+
+    this.upMatch({
+      teamsId: ["avt", "bth"],
+      scores: [16, 9],
+      map: "de_inferno",
+      date: new Date("2019-10-03 23:45"),
+      lobby: "https://gamersclub.com.br/lobby/partida/5920036"
     });
   },
 
