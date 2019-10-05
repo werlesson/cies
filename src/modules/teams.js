@@ -30,15 +30,29 @@ export default {
     },
     matchesPrev(state) {
       return state.matches
-        .filter(match => match.date < new Date())
-        .sort((a, b) => +new Date(b.date) - +new Date(a.date));
+        .filter(function(match) {
+          return match.date < new Date();
+        })
+        .sort(function(a, b) {
+          return +new Date(b.date) - +new Date(a.date);
+        });
     },
     matchesNext(state) {
-      return state.matches
-        .filter(match => match.date > new Date() || match.date === "TBA")
-        .sort(
-          (a, b) => +new Date(a.date) - +new Date(b.date) || a.date === "TBA"
-        );
+      const fixChromeBugIHATECHROME = state.matches
+        .filter(function(match) {
+          return match.date > new Date();
+        })
+        .sort(function(a, b) {
+          return +new Date(a.date) - +new Date(b.date);
+        });
+
+      state.matches.forEach(function(match) {
+        if (match.date === "TBA") {
+          fixChromeBugIHATECHROME.push(match);
+        }
+      });
+
+      return fixChromeBugIHATECHROME;
     }
   },
 
