@@ -260,7 +260,8 @@ export default {
     });
 
     this.addMatch({
-      teams: ["vac", "kmc"]
+      teams: ["vac", "kmc"],
+      date: new Date("2019-10-10 22:00")
     });
 
     this.addMatch({
