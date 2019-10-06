@@ -142,19 +142,19 @@ const _teams = () => [
     defeats: 0,
     diff: 0,
     group: "A"
-  },
-  {
-    name: "Pros Don't Fake",
-    id: "pdf",
-    logo: require("@/assets/img/teams/pdf.png"),
-    steam: "",
-    gc: "",
-    matches: 0,
-    wins: 0,
-    defeats: 0,
-    diff: 0,
-    group: "B"
   }
+  // {
+  //   name: "Pros Don't Fake",
+  //   id: "pdf",
+  //   logo: require("@/assets/img/teams/pdf.png"),
+  //   steam: "",
+  //   gc: "",
+  //   matches: 0,
+  //   wins: 0,
+  //   defeats: 0,
+  //   diff: 0,
+  //   group: "B"
+  // }
 ];
 
 const _matches = () => [];

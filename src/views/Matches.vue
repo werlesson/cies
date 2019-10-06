@@ -272,14 +272,14 @@ export default {
       teams: ["bbl", "n7g"]
     });
 
-    this.addMatch({
-      teams: ["pdf", "xbg"],
-      date: new Date("2019-10-06 16:30")
-    });
+    // this.addMatch({
+    //   teams: ["pdf", "xbg"],
+    //   date: new Date("2019-10-06 16:30")
+    // });
 
-    this.addMatch({
-      teams: ["bbl", "pdf"]
-    });
+    // this.addMatch({
+    //   teams: ["bbl", "pdf"]
+    // });
 
     this.addMatch({
       teams: ["n7g", "avt"]
@@ -297,9 +297,9 @@ export default {
       teams: ["avt", "pdt"]
     });
 
-    this.addMatch({
-      teams: ["bth", "pdf"]
-    });
+    // this.addMatch({
+    //   teams: ["bth", "pdf"]
+    // });
 
     this.addMatch({
       teams: ["n7g", "xbg"]
@@ -314,9 +314,9 @@ export default {
       teams: ["avt", "xbg"]
     });
 
-    this.addMatch({
-      teams: ["n7g", "pdf"]
-    });
+    // this.addMatch({
+    //   teams: ["n7g", "pdf"]
+    // });
 
     this.addMatch({
       teams: ["bbl", "bth"]
@@ -327,19 +327,19 @@ export default {
       date: new Date("2019-10-10 20:00")
     });
 
-    this.addMatch({
-      teams: ["avt", "pdf"]
-    });
+    // this.addMatch({
+    //   teams: ["avt", "pdf"]
+    // });
 
     this.addMatch({
       teams: ["pdt", "n7g"],
       date: new Date("2019-10-02 22:00")
     });
 
-    this.addMatch({
-      teams: ["pdt", "pdf"],
-      date: new Date("2019-10-06 15:00")
-    });
+    // this.addMatch({
+    //   teams: ["pdt", "pdf"],
+    //   date: new Date("2019-10-06 15:00")
+    // });
 
     this.addMatch({
       teams: ["pdt", "bth"],
