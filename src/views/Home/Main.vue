@@ -22,7 +22,8 @@
         Live na Twitch as 20h
         <i class="fa fa-twitch"></i>
       </h2>
-      <h2>a7-Ventu's Team x Brotherhood</h2>
+      <h3>Kommando Chosk x TOXIC</h3>
+      <h3>BROTHERHOOD x PREDATORS</h3>
 
       <div class>
         <p class="text-white">Assista em um dos canais:</p>
@@ -30,7 +31,9 @@
           <a class="live" href="https://www.twitch.tv/ivomarsan">Twitch ch 1</a>
         </p>
         <p>
-          <a class="live" href="https://www.twitch.tv/matheustf7">Twitch ch 2</a>
+          <a class="live" href="https://www.twitch.tv/matheustf7"
+            >Twitch ch 2</a
+          >
         </p>
       </div>
 
@@ -87,6 +90,10 @@ export default {
       font-size: 3.5rem;
       color: white;
       text-align: center;
+    }
+
+    h3 {
+      color: white;
     }
 
     .description {

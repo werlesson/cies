@@ -87,15 +87,15 @@
             v-show="match.date !== 'TBA' || toConfirmShow === true"
           >
             <td class="next-logos left" :class="match.teamsId[0]">
-              <span :class="match.date === 'TBA' ? 'tba' : ''">{{
-                match.teams[0]
-              }}</span>
+              <span :class="match.date === 'TBA' ? 'tba' : ''">
+                {{ match.teams[0] }}
+              </span>
             </td>
             <td>vs</td>
             <td class="next-logos right" :class="match.teamsId[1]">
-              <span :class="match.date === 'TBA' ? 'tba' : ''">{{
-                match.teams[1]
-              }}</span>
+              <span :class="match.date === 'TBA' ? 'tba' : ''">
+                {{ match.teams[1] }}
+              </span>
             </td>
             <td>{{ match.date | moment("dddd, DD/MM HH:mm") }}</td>
             <td>Grupo {{ match.group }}</td>
@@ -127,16 +127,16 @@
         >
           <div class="card">
             <p class="teams">
-              <span :class="match.scores ? 'winner' : ''">
-                {{ match.teams[0] }}
-              </span>
+              <span :class="match.scores ? 'winner' : ''">{{
+                match.teams[0]
+              }}</span>
               <span v-if="match.scores"
                 >{{ match.scores[0] }} vs {{ match.scores[1] }}</span
               >
               <span v-else>vs</span>
-              <span :class="match.scores ? 'loser' : ''">{{
-                match.teams[1]
-              }}</span>
+              <span :class="match.scores ? 'loser' : ''">
+                {{ match.teams[1] }}
+              </span>
             </p>
             <p v-if="!match.scores" style="margin: 0; text-align: center;">
               <span class="badge badge-danger">Aguardando Resultados</span>
@@ -373,6 +373,22 @@ export default {
       map: "de_inferno",
       date: new Date("2019-10-03 23:45"),
       lobby: "https://gamersclub.com.br/lobby/partida/5920036"
+    });
+
+    this.upMatch({
+      teamsId: ["txg", "kmc"],
+      scores: [16, 3],
+      map: "de_cache",
+      date: new Date("2019-10-05 22:26"),
+      lobby: "https://gamersclub.com.br/lobby/partida/5933475"
+    });
+
+    this.upMatch({
+      teamsId: ["pdt", "bth"],
+      scores: [16, 4],
+      map: "de_train",
+      date: new Date("2019-10-06 17:02"),
+      lobby: "https://gamersclub.com.br/lobby/partida/5938644"
     });
   },
 
