@@ -18,22 +18,21 @@
     </section>
 
     <section class="unavailable" v-else>
-      <h2>
+      <h2>Próxima Live terça-feira 08/10</h2>
+      <!-- <h2>
         Live na Twitch as 20h
         <i class="fa fa-twitch"></i>
-      </h2>
-      <h3>Kommando Chosk x TOXIC</h3>
-      <h3>BROTHERHOOD x PREDATORS</h3>
+      </h2>-->
+      <h3>As ppks x VAC-eiros</h3>
 
       <div class>
-        <p class="text-white">Assista em um dos canais:</p>
+        <!-- <p class="text-white">Assista em um dos canais:</p> -->
+        <p class="text-white">Siga nossos canais:</p>
         <p>
           <a class="live" href="https://www.twitch.tv/ivomarsan">Twitch ch 1</a>
         </p>
         <p>
-          <a class="live" href="https://www.twitch.tv/matheustf7"
-            >Twitch ch 2</a
-          >
+          <a class="live" href="https://www.twitch.tv/matheustf7">Twitch ch 2</a>
         </p>
       </div>
 
