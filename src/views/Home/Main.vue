@@ -18,12 +18,12 @@
     </section>
 
     <section class="unavailable" v-else>
-      <h2>Próxima Live terça-feira 08/10</h2>
+      <h2>Próxima Live quinta-feira 10/10</h2>
       <!-- <h2>
-        Live na Twitch as 20h
+        Live na Twitch as 21h
         <i class="fa fa-twitch"></i>
       </h2>-->
-      <h3>As ppks x VAC-eiros</h3>
+      <!-- <h3>A7-VENTU'S TEAM x XABLAU GAMING</h3> -->
 
       <div class>
         <!-- <p class="text-white">Assista em um dos canais:</p> -->
