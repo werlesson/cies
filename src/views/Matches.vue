@@ -200,8 +200,8 @@ export default {
     });
 
     this.addMatch({
-      teams: ["vac", "txg"],
-      date: new Date("2019-10-08 22:00")
+      teams: ["vac", "txg"]
+      // date: new Date("2019-10-08 22:00")
     });
 
     this.addMatch({
@@ -247,7 +247,7 @@ export default {
 
     this.addMatch({
       teams: ["app", "txg"],
-      date: new Date("2019-10-15 20:00")
+      date: new Date("2019-10-09 22:00")
     });
 
     this.addMatch({
