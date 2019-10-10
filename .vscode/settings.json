@@ -45,5 +45,21 @@
   ],
 
   "git.confirmSync": false,
-  "git.autofetch": true
+  "git.autofetch": true,
+
+  "todo-tree.general.tags": ["TODO", "FIXME"],
+  "todo-tree.highlights.defaultHighlight": {
+    "foreground": "green",
+    "type": "tag"
+  },
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "icon": "check"
+    },
+    "FIXME": {
+      "icon": "alert",
+      "foreground": "red",
+      "background": "black"
+    }
+  }
 }
