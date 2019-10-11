@@ -429,6 +429,14 @@ export default {
       date: new Date("2019-10-09 23:12"),
       lobby: "https://gamersclub.com.br/lobby/partida/5960521"
     });
+
+    this.addMatch({
+      teamsId: ["pdt", "xbg"],
+      scores: [16, 9],
+      map: "de_dust2",
+      date: new Date("2019-10-10 20:22"),
+      lobby: "https://gamersclub.com.br/lobby/partida/5964919"
+    });
   },
 
   computed: {
