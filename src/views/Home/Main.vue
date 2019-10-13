@@ -18,7 +18,7 @@
     </section>
 
     <section class="unavailable" v-else>
-      <h2>Próxima Live quinta-feira 10/10</h2>
+      <h2>CIES 2019</h2>
       <!-- <h2>
         Live na Twitch as 21h
         <i class="fa fa-twitch"></i>
@@ -27,12 +27,14 @@
 
       <div class>
         <!-- <p class="text-white">Assista em um dos canais:</p> -->
-        <p class="text-white">Siga nossos canais:</p>
+        <p class="text-white">Acompanhe as transmissões</p>
         <p>
           <a class="live" href="https://www.twitch.tv/ivomarsan">Twitch ch 1</a>
         </p>
         <p>
-          <a class="live" href="https://www.twitch.tv/matheustf7">Twitch ch 2</a>
+          <a class="live" href="https://www.twitch.tv/matheustf7"
+            >Twitch ch 2</a
+          >
         </p>
       </div>
 

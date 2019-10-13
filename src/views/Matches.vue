@@ -274,7 +274,8 @@ export default {
     });
 
     this.addMatch({
-      teams: ["bbl", "n7g"]
+      teams: ["bbl", "n7g"],
+      date: new Date("2019-10-11 22:00")
     });
 
     // this.addMatch({
@@ -292,7 +293,8 @@ export default {
     });
 
     this.addMatch({
-      teams: ["bbl", "avt"]
+      teams: ["bbl", "avt"],
+      date: new Date("2019-10-15 21:30")
     });
 
     this.addMatch({
@@ -312,7 +314,8 @@ export default {
     });
 
     this.addMatch({
-      teams: ["bbl", "pdt"]
+      teams: ["bbl", "pdt"],
+      date: new Date("2019-10-17 21:30")
     });
 
     this.addMatch({
