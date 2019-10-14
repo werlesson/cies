@@ -18,7 +18,11 @@
     </section>
 
     <section class="unavailable" v-else>
-      <h2>CIES 2019</h2>
+      <h2>
+        <i class="fa fa-trophy"></i> CIES 2019
+        <i class="fa fa-trophy"></i>
+      </h2>
+      <h2>ÚLTIMA SEMANA DE FASE ONLINE</h2>
       <!-- <h2>
         Live na Twitch as 21h
         <i class="fa fa-twitch"></i>
@@ -32,9 +36,7 @@
           <a class="live" href="https://www.twitch.tv/ivomarsan">Twitch ch 1</a>
         </p>
         <p>
-          <a class="live" href="https://www.twitch.tv/matheustf7"
-            >Twitch ch 2</a
-          >
+          <a class="live" href="https://www.twitch.tv/matheustf7">Twitch ch 2</a>
         </p>
       </div>
 
