@@ -100,9 +100,9 @@ export default {
       );
 
       match.scores = data.scores;
-      match.map = data.map;
-      match.date = data.date;
-      match.lobby = data.lobby;
+      data.map && (match.map = data.map);
+      data.date && (match.date = data.date);
+      data.lobby && (match.lobby = data.lobby);
       match.teams = [team1.name, team2.name];
 
       team1.matches++;
