@@ -503,6 +503,20 @@ export default {
       scores: [1, 0],
       date: new Date("2019-10-15 22:30")
     });
+
+    this.upMatch({
+      teamsId: ["avt", "pdt"],
+      scores: [16, 13],
+      map: "de_nuke",
+      date: new Date("2019-10-16 21:53"),
+      lobby: "https://gamersclub.com.br/lobby/partida/6008076"
+    });
+
+    this.upMatch({
+      teamsId: ["bbl", "pdt"],
+      scores: [1, 0],
+      date: new Date("2019-10-17 21:30")
+    });
   },
 
   computed: {
