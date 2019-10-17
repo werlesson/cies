@@ -16,14 +16,25 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(row, index) in sortedGroupA" :key="index">
-            <td :class="index < 2 ? 'col-2px-sucess' : 'col-2px-fail'"></td>
+          <tr
+            v-for="(row, index) in sortedGroupA"
+            :key="index"
+            :style="row.id == 'vac' ? 'background: #63020260; color: #ffffff70;' : ''"
+          >
+            <td :class="index == 1 || index == 2 ? 'col-2px-sucess' : 'col-2px-fail'"></td>
             <td scope="row">{{ index + 1 }}</td>
             <td class="name-logo row">
               <div class="col-md-5">
-                <span class="team-nome">{{ row.name }}</span>
+                <span
+                  class="team-nome"
+                  :style="row.id == 'vac' ? 'color: #ffffff70;' : ''"
+                >{{ row.name }}</span>
               </div>
-              <span class="col-md-4 logo" :class="row.id"></span>
+              <span
+                class="col-md-4 logo"
+                :class="row.id"
+                :style="row.id == 'vac' ? 'opacity: 0.5;' : ''"
+              ></span>
             </td>
             <td>{{ row.matches }}</td>
             <td>{{ row.wins }}</td>
@@ -218,16 +229,18 @@ export default {
     });
 
     this.addMatch({
-      teams: ["vac", "txg"]
-      // date: new Date("2019-10-08 22:00")
+      teams: ["vac", "txg"],
+      date: new Date("2019-10-15 21:00")
     });
 
     this.addMatch({
-      teams: ["ols", "app"]
+      teams: ["ols", "app"],
+      date: new Date("2019-10-17 18:30")
     });
 
     this.addMatch({
-      teams: ["ols", "txg"]
+      teams: ["ols", "txg"],
+      date: new Date("2019-10-17 18:30")
     });
 
     this.addMatch({
@@ -241,7 +254,8 @@ export default {
     });
 
     this.addMatch({
-      teams: ["ols", "kmc"]
+      teams: ["ols", "kmc"],
+      date: new Date("2019-10-17 18:30")
     });
 
     this.addMatch({
@@ -260,7 +274,8 @@ export default {
     });
 
     this.addMatch({
-      teams: ["vac", "ols"]
+      teams: ["vac", "ols"],
+      date: new Date("2019-10-17 18:30")
     });
 
     this.addMatch({
@@ -274,7 +289,8 @@ export default {
     });
 
     this.addMatch({
-      teams: ["rvn", "ols"]
+      teams: ["rvn", "ols"],
+      date: new Date("2019-10-17 18:30")
     });
 
     this.addMatch({
@@ -320,7 +336,7 @@ export default {
 
     this.addMatch({
       teams: ["bbl", "pdt"],
-      date: new Date("2019-10-17 21:30")
+      date: new Date("2019-10-17 19:00")
     });
 
     this.addMatch({
@@ -333,7 +349,8 @@ export default {
     // });
 
     this.addMatch({
-      teams: ["bbl", "bth"]
+      teams: ["bbl", "bth"],
+      date: new Date("2019-10-17 18:30")
     });
 
     this.addMatch({
@@ -512,7 +529,37 @@ export default {
     this.upMatch({
       teamsId: ["bbl", "pdt"],
       scores: [1, 0],
-      date: new Date("2019-10-17 21:30")
+      date: new Date("2019-10-17 19:00")
+    });
+
+    this.upMatch({
+      teamsId: ["bth", "bbl"],
+      scores: [1, 0],
+      date: new Date("2019-10-17 18:30")
+    });
+
+    this.upMatch({
+      teamsId: ["txg", "ols"],
+      scores: [1, 0],
+      date: new Date("2019-10-17 18:30")
+    });
+
+    this.upMatch({
+      teamsId: ["kmc", "ols"],
+      scores: [1, 0],
+      date: new Date("2019-10-17 18:31")
+    });
+
+    this.upMatch({
+      teamsId: ["vac", "ols"],
+      scores: [1, 0],
+      date: new Date("2019-10-17 18:32")
+    });
+
+    this.upMatch({
+      teamsId: ["rvn", "ols"],
+      scores: [1, 0],
+      date: new Date("2019-10-17 18:33")
     });
   },
 
