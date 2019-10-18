@@ -331,7 +331,8 @@ export default {
     // });
 
     this.addMatch({
-      teams: ["n7g", "xbg"]
+      teams: ["n7g", "xbg"],
+      date: new Date("2019-10-17 23:18")
     });
 
     this.addMatch({
@@ -513,7 +514,7 @@ export default {
     });
 
     this.upMatch({
-      teamsId: ["ols", "app"],
+      teamsId: ["app", "ols"],
       scores: [1, 0],
       date: new Date("2019-10-15 22:30")
     });
@@ -560,6 +561,14 @@ export default {
       teamsId: ["rvn", "ols"],
       scores: [1, 0],
       date: new Date("2019-10-17 18:33")
+    });
+
+    this.upMatch({
+      teamsId: ["n7g", "xbg"],
+      scores: [16, 11],
+      map: "de_cache",
+      date: new Date("2019-10-17 23:18"),
+      lobby: "https://gamersclub.com.br/lobby/partida/6014821"
     });
   },
 
