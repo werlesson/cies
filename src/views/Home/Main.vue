@@ -22,12 +22,12 @@
         <i class="fa fa-trophy"></i> CIES 2019
         <i class="fa fa-trophy"></i>
       </h2>
-      <h2>ÚLTIMA SEMANA DE FASE ONLINE</h2>
+      <h2>VALENDO A 2ª VAGA DO GRUPO B</h2>
       <!-- <h2>
         Live na Twitch as 21h
         <i class="fa fa-twitch"></i>
       </h2>-->
-      <!-- <h3>A7-VENTU'S TEAM x XABLAU GAMING</h3> -->
+      <h3>BROTHERHOOD x XABLAU GAMING</h3>
 
       <div class>
         <!-- <p class="text-white">Assista em um dos canais:</p> -->
