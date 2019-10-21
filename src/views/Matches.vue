@@ -86,11 +86,14 @@
         </tbody>
       </table>
 
-      <div class="pb-5"></div>
-      <hr />
+      <div v-if="false" class="pb-5"></div>
+      <hr v-if="false" />
 
-      <h3 class="pt-5 pb-3">Próximos Confrontos</h3>
-      <table class="table text-white table-striped table-hover table-borderless text-center">
+      <h3 v-if="false" class="pt-5 pb-3">Próximos Confrontos</h3>
+      <table
+        v-if="false"
+        class="table text-white table-striped table-hover table-borderless text-center"
+      >
         <tbody>
           <tr
             v-for="(match, index) in matchesNext"
@@ -118,7 +121,12 @@
           </tr>
         </tbody>
       </table>
-      <button class="btn btn-light" @click="toConfirmShow = !toConfirmShow" style="color: #b01ba5">
+      <button
+        v-if="false"
+        class="btn btn-light"
+        @click="toConfirmShow = !toConfirmShow"
+        style="color: #b01ba5"
+      >
         {{
         toConfirmShow === false
         ? "Ver confrontos a confirmar"
@@ -318,7 +326,8 @@ export default {
     });
 
     this.addMatch({
-      teams: ["xbg", "bth"]
+      teams: ["xbg", "bth"],
+      date: new Date("2019-10-20 22:30")
     });
 
     this.addMatch({
@@ -569,6 +578,12 @@ export default {
       map: "de_cache",
       date: new Date("2019-10-17 23:18"),
       lobby: "https://gamersclub.com.br/lobby/partida/6014821"
+    });
+
+    this.upMatch({
+      teamsId: ["bth", "xbg"],
+      scores: [1, 0],
+      date: new Date("2019-10-20 22:30")
     });
   },
 

@@ -19,19 +19,18 @@
 
     <section class="unavailable" v-else>
       <h2>
-        <i class="fa fa-trophy"></i> CIES 2019
-        <i class="fa fa-trophy"></i>
+        <i class="fa fa-trophy" style="color: yellow;"></i> CIES 2019
+        <i class="fa fa-trophy" style="color: yellow;"></i>
       </h2>
-      <h2>VALENDO A 2ª VAGA DO GRUPO B</h2>
-      <!-- <h2>
-        Live na Twitch as 21h
+      <h2>
+        Lives na Twitch
         <i class="fa fa-twitch"></i>
-      </h2>-->
-      <h3>BROTHERHOOD x XABLAU GAMING</h3>
+      </h2>
+      <!-- <h3>BROTHERHOOD x XABLAU GAMING</h3> -->
 
       <div class>
         <!-- <p class="text-white">Assista em um dos canais:</p> -->
-        <p class="text-white">Acompanhe as transmissões</p>
+        <p class="text-white">Siga nossos canais</p>
         <p>
           <a class="live" href="https://www.twitch.tv/ivomarsan">Twitch ch 1</a>
         </p>

@@ -75,7 +75,7 @@
         <hr />
 
         <div class="col-md-4 pt-5">
-          <div class="intro-text-box text-box text-white">
+          <div class="intro-text-box text-box text-white period-inactive">
             <div class="top-meta">23/09 a 20/10/2019 - Etapa Online</div>
             <h3>Finalmente! Hora de Jogar.</h3>
             <p>
