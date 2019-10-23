@@ -247,7 +247,7 @@ export default {
   .cies-playoffs {
     width: 200px;
     height: 500px;
-    background-image: url("/img/CIES Playoffs.0a9afaaf.svg");
+    background-image: url("/img/CIES_Playoffs.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
