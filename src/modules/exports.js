@@ -124,7 +124,7 @@ const _teams = () => [
     id: "bth",
     logo: require("@/assets/img/teams/brotherhood.png"),
     steam: "",
-    gc: "",
+    gc: "https://gamersclub.com.br/time/138362",
     matches: 0,
     wins: 0,
     defeats: 0,

@@ -22,14 +22,74 @@
         <i class="fa fa-trophy" style="color: yellow;"></i> CIES 2019
         <i class="fa fa-trophy" style="color: yellow;"></i>
       </h2>
+
+      <h3>
+        Playoffs presenciais dia 26/10 no IFCE
+      </h3>
+
+      <div class="playoffs">
+        <ul class="left">
+          <li class="logo" :class="txg.id">
+            <a :href="txg.gc">
+              <img
+                :src="txg.logo"
+                :alt="`${txg.name} Logo`"
+                :title="txg.name"
+                :class="!txg.live ? 'eliminated' : ''"
+              />
+            </a>
+          </li>
+          <li class="logo" :class="kmc.id">
+            <a :href="kmc.gc">
+              <img
+                :src="kmc.logo"
+                :alt="`${kmc.name} Logo`"
+                :title="kmc.name"
+                :class="!kmc.live ? 'eliminated' : ''"
+              />
+            </a>
+          </li>
+        </ul>
+
+        <div class="middle cies-playoffs"></div>
+
+        <ul class="right">
+          <li class="logo" :class="avt.id">
+            <a :href="avt.gc">
+              <img
+                :src="avt.logo"
+                :alt="`${avt.name} Logo`"
+                :title="avt.name"
+                :class="!avt.live ? 'eliminated' : ''"
+              />
+            </a>
+          </li>
+          <li class="logo" :class="bth.id">
+            <a :href="bth.gc">
+              <img
+                :src="bth.logo"
+                :alt="`${bth.name} Logo`"
+                :title="bth.name"
+                :class="!bth.live ? 'eliminated' : ''"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="background finals"></div>
+    </section>
+
+    <!-- <section class="unavailable" v-else>
+      <h2>
+        <i class="fa fa-trophy" style="color: yellow;"></i> CIES 2019
+        <i class="fa fa-trophy" style="color: yellow;"></i>
+      </h2>
       <h2>
         Lives na Twitch
         <i class="fa fa-twitch"></i>
       </h2>
-      <!-- <h3>BROTHERHOOD x XABLAU GAMING</h3> -->
 
       <div class>
-        <!-- <p class="text-white">Assista em um dos canais:</p> -->
         <p class="text-white">Siga nossos canais</p>
         <p>
           <a class="live" href="https://www.twitch.tv/ivomarsan">Twitch ch 1</a>
@@ -45,7 +105,7 @@
       </router-link>
 
       <div class="background"></div>
-    </section>
+    </section> -->
   </section>
 </template>
 
@@ -61,7 +121,35 @@ export default {
         "Terceira edição da copa CS:GO",
         "Disponível até 13/09/2019",
         "Copa IFCE de eSports"
-      ]
+      ],
+      txg: {
+        name: "TOXIC Gaming",
+        id: "txg",
+        logo: require("@/assets/img/teams/toxic.svg"),
+        gc: "https://gamersclub.com.br/time/126573",
+        live: true
+      },
+      kmc: {
+        name: "Kommando CHOSK",
+        id: "kmc",
+        logo: require("@/assets/img/teams/kommando.png"),
+        gc: "https://gamersclub.com.br/time/137193",
+        live: true
+      },
+      avt: {
+        name: "a7-Ventu's Team",
+        id: "avt",
+        logo: require("@/assets/img/teams/ventus.png"),
+        gc: "https://gamersclub.com.br/time/122255",
+        live: true
+      },
+      bth: {
+        name: "Brotherhood",
+        id: "bth",
+        logo: require("@/assets/img/teams/brotherhood.png"),
+        gc: "https://gamersclub.com.br/time/138362",
+        live: true
+      }
     };
   },
   components: {
@@ -136,6 +224,10 @@ export default {
       background-size: cover;
       filter: saturate(30%);
       transition: all 0.3s linear;
+
+      &.finals {
+        background: #190c44;
+      }
     }
   }
 
@@ -143,6 +235,121 @@ export default {
     div.background {
       background-image: url("~@/assets/img/stadium-bg.jpg");
       filter: brightness(50%);
+    }
+  }
+}
+
+.playoffs {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+
+  .cies-playoffs {
+    width: 200px;
+    height: 500px;
+    background-image: url("/img/CIES Playoffs.0a9afaaf.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+  }
+
+  ul {
+    list-style: none;
+    color: white;
+  }
+
+  ul.left::before,
+  ul.right::before {
+    content: "";
+    background-color: white;
+    display: block;
+    height: 2px;
+    width: 50px;
+    position: relative;
+    top: 50%;
+    transform: translate(50px, -48px);
+  }
+
+  ul.left::before {
+    left: 100%;
+  }
+
+  ul.right::before {
+    right: 100%;
+    transform: translate(100px, -48px);
+  }
+
+  .logo {
+    display: block;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 300px;
+
+    img {
+      height: 200px;
+      padding: 10px;
+      transition: padding 300ms ease-in-out;
+
+      &:hover {
+        padding: 2px;
+      }
+
+      &.eliminated {
+        filter: grayscale(1);
+      }
+    }
+
+    &.txg::before,
+    &.kmc::before,
+    &.avt::before,
+    &.bth::before {
+      content: "";
+      width: 50px;
+      height: 2px;
+      display: block;
+      background-color: white;
+      position: relative;
+      top: 100px;
+      left: 50%;
+      transform: translate(100px, 0);
+    }
+
+    &.avt::before,
+    &.bth::before {
+      left: -50px;
+      transform: translate(0, 0);
+    }
+
+    &.txg::after,
+    &.kmc::after,
+    &.avt::after,
+    &.bth::after {
+      content: "";
+      width: 2px;
+      height: 150px;
+      display: block;
+      background-color: white;
+      position: relative;
+      left: 50%;
+      top: -100px;
+      transform: translate(148px, 0);
+    }
+
+    &.txg::after,
+    &.avt::after {
+      height: 150px;
+    }
+
+    &.kmc::after,
+    &.bth::after {
+      top: -250px;
+    }
+
+    &.avt::after,
+    &.bth::after {
+      left: -50px;
+      transform: translate(0, 0);
     }
   }
 }
@@ -177,5 +384,89 @@ export default {
   //     margin-bottom: 10px;
   //   }
   // }
+}
+
+@media screen and (max-width: 1600px) {
+  .playoffs {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .playoffs {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .playoffs {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .playoffs {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .playoffs {
+    ul.left::before {
+      transform: translate(30px, -48px);
+    }
+
+    .cies-playoffs {
+      height: 300px;
+    }
+
+    ul.right::before {
+      transform: translate(40px, -48px);
+    }
+
+    ul.left::before,
+    ul.right::before {
+      width: 30px;
+    }
+
+    .logo {
+      height: 200px;
+
+      img {
+        height: 100px;
+      }
+
+      &.txg::before,
+      &.kmc::before {
+        top: 50px;
+        width: 30px;
+        transform: translate(50px, 0);
+      }
+
+      &.txg::after,
+      &.kmc::after {
+        transform: translate(78px, 48px);
+      }
+
+      &.avt::before,
+      &.bth::before {
+        transform: translate(20px, -50px);
+        width: 30px;
+      }
+
+      &.avt::after,
+      &.bth::after {
+        transform: translate(20px, 48px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .playoffs {
+    .cies-playoffs {
+      width: 120px;
+    }
+  }
 }
 </style>
