@@ -3,7 +3,7 @@
     <div class="row pt-2 pb-2 pr-4 pl-4">
       <div class="col-md-1"></div>
       <div class="col-md-6 col-sm-12 pt-5 text-justify">
-        <h2>
+        <h2 class="text-left">
           O bot viu você digitanto
           <b>!sorteio</b> nas lives
         </h2>
@@ -34,10 +34,6 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-.featured-box {
-  padding: 50px 50px 50px 75px;
-}
-
 .sorteio {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -79,6 +75,11 @@ export default {};
 
   p {
     color: #9591a8;
+  }
+
+  .row {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
   }
 }
 
