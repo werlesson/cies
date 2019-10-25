@@ -2,6 +2,7 @@
   <div class="home">
     <main-page />
     <!-- <video-twitch /> -->
+    <sorteio />
     <schedule />
     <!-- <informs /> -->
     <video-trailer />
@@ -19,6 +20,7 @@ import VideoTrailer from "./Home/Video";
 // import Feedback from "./Home/Feedback";
 // import Informs from "./Home/Informs";
 // import ConfirmedTeams from "./Home/ConfirmedTeams";
+import Sorteio from "./Home/Sorteio";
 import VideoTwitch from "./Home/VideoTwitch";
 export default {
   name: "home",
@@ -27,7 +29,8 @@ export default {
     VideoTwitch,
     Schedule,
     Support,
-    VideoTrailer
+    VideoTrailer,
+    Sorteio
     // Feedback,
     // Informs,
     // ConfirmedTeams

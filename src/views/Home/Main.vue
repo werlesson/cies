@@ -22,10 +22,12 @@
         <i class="fa fa-trophy" style="color: yellow;"></i> CIES 2019
         <i class="fa fa-trophy" style="color: yellow;"></i>
       </h2>
-
       <h3>
-        Playoffs presenciais dia 26/10 no IFCE
+        aqui tem
+        <a href="#sorteio">!sorteio</a>
+        clica
       </h3>
+      <h3>Playoffs presenciais dia 26/10 no IFCE</h3>
 
       <div class="playoffs">
         <ul class="left">
@@ -105,7 +107,7 @@
       </router-link>
 
       <div class="background"></div>
-    </section> -->
+    </section>-->
   </section>
 </template>
 
