@@ -3,6 +3,7 @@
     <main-page />
     <!-- <video-twitch /> -->
     <sorteio />
+    <transporte />
     <schedule />
     <!-- <informs /> -->
     <video-trailer />
@@ -21,6 +22,7 @@ import VideoTrailer from "./Home/Video";
 // import Informs from "./Home/Informs";
 // import ConfirmedTeams from "./Home/ConfirmedTeams";
 import Sorteio from "./Home/Sorteio";
+import Transporte from "./Home/Transporte";
 import VideoTwitch from "./Home/VideoTwitch";
 export default {
   name: "home",
@@ -30,7 +32,8 @@ export default {
     Schedule,
     Support,
     VideoTrailer,
-    Sorteio
+    Sorteio,
+    Transporte
     // Feedback,
     // Informs,
     // ConfirmedTeams

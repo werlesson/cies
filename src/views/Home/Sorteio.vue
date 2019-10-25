@@ -22,7 +22,7 @@
         </p>
         <p>Compareça e PARTICIPE!</p>
       </div>
-      <div class="col-md-4 col sm-12 pt-5 pb-5">
+      <div class="col-md-4 col-sm-12 pt-5 pb-5">
         <img src="~@/assets/img/headset.png" alt />
       </div>
     </div>
