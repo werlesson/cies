@@ -18,7 +18,7 @@
           <b>!sorteio</b> no chat. Venha prestigiar o fino do fino do fino do bino na fase presencial da CIES CS:GO 2019 e ainda concorra a um prêmio.
           Quer mais? Boatos apontam que terão as dançarinas do Faustão no palco, dragões cospindo fogo, duendes de patinete e ainda a presença do ilustre
           <b>LindZika</b> que
-          dará autógragos durante a competição caso este CSGO Player God esteja a fim.
+          dará autógrafos durante a competição caso este CSGO Player God esteja a fim.
         </p>
         <p>Compareça e PARTICIPE!</p>
       </div>
