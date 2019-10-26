@@ -1,7 +1,7 @@
 <template>
   <section class="twitch-live-video pt-5">
     <div class="container text-white pt-5 pb-5">
-      <h2>Live do sorteio dos grupos ocorreu em 22/09/2019 as 15h. Veja a transmissão abaixo</h2>
+      <h2>FINAL CIES 2019 - TOXIC X KOMMANDO -- LIVE AS 13H30</h2>
       <div id="twitch-embed"></div>
     </div>
   </section>

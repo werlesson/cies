@@ -18,17 +18,11 @@
     </section>
 
     <section class="unavailable" v-else>
+      <h2>CIES 2019</h2>
       <h2>
-        <i class="fa fa-trophy" style="color: yellow;"></i> CIES 2019
+        <i class="fa fa-trophy" style="color: yellow;"></i> TOXIC GAMING
         <i class="fa fa-trophy" style="color: yellow;"></i>
       </h2>
-      <h3>
-        aqui tem
-        <a href="#sorteio">!sorteio</a>,
-        clica
-      </h3>
-      <h3>Playoffs presenciais dia 26/10 no IFCE</h3>
-
       <div class="playoffs">
         <ul class="left">
           <li class="logo" :class="txg.id">
@@ -136,21 +130,21 @@ export default {
         id: "kmc",
         logo: require("@/assets/img/teams/kommando.png"),
         gc: "https://gamersclub.com.br/time/137193",
-        live: true
+        live: false
       },
       avt: {
         name: "a7-Ventu's Team",
         id: "avt",
         logo: require("@/assets/img/teams/ventus.png"),
         gc: "https://gamersclub.com.br/time/122255",
-        live: true
+        live: false
       },
       n7g: {
         name: "NATUS7 GAMING",
         id: "n7g",
         logo: require("@/assets/img/teams/natus.png"),
         gc: "https://gamersclub.com.br/time/101392",
-        live: true
+        live: false
       }
     };
   },

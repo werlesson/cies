@@ -2,8 +2,8 @@
   <div class="home">
     <main-page />
     <!-- <video-twitch /> -->
-    <sorteio />
-    <transporte />
+    <!-- <sorteio /> -->
+    <!-- <transporte /> -->
     <schedule />
     <!-- <informs /> -->
     <video-trailer />
