@@ -24,7 +24,7 @@
       </h2>
       <h3>
         aqui tem
-        <a href="#sorteio">!sorteio</a>
+        <a href="#sorteio">!sorteio</a>,
         clica
       </h3>
       <h3>Playoffs presenciais dia 26/10 no IFCE</h3>
@@ -66,13 +66,13 @@
               />
             </a>
           </li>
-          <li class="logo" :class="bth.id">
-            <a :href="bth.gc">
+          <li class="logo" :class="n7g.id">
+            <a :href="n7g.gc">
               <img
-                :src="bth.logo"
-                :alt="`${bth.name} Logo`"
-                :title="bth.name"
-                :class="!bth.live ? 'eliminated' : ''"
+                :src="n7g.logo"
+                :alt="`${n7g.name} Logo`"
+                :title="n7g.name"
+                :class="!n7g.live ? 'eliminated' : ''"
               />
             </a>
           </li>
@@ -145,11 +145,11 @@ export default {
         gc: "https://gamersclub.com.br/time/122255",
         live: true
       },
-      bth: {
-        name: "Brotherhood",
-        id: "bth",
-        logo: require("@/assets/img/teams/brotherhood.png"),
-        gc: "https://gamersclub.com.br/time/138362",
+      n7g: {
+        name: "NATUS7 GAMING",
+        id: "n7g",
+        logo: require("@/assets/img/teams/natus.png"),
+        gc: "https://gamersclub.com.br/time/101392",
         live: true
       }
     };
@@ -305,7 +305,7 @@ export default {
     &.txg::before,
     &.kmc::before,
     &.avt::before,
-    &.bth::before {
+    &.n7g::before {
       content: "";
       width: 50px;
       height: 2px;
@@ -318,7 +318,7 @@ export default {
     }
 
     &.avt::before,
-    &.bth::before {
+    &.n7g::before {
       left: -50px;
       transform: translate(0, 0);
     }
@@ -326,7 +326,7 @@ export default {
     &.txg::after,
     &.kmc::after,
     &.avt::after,
-    &.bth::after {
+    &.n7g::after {
       content: "";
       width: 2px;
       height: 150px;
@@ -344,12 +344,12 @@ export default {
     }
 
     &.kmc::after,
-    &.bth::after {
+    &.n7g::after {
       top: -250px;
     }
 
     &.avt::after,
-    &.bth::after {
+    &.n7g::after {
       left: -50px;
       transform: translate(0, 0);
     }
@@ -451,13 +451,13 @@ export default {
       }
 
       &.avt::before,
-      &.bth::before {
+      &.n7g::before {
         transform: translate(20px, -50px);
         width: 30px;
       }
 
       &.avt::after,
-      &.bth::after {
+      &.n7g::after {
         transform: translate(20px, 48px);
       }
     }

@@ -61,9 +61,9 @@
           <tr
             v-for="(row, index) in sortedGroupB"
             :key="index"
-            :style="row.id == 'pdt' ? 'background: #63020260; color: #ffffff70;' : ''"
+            :style="row.id == 'pdt' || row.id == 'bth' ? 'background: #63020260; color: #ffffff70;' : ''"
           >
-            <td :class="index == 0 || index == 2 ? 'col-2px-sucess' : 'col-2px-fail'"></td>
+            <td :class="index == 0 || index == 3 ? 'col-2px-sucess' : 'col-2px-fail'"></td>
             <td scope="row">{{ index + 1 }}</td>
             <td class="name-logo row">
               <div class="col-md-5">
@@ -75,7 +75,7 @@
               <span
                 class="col-md-4 logo"
                 :class="row.id"
-                :style="row.id == 'pdt' ? 'opacity: 0.5;' : ''"
+                :style="row.id == 'pdt' || row.id == 'bth' ? 'opacity: 0.5;' : ''"
               ></span>
             </td>
             <td>{{ row.matches }}</td>
