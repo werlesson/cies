@@ -33,6 +33,9 @@
             <router-link to="/matches">Partidas</router-link>
           </li>
           <li>
+            <router-link to="/album">Album de Fotos</router-link>
+          </li>
+          <li>
             <router-link to="/local">Local do Evento</router-link>
           </li>
           <!-- <li>
@@ -52,8 +55,7 @@
           <a
             class="btn-register ml-auto mr-auto btn-block text-center"
             href="https://forms.gle/Qco39doRwpdHSNmg7"
-            >Inscreva-se!</a
-          >
+          >Inscreva-se!</a>
         </form>
       </div>
     </nav>

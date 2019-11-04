@@ -10,6 +10,7 @@ import About from "./views/About";
 import FrequentAsk from "./views/FrequentAsk";
 import Teams from "./views/Teams";
 import Matches from "./views/Matches";
+import Album from "./views/Album"
 
 Vue.use(Router);
 
@@ -70,6 +71,11 @@ export default new Router({
       path: "/matches",
       name: "matches",
       component: Matches
+    },
+    {
+      path: "/album",
+      name: "album",
+      component: Album
     }
     // {
     //   path: "/about",
