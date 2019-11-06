@@ -26,12 +26,12 @@
           <li class="active">
             <router-link to="/">Página Inicial</router-link>
           </li>
-          <li>
+          <!-- <li>
             <router-link to="/teams">Equipes Confirmadas</router-link>
           </li>
           <li>
             <router-link to="/matches">Partidas</router-link>
-          </li>
+          </li>-->
           <li>
             <router-link to="/album">Album de Fotos</router-link>
           </li>
@@ -54,7 +54,7 @@
         <form class="form-inline my-2 my-lg-0" v-if="isAvailableToSubscribe">
           <a
             class="btn-register ml-auto mr-auto btn-block text-center"
-            href="https://forms.gle/Qco39doRwpdHSNmg7"
+            href="http://bit.ly/CIESLeagueOfLegends"
           >Inscreva-se!</a>
         </form>
       </div>

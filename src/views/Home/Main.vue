@@ -6,10 +6,10 @@
       <countdown :date="deadline"></countdown>
 
       <div class="description">
-        <p v-for="{ item, index } in description" :key="index">{{ item }}</p>
+        <p v-for="( item, index ) in description" :key="index">{{item}}</p>
       </div>
 
-      <a href="https://forms.gle/J7mPvQHRHRgNKte89" class="site-btn">
+      <a href="http://bit.ly/CIESLeagueOfLegends" class="site-btn">
         Inscreva-se agora!
         <img src="@/assets/img/icons/double-arrow.png" alt="#" />
       </a>
@@ -112,10 +112,10 @@ import Countdown from "@/components/Countdown";
 export default {
   data() {
     return {
-      title: "Inscrições Prorrogadas!",
+      title: "Inscrições Abertas!",
       description: [
-        "Terceira edição da copa CS:GO",
-        "Disponível até 13/09/2019",
+        "Segunda edição da copa League of Legends",
+        "Disponível até 30/11/2019",
         "Copa IFCE de eSports"
       ],
       txg: {
@@ -197,7 +197,7 @@ export default {
 
       &:hover ~ div.background {
         color: white;
-        filter: brightness(70%);
+        filter: brightness(100%);
       }
     }
 
@@ -214,11 +214,12 @@ export default {
       top: 0;
       left: 0;
       z-index: -1;
-      background-image: url("~@/assets/img/background-cs.jpg");
+      background-image: url("~@/assets/img/background-lol.jpg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      filter: saturate(30%);
+      // filter: saturate(60%);
+      filter: brightness(60%);
       transition: all 0.3s linear;
 
       &.finals {

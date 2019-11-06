@@ -26,7 +26,7 @@ export default {
   props: {
     date: {
       type: String,
-      default: "Sep 20, 2019"
+      default: "Nov 30, 2020"
     }
   },
 

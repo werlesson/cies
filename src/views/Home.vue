@@ -4,9 +4,9 @@
     <!-- <video-twitch /> -->
     <!-- <sorteio /> -->
     <!-- <transporte /> -->
-    <schedule />
+    <!-- <schedule /> -->
     <!-- <informs /> -->
-    <video-trailer />
+    <!-- <video-trailer /> -->
     <!-- <ConfirmedTeams /> -->
     <!-- <feedback /> -->
     <support />

@@ -1,12 +1,12 @@
 <template>
   <footer class="footer-section">
     <div class="container">
-      <div class="footer-left-pic">
+      <!-- <div class="footer-left-pic">
         <img src="../assets/img/footer-left-pic.png" alt />
       </div>
       <div class="footer-right-pic">
         <img src="../assets/img/footer-right-pic.png" alt />
-      </div>
+      </div>-->
       <div>
         <router-link class="footer-logo" to="/">
           <img src="../assets/img/cies-logo-white.svg" width="100" alt />
