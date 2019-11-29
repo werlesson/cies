@@ -112,10 +112,10 @@ import Countdown from "@/components/Countdown";
 export default {
   data() {
     return {
-      title: "Inscrições Abertas!",
+      title: "Inscrições Prorrogadas!",
       description: [
         "Segunda edição da copa League of Legends",
-        "Disponível até 30/11/2019",
+        "Disponível até 07/12/2019",
         "Copa IFCE de eSports"
       ],
       txg: {
