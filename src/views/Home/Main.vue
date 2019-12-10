@@ -17,7 +17,7 @@
       <div class="background"></div>
     </section>
 
-    <section class="unavailable" v-else>
+    <!-- <section class="unavailable" v-else>
       <h2>CIES 2019</h2>
       <h2>
         <i class="fa fa-trophy" style="color: yellow;"></i> TOXIC GAMING
@@ -73,35 +73,24 @@
         </ul>
       </div>
       <div class="background finals"></div>
-    </section>
+    </section>-->
 
-    <!-- <section class="unavailable" v-else>
-      <h2>
-        <i class="fa fa-trophy" style="color: yellow;"></i> CIES 2019
-        <i class="fa fa-trophy" style="color: yellow;"></i>
-      </h2>
-      <h2>
-        Lives na Twitch
-        <i class="fa fa-twitch"></i>
-      </h2>
+    <section class="unavailable" v-else>
+      <h2 class="pb-2">Inscrições Encerradas</h2>
+      <h2 class="pb-4">CIES - League Of Legends</h2>
 
-      <div class>
-        <p class="text-white">Siga nossos canais</p>
-        <p>
-          <a class="live" href="https://www.twitch.tv/ivomarsan">Twitch ch 1</a>
-        </p>
-        <p>
-          <a class="live" href="https://www.twitch.tv/matheustf7">Twitch ch 2</a>
-        </p>
-      </div>
+      <a class="site-btn" href="http://bit.ly/CIESLeagueOfLegends">
+        Ver Datalhes da Competição
+        <img src="@/assets/img/icons/double-arrow.png" alt="#" />
+      </a>
 
-      <router-link to="/matches" class="site-btn">
+      <!-- <router-link to="/matches" class="site-btn">
         Ver Confrontos e Datas
         <img src="@/assets/img/icons/double-arrow.png" alt="#" />
-      </router-link>
+      </router-link>-->
 
       <div class="background"></div>
-    </section>-->
+    </section>
   </section>
 </template>
 
@@ -230,7 +219,8 @@ export default {
 
   .unavailable {
     div.background {
-      background-image: url("~@/assets/img/stadium-bg.jpg");
+      background-image: url("~@/assets/img/background-lol.jpg");
+      // background-image: url("~@/assets/img/stadium-bg.jpg");
       filter: brightness(50%);
     }
   }
