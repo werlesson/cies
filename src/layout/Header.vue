@@ -2,7 +2,7 @@
   <header
     class="header-section"
     :class="{
-      transparent: $route.path == '/' && lastScrollPosition < OFFSET
+      transparent: $route.path == '/' && lastScrollPosition < OFFSET,
     }"
   >
     <nav class="navbar navbar-expand-lg d-flex navbar-light">
@@ -54,8 +54,9 @@
         <form class="form-inline my-2 my-lg-0" v-if="isAvailableToSubscribe">
           <a
             class="btn-register ml-auto mr-auto btn-block text-center"
-            href="http://bit.ly/CIESLeagueOfLegends"
-          >Inscreva-se!</a>
+            href="https://forms.gle/UaePFJjQra5YHZwg8"
+            >Inscreva-se!</a
+          >
         </form>
       </div>
     </nav>
@@ -69,12 +70,12 @@ export default {
   data() {
     return {
       lastScrollPosition: 0,
-      OFFSET: 30
+      OFFSET: 30,
     };
   },
 
   computed: {
-    ...mapGetters(["isAvailableToSubscribe"])
+    ...mapGetters(["isAvailableToSubscribe"]),
   },
 
   mounted() {
@@ -101,8 +102,8 @@ export default {
         return;
       }
       this.lastScrollPosition = window.pageYOffset;
-    }
-  }
+    },
+  },
 };
 </script>
 

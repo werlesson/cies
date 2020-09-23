@@ -4,7 +4,7 @@ import teams from "@/modules/teams";
 
 Vue.use(Vuex);
 
-const deadline = "Dec 8, 2019";
+const deadline = "Oct 7, 2020";
 
 export default new Vuex.Store({
   modules: {

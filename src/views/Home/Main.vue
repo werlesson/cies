@@ -6,10 +6,10 @@
       <countdown :date="deadline"></countdown>
 
       <div class="description">
-        <p v-for="( item, index ) in description" :key="index">{{item}}</p>
+        <p v-for="(item, index) in description" :key="index">{{ item }}</p>
       </div>
 
-      <a href="http://bit.ly/CIESLeagueOfLegends" class="site-btn">
+      <a href="https://forms.gle/UaePFJjQra5YHZwg8" class="site-btn">
         Inscreva-se agora!
         <img src="@/assets/img/icons/double-arrow.png" alt="#" />
       </a>
@@ -77,12 +77,13 @@
 
     <section class="unavailable" v-else>
       <h2 class="pb-2">Inscrições Encerradas</h2>
-      <h2 class="pb-4">CIES - League Of Legends</h2>
+      <h2 class="pb-2">CIES - Free Fire 1ª Edição</h2>
+      <h2 class="pb-4">Aguarde Mais Informações</h2>
 
-      <a class="site-btn" href="http://bit.ly/CIESLeagueOfLegends">
+      <!-- <a class="site-btn" href="#">
         Ver Datalhes da Competição
         <img src="@/assets/img/icons/double-arrow.png" alt="#" />
-      </a>
+      </a> -->
 
       <!-- <router-link to="/matches" class="site-btn">
         Ver Confrontos e Datas
@@ -101,49 +102,49 @@ import Countdown from "@/components/Countdown";
 export default {
   data() {
     return {
-      title: "Inscrições Prorrogadas!",
+      title: "Inscrições Abertas!",
       description: [
-        "Segunda edição da copa League of Legends",
-        "Disponível até 07/12/2019",
-        "Copa IFCE de eSports"
+        "Primeira edição Free Fire Battlegrounds",
+        "Disponível até 07/10/2020",
+        "Copa IFCE de eSports",
       ],
       txg: {
         name: "TOXIC Gaming",
         id: "txg",
         logo: require("@/assets/img/teams/toxic.svg"),
         gc: "https://gamersclub.com.br/time/126573",
-        live: true
+        live: true,
       },
       kmc: {
         name: "Kommando CHOSK",
         id: "kmc",
         logo: require("@/assets/img/teams/kommando.png"),
         gc: "https://gamersclub.com.br/time/137193",
-        live: false
+        live: false,
       },
       avt: {
         name: "a7-Ventu's Team",
         id: "avt",
         logo: require("@/assets/img/teams/ventus.png"),
         gc: "https://gamersclub.com.br/time/122255",
-        live: false
+        live: false,
       },
       n7g: {
         name: "NATUS7 GAMING",
         id: "n7g",
         logo: require("@/assets/img/teams/natus.png"),
         gc: "https://gamersclub.com.br/time/101392",
-        live: false
-      }
+        live: false,
+      },
     };
   },
   components: {
-    Countdown
+    Countdown,
   },
 
   computed: {
-    ...mapGetters(["deadline", "isAvailableToSubscribe"])
-  }
+    ...mapGetters(["deadline", "isAvailableToSubscribe"]),
+  },
 };
 </script>
 
@@ -203,7 +204,7 @@ export default {
       top: 0;
       left: 0;
       z-index: -1;
-      background-image: url("~@/assets/img/background-lol.jpg");
+      background-image: url("~@/assets/img/background-ff.jpg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -219,7 +220,7 @@ export default {
 
   .unavailable {
     div.background {
-      background-image: url("~@/assets/img/background-lol.jpg");
+      background-image: url("~@/assets/img/background-ff.jpg");
       // background-image: url("~@/assets/img/stadium-bg.jpg");
       filter: brightness(50%);
     }

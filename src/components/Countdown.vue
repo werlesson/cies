@@ -26,13 +26,13 @@ export default {
   props: {
     date: {
       type: String,
-      default: "Nov 30, 2020"
-    }
+      default: "Oct 07, 2020",
+    },
   },
 
   data() {
     return {
-      now: Math.trunc(new Date().getTime() / 1000)
+      now: Math.trunc(new Date().getTime() / 1000),
     };
   },
 
@@ -63,10 +63,10 @@ export default {
 
     days() {
       return Math.trunc((this.limit - this.now) / 60 / 60 / 24);
-    }
+    },
   },
   methods: {
-    ...mapActions(["updateAvailability"])
+    ...mapActions(["updateAvailability"]),
   },
 
   filters: {
@@ -75,8 +75,8 @@ export default {
         return "0" + value.toString();
       }
       return value.toString();
-    }
-  }
+    },
+  },
 };
 </script>
 
